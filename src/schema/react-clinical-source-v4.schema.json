@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/eviagent/react-clinical-source-v4.schema.json",
+  "title": "React Clinical Source V4 Benchmark Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "source",
+    "sourceRecordId",
+    "task",
+    "allowedDecisions",
+    "goldDecision",
+    "documents",
+    "requiredEvidence"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "v4"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "string",
+      "enum": ["scifact", "pubmedqa", "nli4ct"]
+    },
+    "sourceRecordId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "input"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["statement_verification", "question_answering"]
+        },
+        "input": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "allowedDecisions": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "goldDecision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "documents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/document"
+      }
+    },
+    "requiredEvidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidenceRef"
+      }
+    }
+  },
+  "$defs": {
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["documentId", "segments"],
+      "properties": {
+        "documentId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "segments": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/segment"
+          }
+        }
+      }
+    },
+    "segment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["segmentId", "index", "text"],
+      "properties": {
+        "segmentId": {
+          "type": "string",
+          "pattern": "^seg-[0-9]+$"
+        },
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidenceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["documentId", "segmentId", "granularity"],
+      "properties": {
+        "documentId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "segmentId": {
+          "type": "string",
+          "pattern": "^seg-[0-9]+$"
+        },
+        "granularity": {
+          "const": "segment"
+        }
+      }
+    }
+  }
+}

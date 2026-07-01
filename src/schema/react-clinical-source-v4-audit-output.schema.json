@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/eviagent/react-clinical-source-v4-audit-output.schema.json",
+  "title": "React Clinical Source V4 LLM Audit Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "recordId",
+    "source",
+    "goldDecision",
+    "auditDecision",
+    "suggestedDecision",
+    "goldDecisionCheck",
+    "evidenceSufficiency",
+    "granularityIssue",
+    "missingContextRows",
+    "materialConflict",
+    "includeInMain",
+    "confidence",
+    "rationale",
+    "citedEvidence"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "v4-llm-audit"
+    },
+    "recordId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "string",
+      "enum": ["scifact", "pubmedqa", "nli4ct"]
+    },
+    "goldDecision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "allowedDecisions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "auditDecision": {
+      "type": "string",
+      "enum": ["agree", "disagree", "uncertain"]
+    },
+    "suggestedDecision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goldDecisionCheck": {
+      "type": "string",
+      "enum": ["consistent", "inconsistent", "unclear"]
+    },
+    "evidenceSufficiency": {
+      "type": "string",
+      "enum": ["sufficient", "partial", "insufficient", "conflicting"]
+    },
+    "granularityIssue": {
+      "type": "boolean"
+    },
+    "missingContextRows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["documentId", "segmentId"],
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "segmentId": {
+            "type": "string",
+            "pattern": "^seg-[0-9]+$"
+          }
+        }
+      }
+    },
+    "materialConflict": {
+      "type": "boolean"
+    },
+    "includeInMain": {
+      "type": "boolean"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "citedEvidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["documentId", "segmentId"],
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "segmentId": {
+            "type": "string",
+            "pattern": "^seg-[0-9]+$"
+          }
+        }
+      }
+    },
+    "citationValid": {
+      "type": "boolean"
+    },
+    "parseError": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "reasoningEffort": {
+      "type": "string"
+    },
+    "promptSha256": {
+      "type": "string"
+    }
+  }
+}

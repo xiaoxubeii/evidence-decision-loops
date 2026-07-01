@@ -1,0 +1,3842 @@
+[
+  {
+    "assignmentId": "asg_RATER_A_0001",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0121_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0121",
+    "phase": "main",
+    "order": 1
+  },
+  {
+    "assignmentId": "asg_RATER_A_0002",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0010_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0010",
+    "phase": "main",
+    "order": 2
+  },
+  {
+    "assignmentId": "asg_RATER_A_0003",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0039_y",
+    "caseId": "scifact-v4-0039",
+    "phase": "main",
+    "order": 3
+  },
+  {
+    "assignmentId": "asg_RATER_A_0004",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0018_x",
+    "caseId": "scifact-v4-0018",
+    "phase": "main",
+    "order": 4
+  },
+  {
+    "assignmentId": "asg_RATER_A_0005",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0112_x",
+    "caseId": "scifact-v4-0112",
+    "phase": "main",
+    "order": 5
+  },
+  {
+    "assignmentId": "asg_RATER_A_0006",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0087_y",
+    "caseId": "scifact-v4-0087",
+    "phase": "main",
+    "order": 6
+  },
+  {
+    "assignmentId": "asg_RATER_A_0007",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0069_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0069",
+    "phase": "main",
+    "order": 7
+  },
+  {
+    "assignmentId": "asg_RATER_A_0008",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0048_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0048",
+    "phase": "main",
+    "order": 8
+  },
+  {
+    "assignmentId": "asg_RATER_A_0009",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0061_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0061",
+    "phase": "main",
+    "order": 9
+  },
+  {
+    "assignmentId": "asg_RATER_A_0010",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0017_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0017",
+    "phase": "main",
+    "order": 10
+  },
+  {
+    "assignmentId": "asg_RATER_A_0011",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0027_y",
+    "caseId": "scifact-v4-0027",
+    "phase": "main",
+    "order": 11
+  },
+  {
+    "assignmentId": "asg_RATER_A_0012",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0126_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0126",
+    "phase": "main",
+    "order": 12
+  },
+  {
+    "assignmentId": "asg_RATER_A_0013",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0120_x",
+    "caseId": "scifact-v4-0120",
+    "phase": "main",
+    "order": 13
+  },
+  {
+    "assignmentId": "asg_RATER_A_0014",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0084_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0084",
+    "phase": "main",
+    "order": 14
+  },
+  {
+    "assignmentId": "asg_RATER_A_0015",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0075_y",
+    "caseId": "scifact-v4-0075",
+    "phase": "main",
+    "order": 15
+  },
+  {
+    "assignmentId": "asg_RATER_A_0016",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0144_y",
+    "caseId": "scifact-v4-0144",
+    "phase": "main",
+    "order": 16
+  },
+  {
+    "assignmentId": "asg_RATER_A_0017",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0068_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0068",
+    "phase": "main",
+    "order": 17
+  },
+  {
+    "assignmentId": "asg_RATER_A_0018",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0036_x",
+    "caseId": "scifact-v4-0036",
+    "phase": "main",
+    "order": 18
+  },
+  {
+    "assignmentId": "asg_RATER_A_0019",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0044_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0044",
+    "phase": "main",
+    "order": 19
+  },
+  {
+    "assignmentId": "asg_RATER_A_0020",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0074_x",
+    "caseId": "scifact-v4-0074",
+    "phase": "main",
+    "order": 20
+  },
+  {
+    "assignmentId": "asg_RATER_A_0021",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0052_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0052",
+    "phase": "main",
+    "order": 21
+  },
+  {
+    "assignmentId": "asg_RATER_A_0022",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0063_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0063",
+    "phase": "main",
+    "order": 22
+  },
+  {
+    "assignmentId": "asg_RATER_A_0023",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0004_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0004",
+    "phase": "main",
+    "order": 23
+  },
+  {
+    "assignmentId": "asg_RATER_A_0024",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0077_y",
+    "caseId": "scifact-v4-0077",
+    "phase": "main",
+    "order": 24
+  },
+  {
+    "assignmentId": "asg_RATER_A_0025",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0020_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0020",
+    "phase": "main",
+    "order": 25
+  },
+  {
+    "assignmentId": "asg_RATER_A_0026",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0036_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0036",
+    "phase": "main",
+    "order": 26
+  },
+  {
+    "assignmentId": "asg_RATER_A_0027",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0019_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0019",
+    "phase": "main",
+    "order": 27
+  },
+  {
+    "assignmentId": "asg_RATER_A_0028",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0141_x",
+    "caseId": "scifact-v4-0141",
+    "phase": "main",
+    "order": 28
+  },
+  {
+    "assignmentId": "asg_RATER_A_0029",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0135_y",
+    "caseId": "scifact-v4-0135",
+    "phase": "main",
+    "order": 29
+  },
+  {
+    "assignmentId": "asg_RATER_A_0030",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0061_x",
+    "caseId": "scifact-v4-0061",
+    "phase": "main",
+    "order": 30
+  },
+  {
+    "assignmentId": "asg_RATER_A_0031",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0021_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0021",
+    "phase": "main",
+    "order": 31
+  },
+  {
+    "assignmentId": "asg_RATER_A_0032",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0119_y",
+    "caseId": "scifact-v4-0119",
+    "phase": "main",
+    "order": 32
+  },
+  {
+    "assignmentId": "asg_RATER_A_0033",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0056_y",
+    "caseId": "scifact-v4-0056",
+    "phase": "main",
+    "order": 33
+  },
+  {
+    "assignmentId": "asg_RATER_A_0034",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0094_y",
+    "caseId": "scifact-v4-0094",
+    "phase": "main",
+    "order": 34
+  },
+  {
+    "assignmentId": "asg_RATER_A_0035",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0079_y",
+    "caseId": "scifact-v4-0079",
+    "phase": "main",
+    "order": 35
+  },
+  {
+    "assignmentId": "asg_RATER_A_0036",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0149_y",
+    "caseId": "scifact-v4-0149",
+    "phase": "main",
+    "order": 36
+  },
+  {
+    "assignmentId": "asg_RATER_A_0037",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0040_x",
+    "caseId": "scifact-v4-0040",
+    "phase": "main",
+    "order": 37
+  },
+  {
+    "assignmentId": "asg_RATER_A_0038",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0013_y",
+    "caseId": "scifact-v4-0013",
+    "phase": "main",
+    "order": 38
+  },
+  {
+    "assignmentId": "asg_RATER_A_0039",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0122_y",
+    "caseId": "scifact-v4-0122",
+    "phase": "main",
+    "order": 39
+  },
+  {
+    "assignmentId": "asg_RATER_A_0040",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0068_x",
+    "caseId": "scifact-v4-0068",
+    "phase": "main",
+    "order": 40
+  },
+  {
+    "assignmentId": "asg_RATER_A_0041",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0137_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0137",
+    "phase": "main",
+    "order": 41
+  },
+  {
+    "assignmentId": "asg_RATER_A_0042",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0091_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0091",
+    "phase": "main",
+    "order": 42
+  },
+  {
+    "assignmentId": "asg_RATER_A_0043",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0055_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0055",
+    "phase": "main",
+    "order": 43
+  },
+  {
+    "assignmentId": "asg_RATER_A_0044",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0059_x",
+    "caseId": "scifact-v4-0059",
+    "phase": "main",
+    "order": 44
+  },
+  {
+    "assignmentId": "asg_RATER_A_0045",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0054_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0054",
+    "phase": "main",
+    "order": 45
+  },
+  {
+    "assignmentId": "asg_RATER_A_0046",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0134_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0134",
+    "phase": "main",
+    "order": 46
+  },
+  {
+    "assignmentId": "asg_RATER_A_0047",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0035_y",
+    "caseId": "scifact-v4-0035",
+    "phase": "main",
+    "order": 47
+  },
+  {
+    "assignmentId": "asg_RATER_A_0048",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0065_y",
+    "caseId": "scifact-v4-0065",
+    "phase": "main",
+    "order": 48
+  },
+  {
+    "assignmentId": "asg_RATER_A_0049",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0038_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0038",
+    "phase": "main",
+    "order": 49
+  },
+  {
+    "assignmentId": "asg_RATER_A_0050",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0029_x",
+    "caseId": "scifact-v4-0029",
+    "phase": "main",
+    "order": 50
+  },
+  {
+    "assignmentId": "asg_RATER_A_0051",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0005_x",
+    "caseId": "scifact-v4-0005",
+    "phase": "main",
+    "order": 51
+  },
+  {
+    "assignmentId": "asg_RATER_A_0052",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0092_x",
+    "caseId": "scifact-v4-0092",
+    "phase": "main",
+    "order": 52
+  },
+  {
+    "assignmentId": "asg_RATER_A_0053",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0047_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0047",
+    "phase": "main",
+    "order": 53
+  },
+  {
+    "assignmentId": "asg_RATER_A_0054",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0136_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0136",
+    "phase": "main",
+    "order": 54
+  },
+  {
+    "assignmentId": "asg_RATER_A_0055",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0007_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0007",
+    "phase": "main",
+    "order": 55
+  },
+  {
+    "assignmentId": "asg_RATER_A_0056",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0013_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0013",
+    "phase": "main",
+    "order": 56
+  },
+  {
+    "assignmentId": "asg_RATER_A_0057",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0039_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0039",
+    "phase": "main",
+    "order": 57
+  },
+  {
+    "assignmentId": "asg_RATER_A_0058",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_scifact-v4-0129_y",
+    "caseId": "scifact-v4-0129",
+    "phase": "main",
+    "order": 58
+  },
+  {
+    "assignmentId": "asg_RATER_A_0059",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0082_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0082",
+    "phase": "main",
+    "order": 59
+  },
+  {
+    "assignmentId": "asg_RATER_A_0060",
+    "raterId": "RATER_A",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0092_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0092",
+    "phase": "main",
+    "order": 60
+  },
+  {
+    "assignmentId": "asg_RATER_B_0001",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0084_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0084",
+    "phase": "main",
+    "order": 1
+  },
+  {
+    "assignmentId": "asg_RATER_B_0002",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0020_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0020",
+    "phase": "main",
+    "order": 2
+  },
+  {
+    "assignmentId": "asg_RATER_B_0003",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0048_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0048",
+    "phase": "main",
+    "order": 3
+  },
+  {
+    "assignmentId": "asg_RATER_B_0004",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0007_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0007",
+    "phase": "main",
+    "order": 4
+  },
+  {
+    "assignmentId": "asg_RATER_B_0005",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0029_y",
+    "caseId": "scifact-v4-0029",
+    "phase": "main",
+    "order": 5
+  },
+  {
+    "assignmentId": "asg_RATER_B_0006",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0018_x",
+    "caseId": "scifact-v4-0018",
+    "phase": "main",
+    "order": 6
+  },
+  {
+    "assignmentId": "asg_RATER_B_0007",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0137_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0137",
+    "phase": "main",
+    "order": 7
+  },
+  {
+    "assignmentId": "asg_RATER_B_0008",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0069_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0069",
+    "phase": "main",
+    "order": 8
+  },
+  {
+    "assignmentId": "asg_RATER_B_0009",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0092_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0092",
+    "phase": "main",
+    "order": 9
+  },
+  {
+    "assignmentId": "asg_RATER_B_0010",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0044_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0044",
+    "phase": "main",
+    "order": 10
+  },
+  {
+    "assignmentId": "asg_RATER_B_0011",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0077_x",
+    "caseId": "scifact-v4-0077",
+    "phase": "main",
+    "order": 11
+  },
+  {
+    "assignmentId": "asg_RATER_B_0012",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0129_y",
+    "caseId": "scifact-v4-0129",
+    "phase": "main",
+    "order": 12
+  },
+  {
+    "assignmentId": "asg_RATER_B_0013",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0065_x",
+    "caseId": "scifact-v4-0065",
+    "phase": "main",
+    "order": 13
+  },
+  {
+    "assignmentId": "asg_RATER_B_0014",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0075_x",
+    "caseId": "scifact-v4-0075",
+    "phase": "main",
+    "order": 14
+  },
+  {
+    "assignmentId": "asg_RATER_B_0015",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0004_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0004",
+    "phase": "main",
+    "order": 15
+  },
+  {
+    "assignmentId": "asg_RATER_B_0016",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0017_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0017",
+    "phase": "main",
+    "order": 16
+  },
+  {
+    "assignmentId": "asg_RATER_B_0017",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0136_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0136",
+    "phase": "main",
+    "order": 17
+  },
+  {
+    "assignmentId": "asg_RATER_B_0018",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0120_x",
+    "caseId": "scifact-v4-0120",
+    "phase": "main",
+    "order": 18
+  },
+  {
+    "assignmentId": "asg_RATER_B_0019",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0121_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0121",
+    "phase": "main",
+    "order": 19
+  },
+  {
+    "assignmentId": "asg_RATER_B_0020",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0039_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0039",
+    "phase": "main",
+    "order": 20
+  },
+  {
+    "assignmentId": "asg_RATER_B_0021",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0087_y",
+    "caseId": "scifact-v4-0087",
+    "phase": "main",
+    "order": 21
+  },
+  {
+    "assignmentId": "asg_RATER_B_0022",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0039_y",
+    "caseId": "scifact-v4-0039",
+    "phase": "main",
+    "order": 22
+  },
+  {
+    "assignmentId": "asg_RATER_B_0023",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0074_y",
+    "caseId": "scifact-v4-0074",
+    "phase": "main",
+    "order": 23
+  },
+  {
+    "assignmentId": "asg_RATER_B_0024",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0055_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0055",
+    "phase": "main",
+    "order": 24
+  },
+  {
+    "assignmentId": "asg_RATER_B_0025",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0082_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0082",
+    "phase": "main",
+    "order": 25
+  },
+  {
+    "assignmentId": "asg_RATER_B_0026",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0079_y",
+    "caseId": "scifact-v4-0079",
+    "phase": "main",
+    "order": 26
+  },
+  {
+    "assignmentId": "asg_RATER_B_0027",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0061_x",
+    "caseId": "scifact-v4-0061",
+    "phase": "main",
+    "order": 27
+  },
+  {
+    "assignmentId": "asg_RATER_B_0028",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0141_x",
+    "caseId": "scifact-v4-0141",
+    "phase": "main",
+    "order": 28
+  },
+  {
+    "assignmentId": "asg_RATER_B_0029",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0149_x",
+    "caseId": "scifact-v4-0149",
+    "phase": "main",
+    "order": 29
+  },
+  {
+    "assignmentId": "asg_RATER_B_0030",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0019_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0019",
+    "phase": "main",
+    "order": 30
+  },
+  {
+    "assignmentId": "asg_RATER_B_0031",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0091_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0091",
+    "phase": "main",
+    "order": 31
+  },
+  {
+    "assignmentId": "asg_RATER_B_0032",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0056_y",
+    "caseId": "scifact-v4-0056",
+    "phase": "main",
+    "order": 32
+  },
+  {
+    "assignmentId": "asg_RATER_B_0033",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0061_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0061",
+    "phase": "main",
+    "order": 33
+  },
+  {
+    "assignmentId": "asg_RATER_B_0034",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0047_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0047",
+    "phase": "main",
+    "order": 34
+  },
+  {
+    "assignmentId": "asg_RATER_B_0035",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0036_y",
+    "caseId": "scifact-v4-0036",
+    "phase": "main",
+    "order": 35
+  },
+  {
+    "assignmentId": "asg_RATER_B_0036",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0068_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0068",
+    "phase": "main",
+    "order": 36
+  },
+  {
+    "assignmentId": "asg_RATER_B_0037",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0021_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0021",
+    "phase": "main",
+    "order": 37
+  },
+  {
+    "assignmentId": "asg_RATER_B_0038",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0035_x",
+    "caseId": "scifact-v4-0035",
+    "phase": "main",
+    "order": 38
+  },
+  {
+    "assignmentId": "asg_RATER_B_0039",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0112_x",
+    "caseId": "scifact-v4-0112",
+    "phase": "main",
+    "order": 39
+  },
+  {
+    "assignmentId": "asg_RATER_B_0040",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0013_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0013",
+    "phase": "main",
+    "order": 40
+  },
+  {
+    "assignmentId": "asg_RATER_B_0041",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0013_y",
+    "caseId": "scifact-v4-0013",
+    "phase": "main",
+    "order": 41
+  },
+  {
+    "assignmentId": "asg_RATER_B_0042",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0144_x",
+    "caseId": "scifact-v4-0144",
+    "phase": "main",
+    "order": 42
+  },
+  {
+    "assignmentId": "asg_RATER_B_0043",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0005_y",
+    "caseId": "scifact-v4-0005",
+    "phase": "main",
+    "order": 43
+  },
+  {
+    "assignmentId": "asg_RATER_B_0044",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0122_x",
+    "caseId": "scifact-v4-0122",
+    "phase": "main",
+    "order": 44
+  },
+  {
+    "assignmentId": "asg_RATER_B_0045",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0036_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0036",
+    "phase": "main",
+    "order": 45
+  },
+  {
+    "assignmentId": "asg_RATER_B_0046",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0119_x",
+    "caseId": "scifact-v4-0119",
+    "phase": "main",
+    "order": 46
+  },
+  {
+    "assignmentId": "asg_RATER_B_0047",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0126_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0126",
+    "phase": "main",
+    "order": 47
+  },
+  {
+    "assignmentId": "asg_RATER_B_0048",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0027_x",
+    "caseId": "scifact-v4-0027",
+    "phase": "main",
+    "order": 48
+  },
+  {
+    "assignmentId": "asg_RATER_B_0049",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0134_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0134",
+    "phase": "main",
+    "order": 49
+  },
+  {
+    "assignmentId": "asg_RATER_B_0050",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0059_x",
+    "caseId": "scifact-v4-0059",
+    "phase": "main",
+    "order": 50
+  },
+  {
+    "assignmentId": "asg_RATER_B_0051",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0068_y",
+    "caseId": "scifact-v4-0068",
+    "phase": "main",
+    "order": 51
+  },
+  {
+    "assignmentId": "asg_RATER_B_0052",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0092_y",
+    "caseId": "scifact-v4-0092",
+    "phase": "main",
+    "order": 52
+  },
+  {
+    "assignmentId": "asg_RATER_B_0053",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0094_y",
+    "caseId": "scifact-v4-0094",
+    "phase": "main",
+    "order": 53
+  },
+  {
+    "assignmentId": "asg_RATER_B_0054",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0054_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0054",
+    "phase": "main",
+    "order": 54
+  },
+  {
+    "assignmentId": "asg_RATER_B_0055",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0038_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0038",
+    "phase": "main",
+    "order": 55
+  },
+  {
+    "assignmentId": "asg_RATER_B_0056",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0010_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0010",
+    "phase": "main",
+    "order": 56
+  },
+  {
+    "assignmentId": "asg_RATER_B_0057",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0040_y",
+    "caseId": "scifact-v4-0040",
+    "phase": "main",
+    "order": 57
+  },
+  {
+    "assignmentId": "asg_RATER_B_0058",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0063_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0063",
+    "phase": "main",
+    "order": 58
+  },
+  {
+    "assignmentId": "asg_RATER_B_0059",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0052_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0052",
+    "phase": "main",
+    "order": 59
+  },
+  {
+    "assignmentId": "asg_RATER_B_0060",
+    "raterId": "RATER_B",
+    "stimulusId": "stim_scifact-v4-0135_x",
+    "caseId": "scifact-v4-0135",
+    "phase": "main",
+    "order": 60
+  },
+  {
+    "assignmentId": "asg_RATER_C_0001",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0061_y",
+    "caseId": "scifact-v4-0061",
+    "phase": "main",
+    "order": 1
+  },
+  {
+    "assignmentId": "asg_RATER_C_0002",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0149_x",
+    "caseId": "scifact-v4-0149",
+    "phase": "main",
+    "order": 2
+  },
+  {
+    "assignmentId": "asg_RATER_C_0003",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0035_x",
+    "caseId": "scifact-v4-0035",
+    "phase": "main",
+    "order": 3
+  },
+  {
+    "assignmentId": "asg_RATER_C_0004",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0036_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0036",
+    "phase": "main",
+    "order": 4
+  },
+  {
+    "assignmentId": "asg_RATER_C_0005",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0092_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0092",
+    "phase": "main",
+    "order": 5
+  },
+  {
+    "assignmentId": "asg_RATER_C_0006",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0129_x",
+    "caseId": "scifact-v4-0129",
+    "phase": "main",
+    "order": 6
+  },
+  {
+    "assignmentId": "asg_RATER_C_0007",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0027_y",
+    "caseId": "scifact-v4-0027",
+    "phase": "main",
+    "order": 7
+  },
+  {
+    "assignmentId": "asg_RATER_C_0008",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0119_y",
+    "caseId": "scifact-v4-0119",
+    "phase": "main",
+    "order": 8
+  },
+  {
+    "assignmentId": "asg_RATER_C_0009",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0013_y",
+    "caseId": "scifact-v4-0013",
+    "phase": "main",
+    "order": 9
+  },
+  {
+    "assignmentId": "asg_RATER_C_0010",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0068_y",
+    "caseId": "scifact-v4-0068",
+    "phase": "main",
+    "order": 10
+  },
+  {
+    "assignmentId": "asg_RATER_C_0011",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0063_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0063",
+    "phase": "main",
+    "order": 11
+  },
+  {
+    "assignmentId": "asg_RATER_C_0012",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0007_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0007",
+    "phase": "main",
+    "order": 12
+  },
+  {
+    "assignmentId": "asg_RATER_C_0013",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0137_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0137",
+    "phase": "main",
+    "order": 13
+  },
+  {
+    "assignmentId": "asg_RATER_C_0014",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0069_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0069",
+    "phase": "main",
+    "order": 14
+  },
+  {
+    "assignmentId": "asg_RATER_C_0015",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0004_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0004",
+    "phase": "main",
+    "order": 15
+  },
+  {
+    "assignmentId": "asg_RATER_C_0016",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0020_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0020",
+    "phase": "main",
+    "order": 16
+  },
+  {
+    "assignmentId": "asg_RATER_C_0017",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0059_y",
+    "caseId": "scifact-v4-0059",
+    "phase": "main",
+    "order": 17
+  },
+  {
+    "assignmentId": "asg_RATER_C_0018",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0048_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0048",
+    "phase": "main",
+    "order": 18
+  },
+  {
+    "assignmentId": "asg_RATER_C_0019",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0040_x",
+    "caseId": "scifact-v4-0040",
+    "phase": "main",
+    "order": 19
+  },
+  {
+    "assignmentId": "asg_RATER_C_0020",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0021_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0021",
+    "phase": "main",
+    "order": 20
+  },
+  {
+    "assignmentId": "asg_RATER_C_0021",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0120_y",
+    "caseId": "scifact-v4-0120",
+    "phase": "main",
+    "order": 21
+  },
+  {
+    "assignmentId": "asg_RATER_C_0022",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0126_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0126",
+    "phase": "main",
+    "order": 22
+  },
+  {
+    "assignmentId": "asg_RATER_C_0023",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0136_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0136",
+    "phase": "main",
+    "order": 23
+  },
+  {
+    "assignmentId": "asg_RATER_C_0024",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0005_x",
+    "caseId": "scifact-v4-0005",
+    "phase": "main",
+    "order": 24
+  },
+  {
+    "assignmentId": "asg_RATER_C_0025",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0047_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0047",
+    "phase": "main",
+    "order": 25
+  },
+  {
+    "assignmentId": "asg_RATER_C_0026",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0038_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0038",
+    "phase": "main",
+    "order": 26
+  },
+  {
+    "assignmentId": "asg_RATER_C_0027",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0121_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0121",
+    "phase": "main",
+    "order": 27
+  },
+  {
+    "assignmentId": "asg_RATER_C_0028",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0075_y",
+    "caseId": "scifact-v4-0075",
+    "phase": "main",
+    "order": 28
+  },
+  {
+    "assignmentId": "asg_RATER_C_0029",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0092_x",
+    "caseId": "scifact-v4-0092",
+    "phase": "main",
+    "order": 29
+  },
+  {
+    "assignmentId": "asg_RATER_C_0030",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0052_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0052",
+    "phase": "main",
+    "order": 30
+  },
+  {
+    "assignmentId": "asg_RATER_C_0031",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0055_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0055",
+    "phase": "main",
+    "order": 31
+  },
+  {
+    "assignmentId": "asg_RATER_C_0032",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0135_x",
+    "caseId": "scifact-v4-0135",
+    "phase": "main",
+    "order": 32
+  },
+  {
+    "assignmentId": "asg_RATER_C_0033",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0018_x",
+    "caseId": "scifact-v4-0018",
+    "phase": "main",
+    "order": 33
+  },
+  {
+    "assignmentId": "asg_RATER_C_0034",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0019_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0019",
+    "phase": "main",
+    "order": 34
+  },
+  {
+    "assignmentId": "asg_RATER_C_0035",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0010_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0010",
+    "phase": "main",
+    "order": 35
+  },
+  {
+    "assignmentId": "asg_RATER_C_0036",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0074_x",
+    "caseId": "scifact-v4-0074",
+    "phase": "main",
+    "order": 36
+  },
+  {
+    "assignmentId": "asg_RATER_C_0037",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0029_y",
+    "caseId": "scifact-v4-0029",
+    "phase": "main",
+    "order": 37
+  },
+  {
+    "assignmentId": "asg_RATER_C_0038",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0077_y",
+    "caseId": "scifact-v4-0077",
+    "phase": "main",
+    "order": 38
+  },
+  {
+    "assignmentId": "asg_RATER_C_0039",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0087_x",
+    "caseId": "scifact-v4-0087",
+    "phase": "main",
+    "order": 39
+  },
+  {
+    "assignmentId": "asg_RATER_C_0040",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0084_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0084",
+    "phase": "main",
+    "order": 40
+  },
+  {
+    "assignmentId": "asg_RATER_C_0041",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0065_y",
+    "caseId": "scifact-v4-0065",
+    "phase": "main",
+    "order": 41
+  },
+  {
+    "assignmentId": "asg_RATER_C_0042",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0112_x",
+    "caseId": "scifact-v4-0112",
+    "phase": "main",
+    "order": 42
+  },
+  {
+    "assignmentId": "asg_RATER_C_0043",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0079_x",
+    "caseId": "scifact-v4-0079",
+    "phase": "main",
+    "order": 43
+  },
+  {
+    "assignmentId": "asg_RATER_C_0044",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0091_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0091",
+    "phase": "main",
+    "order": 44
+  },
+  {
+    "assignmentId": "asg_RATER_C_0045",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0061_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0061",
+    "phase": "main",
+    "order": 45
+  },
+  {
+    "assignmentId": "asg_RATER_C_0046",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0094_x",
+    "caseId": "scifact-v4-0094",
+    "phase": "main",
+    "order": 46
+  },
+  {
+    "assignmentId": "asg_RATER_C_0047",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0013_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0013",
+    "phase": "main",
+    "order": 47
+  },
+  {
+    "assignmentId": "asg_RATER_C_0048",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0122_x",
+    "caseId": "scifact-v4-0122",
+    "phase": "main",
+    "order": 48
+  },
+  {
+    "assignmentId": "asg_RATER_C_0049",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0144_y",
+    "caseId": "scifact-v4-0144",
+    "phase": "main",
+    "order": 49
+  },
+  {
+    "assignmentId": "asg_RATER_C_0050",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0054_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0054",
+    "phase": "main",
+    "order": 50
+  },
+  {
+    "assignmentId": "asg_RATER_C_0051",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0017_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0017",
+    "phase": "main",
+    "order": 51
+  },
+  {
+    "assignmentId": "asg_RATER_C_0052",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0039_x",
+    "caseId": "scifact-v4-0039",
+    "phase": "main",
+    "order": 52
+  },
+  {
+    "assignmentId": "asg_RATER_C_0053",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0134_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0134",
+    "phase": "main",
+    "order": 53
+  },
+  {
+    "assignmentId": "asg_RATER_C_0054",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0044_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0044",
+    "phase": "main",
+    "order": 54
+  },
+  {
+    "assignmentId": "asg_RATER_C_0055",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0036_y",
+    "caseId": "scifact-v4-0036",
+    "phase": "main",
+    "order": 55
+  },
+  {
+    "assignmentId": "asg_RATER_C_0056",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0082_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0082",
+    "phase": "main",
+    "order": 56
+  },
+  {
+    "assignmentId": "asg_RATER_C_0057",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0056_x",
+    "caseId": "scifact-v4-0056",
+    "phase": "main",
+    "order": 57
+  },
+  {
+    "assignmentId": "asg_RATER_C_0058",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0068_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0068",
+    "phase": "main",
+    "order": 58
+  },
+  {
+    "assignmentId": "asg_RATER_C_0059",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_scifact-v4-0141_x",
+    "caseId": "scifact-v4-0141",
+    "phase": "main",
+    "order": 59
+  },
+  {
+    "assignmentId": "asg_RATER_C_0060",
+    "raterId": "RATER_C",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0039_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0039",
+    "phase": "main",
+    "order": 60
+  },
+  {
+    "assignmentId": "asg_RATER_D_0001",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0126_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0126",
+    "phase": "main",
+    "order": 1
+  },
+  {
+    "assignmentId": "asg_RATER_D_0002",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0091_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0091",
+    "phase": "main",
+    "order": 2
+  },
+  {
+    "assignmentId": "asg_RATER_D_0003",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0134_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0134",
+    "phase": "main",
+    "order": 3
+  },
+  {
+    "assignmentId": "asg_RATER_D_0004",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0035_y",
+    "caseId": "scifact-v4-0035",
+    "phase": "main",
+    "order": 4
+  },
+  {
+    "assignmentId": "asg_RATER_D_0005",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0122_y",
+    "caseId": "scifact-v4-0122",
+    "phase": "main",
+    "order": 5
+  },
+  {
+    "assignmentId": "asg_RATER_D_0006",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0121_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0121",
+    "phase": "main",
+    "order": 6
+  },
+  {
+    "assignmentId": "asg_RATER_D_0007",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0135_x",
+    "caseId": "scifact-v4-0135",
+    "phase": "main",
+    "order": 7
+  },
+  {
+    "assignmentId": "asg_RATER_D_0008",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0004_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0004",
+    "phase": "main",
+    "order": 8
+  },
+  {
+    "assignmentId": "asg_RATER_D_0009",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0021_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0021",
+    "phase": "main",
+    "order": 9
+  },
+  {
+    "assignmentId": "asg_RATER_D_0010",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0119_x",
+    "caseId": "scifact-v4-0119",
+    "phase": "main",
+    "order": 10
+  },
+  {
+    "assignmentId": "asg_RATER_D_0011",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0068_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0068",
+    "phase": "main",
+    "order": 11
+  },
+  {
+    "assignmentId": "asg_RATER_D_0012",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0020_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0020",
+    "phase": "main",
+    "order": 12
+  },
+  {
+    "assignmentId": "asg_RATER_D_0013",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0074_y",
+    "caseId": "scifact-v4-0074",
+    "phase": "main",
+    "order": 13
+  },
+  {
+    "assignmentId": "asg_RATER_D_0014",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0079_y",
+    "caseId": "scifact-v4-0079",
+    "phase": "main",
+    "order": 14
+  },
+  {
+    "assignmentId": "asg_RATER_D_0015",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0040_x",
+    "caseId": "scifact-v4-0040",
+    "phase": "main",
+    "order": 15
+  },
+  {
+    "assignmentId": "asg_RATER_D_0016",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0038_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0038",
+    "phase": "main",
+    "order": 16
+  },
+  {
+    "assignmentId": "asg_RATER_D_0017",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0077_y",
+    "caseId": "scifact-v4-0077",
+    "phase": "main",
+    "order": 17
+  },
+  {
+    "assignmentId": "asg_RATER_D_0018",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0149_x",
+    "caseId": "scifact-v4-0149",
+    "phase": "main",
+    "order": 18
+  },
+  {
+    "assignmentId": "asg_RATER_D_0019",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0129_x",
+    "caseId": "scifact-v4-0129",
+    "phase": "main",
+    "order": 19
+  },
+  {
+    "assignmentId": "asg_RATER_D_0020",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0144_x",
+    "caseId": "scifact-v4-0144",
+    "phase": "main",
+    "order": 20
+  },
+  {
+    "assignmentId": "asg_RATER_D_0021",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0052_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0052",
+    "phase": "main",
+    "order": 21
+  },
+  {
+    "assignmentId": "asg_RATER_D_0022",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0036_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0036",
+    "phase": "main",
+    "order": 22
+  },
+  {
+    "assignmentId": "asg_RATER_D_0023",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0013_y",
+    "caseId": "scifact-v4-0013",
+    "phase": "main",
+    "order": 23
+  },
+  {
+    "assignmentId": "asg_RATER_D_0024",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0092_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0092",
+    "phase": "main",
+    "order": 24
+  },
+  {
+    "assignmentId": "asg_RATER_D_0025",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0027_y",
+    "caseId": "scifact-v4-0027",
+    "phase": "main",
+    "order": 25
+  },
+  {
+    "assignmentId": "asg_RATER_D_0026",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0137_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0137",
+    "phase": "main",
+    "order": 26
+  },
+  {
+    "assignmentId": "asg_RATER_D_0027",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0084_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0084",
+    "phase": "main",
+    "order": 27
+  },
+  {
+    "assignmentId": "asg_RATER_D_0028",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0036_y",
+    "caseId": "scifact-v4-0036",
+    "phase": "main",
+    "order": 28
+  },
+  {
+    "assignmentId": "asg_RATER_D_0029",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0068_y",
+    "caseId": "scifact-v4-0068",
+    "phase": "main",
+    "order": 29
+  },
+  {
+    "assignmentId": "asg_RATER_D_0030",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0087_x",
+    "caseId": "scifact-v4-0087",
+    "phase": "main",
+    "order": 30
+  },
+  {
+    "assignmentId": "asg_RATER_D_0031",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0141_y",
+    "caseId": "scifact-v4-0141",
+    "phase": "main",
+    "order": 31
+  },
+  {
+    "assignmentId": "asg_RATER_D_0032",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0018_y",
+    "caseId": "scifact-v4-0018",
+    "phase": "main",
+    "order": 32
+  },
+  {
+    "assignmentId": "asg_RATER_D_0033",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0029_y",
+    "caseId": "scifact-v4-0029",
+    "phase": "main",
+    "order": 33
+  },
+  {
+    "assignmentId": "asg_RATER_D_0034",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0061_x",
+    "caseId": "scifact-v4-0061",
+    "phase": "main",
+    "order": 34
+  },
+  {
+    "assignmentId": "asg_RATER_D_0035",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0056_x",
+    "caseId": "scifact-v4-0056",
+    "phase": "main",
+    "order": 35
+  },
+  {
+    "assignmentId": "asg_RATER_D_0036",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0017_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0017",
+    "phase": "main",
+    "order": 36
+  },
+  {
+    "assignmentId": "asg_RATER_D_0037",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0082_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0082",
+    "phase": "main",
+    "order": 37
+  },
+  {
+    "assignmentId": "asg_RATER_D_0038",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0007_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0007",
+    "phase": "main",
+    "order": 38
+  },
+  {
+    "assignmentId": "asg_RATER_D_0039",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0039_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0039",
+    "phase": "main",
+    "order": 39
+  },
+  {
+    "assignmentId": "asg_RATER_D_0040",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0094_x",
+    "caseId": "scifact-v4-0094",
+    "phase": "main",
+    "order": 40
+  },
+  {
+    "assignmentId": "asg_RATER_D_0041",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0013_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0013",
+    "phase": "main",
+    "order": 41
+  },
+  {
+    "assignmentId": "asg_RATER_D_0042",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0136_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0136",
+    "phase": "main",
+    "order": 42
+  },
+  {
+    "assignmentId": "asg_RATER_D_0043",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0048_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0048",
+    "phase": "main",
+    "order": 43
+  },
+  {
+    "assignmentId": "asg_RATER_D_0044",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0005_x",
+    "caseId": "scifact-v4-0005",
+    "phase": "main",
+    "order": 44
+  },
+  {
+    "assignmentId": "asg_RATER_D_0045",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0047_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0047",
+    "phase": "main",
+    "order": 45
+  },
+  {
+    "assignmentId": "asg_RATER_D_0046",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0065_y",
+    "caseId": "scifact-v4-0065",
+    "phase": "main",
+    "order": 46
+  },
+  {
+    "assignmentId": "asg_RATER_D_0047",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0044_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0044",
+    "phase": "main",
+    "order": 47
+  },
+  {
+    "assignmentId": "asg_RATER_D_0048",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0120_y",
+    "caseId": "scifact-v4-0120",
+    "phase": "main",
+    "order": 48
+  },
+  {
+    "assignmentId": "asg_RATER_D_0049",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0010_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0010",
+    "phase": "main",
+    "order": 49
+  },
+  {
+    "assignmentId": "asg_RATER_D_0050",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0061_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0061",
+    "phase": "main",
+    "order": 50
+  },
+  {
+    "assignmentId": "asg_RATER_D_0051",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0059_y",
+    "caseId": "scifact-v4-0059",
+    "phase": "main",
+    "order": 51
+  },
+  {
+    "assignmentId": "asg_RATER_D_0052",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0092_y",
+    "caseId": "scifact-v4-0092",
+    "phase": "main",
+    "order": 52
+  },
+  {
+    "assignmentId": "asg_RATER_D_0053",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0039_x",
+    "caseId": "scifact-v4-0039",
+    "phase": "main",
+    "order": 53
+  },
+  {
+    "assignmentId": "asg_RATER_D_0054",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0063_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0063",
+    "phase": "main",
+    "order": 54
+  },
+  {
+    "assignmentId": "asg_RATER_D_0055",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0075_x",
+    "caseId": "scifact-v4-0075",
+    "phase": "main",
+    "order": 55
+  },
+  {
+    "assignmentId": "asg_RATER_D_0056",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0055_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0055",
+    "phase": "main",
+    "order": 56
+  },
+  {
+    "assignmentId": "asg_RATER_D_0057",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0054_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0054",
+    "phase": "main",
+    "order": 57
+  },
+  {
+    "assignmentId": "asg_RATER_D_0058",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_scifact-v4-0112_y",
+    "caseId": "scifact-v4-0112",
+    "phase": "main",
+    "order": 58
+  },
+  {
+    "assignmentId": "asg_RATER_D_0059",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0019_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0019",
+    "phase": "main",
+    "order": 59
+  },
+  {
+    "assignmentId": "asg_RATER_D_0060",
+    "raterId": "RATER_D",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0069_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0069",
+    "phase": "main",
+    "order": 60
+  },
+  {
+    "assignmentId": "asg_RATER_E_0001",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0075_x",
+    "caseId": "scifact-v4-0075",
+    "phase": "main",
+    "order": 1
+  },
+  {
+    "assignmentId": "asg_RATER_E_0002",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0021_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0021",
+    "phase": "main",
+    "order": 2
+  },
+  {
+    "assignmentId": "asg_RATER_E_0003",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0054_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0054",
+    "phase": "main",
+    "order": 3
+  },
+  {
+    "assignmentId": "asg_RATER_E_0004",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0137_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0137",
+    "phase": "main",
+    "order": 4
+  },
+  {
+    "assignmentId": "asg_RATER_E_0005",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0126_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0126",
+    "phase": "main",
+    "order": 5
+  },
+  {
+    "assignmentId": "asg_RATER_E_0006",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0079_y",
+    "caseId": "scifact-v4-0079",
+    "phase": "main",
+    "order": 6
+  },
+  {
+    "assignmentId": "asg_RATER_E_0007",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0092_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0092",
+    "phase": "main",
+    "order": 7
+  },
+  {
+    "assignmentId": "asg_RATER_E_0008",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0144_x",
+    "caseId": "scifact-v4-0144",
+    "phase": "main",
+    "order": 8
+  },
+  {
+    "assignmentId": "asg_RATER_E_0009",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0092_x",
+    "caseId": "scifact-v4-0092",
+    "phase": "main",
+    "order": 9
+  },
+  {
+    "assignmentId": "asg_RATER_E_0010",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0094_x",
+    "caseId": "scifact-v4-0094",
+    "phase": "main",
+    "order": 10
+  },
+  {
+    "assignmentId": "asg_RATER_E_0011",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0059_x",
+    "caseId": "scifact-v4-0059",
+    "phase": "main",
+    "order": 11
+  },
+  {
+    "assignmentId": "asg_RATER_E_0012",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0013_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0013",
+    "phase": "main",
+    "order": 12
+  },
+  {
+    "assignmentId": "asg_RATER_E_0013",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0149_x",
+    "caseId": "scifact-v4-0149",
+    "phase": "main",
+    "order": 13
+  },
+  {
+    "assignmentId": "asg_RATER_E_0014",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0061_x",
+    "caseId": "scifact-v4-0061",
+    "phase": "main",
+    "order": 14
+  },
+  {
+    "assignmentId": "asg_RATER_E_0015",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0027_x",
+    "caseId": "scifact-v4-0027",
+    "phase": "main",
+    "order": 15
+  },
+  {
+    "assignmentId": "asg_RATER_E_0016",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0082_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0082",
+    "phase": "main",
+    "order": 16
+  },
+  {
+    "assignmentId": "asg_RATER_E_0017",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0135_y",
+    "caseId": "scifact-v4-0135",
+    "phase": "main",
+    "order": 17
+  },
+  {
+    "assignmentId": "asg_RATER_E_0018",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0129_x",
+    "caseId": "scifact-v4-0129",
+    "phase": "main",
+    "order": 18
+  },
+  {
+    "assignmentId": "asg_RATER_E_0019",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0068_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0068",
+    "phase": "main",
+    "order": 19
+  },
+  {
+    "assignmentId": "asg_RATER_E_0020",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0029_y",
+    "caseId": "scifact-v4-0029",
+    "phase": "main",
+    "order": 20
+  },
+  {
+    "assignmentId": "asg_RATER_E_0021",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0077_x",
+    "caseId": "scifact-v4-0077",
+    "phase": "main",
+    "order": 21
+  },
+  {
+    "assignmentId": "asg_RATER_E_0022",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0084_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0084",
+    "phase": "main",
+    "order": 22
+  },
+  {
+    "assignmentId": "asg_RATER_E_0023",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0036_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0036",
+    "phase": "main",
+    "order": 23
+  },
+  {
+    "assignmentId": "asg_RATER_E_0024",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0017_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0017",
+    "phase": "main",
+    "order": 24
+  },
+  {
+    "assignmentId": "asg_RATER_E_0025",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0068_x",
+    "caseId": "scifact-v4-0068",
+    "phase": "main",
+    "order": 25
+  },
+  {
+    "assignmentId": "asg_RATER_E_0026",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0120_x",
+    "caseId": "scifact-v4-0120",
+    "phase": "main",
+    "order": 26
+  },
+  {
+    "assignmentId": "asg_RATER_E_0027",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0134_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0134",
+    "phase": "main",
+    "order": 27
+  },
+  {
+    "assignmentId": "asg_RATER_E_0028",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0044_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0044",
+    "phase": "main",
+    "order": 28
+  },
+  {
+    "assignmentId": "asg_RATER_E_0029",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0005_y",
+    "caseId": "scifact-v4-0005",
+    "phase": "main",
+    "order": 29
+  },
+  {
+    "assignmentId": "asg_RATER_E_0030",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0119_y",
+    "caseId": "scifact-v4-0119",
+    "phase": "main",
+    "order": 30
+  },
+  {
+    "assignmentId": "asg_RATER_E_0031",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0052_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0052",
+    "phase": "main",
+    "order": 31
+  },
+  {
+    "assignmentId": "asg_RATER_E_0032",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0061_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0061",
+    "phase": "main",
+    "order": 32
+  },
+  {
+    "assignmentId": "asg_RATER_E_0033",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0136_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0136",
+    "phase": "main",
+    "order": 33
+  },
+  {
+    "assignmentId": "asg_RATER_E_0034",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0004_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0004",
+    "phase": "main",
+    "order": 34
+  },
+  {
+    "assignmentId": "asg_RATER_E_0035",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0013_x",
+    "caseId": "scifact-v4-0013",
+    "phase": "main",
+    "order": 35
+  },
+  {
+    "assignmentId": "asg_RATER_E_0036",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0010_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0010",
+    "phase": "main",
+    "order": 36
+  },
+  {
+    "assignmentId": "asg_RATER_E_0037",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0007_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0007",
+    "phase": "main",
+    "order": 37
+  },
+  {
+    "assignmentId": "asg_RATER_E_0038",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0039_y",
+    "caseId": "scifact-v4-0039",
+    "phase": "main",
+    "order": 38
+  },
+  {
+    "assignmentId": "asg_RATER_E_0039",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0112_x",
+    "caseId": "scifact-v4-0112",
+    "phase": "main",
+    "order": 39
+  },
+  {
+    "assignmentId": "asg_RATER_E_0040",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0122_y",
+    "caseId": "scifact-v4-0122",
+    "phase": "main",
+    "order": 40
+  },
+  {
+    "assignmentId": "asg_RATER_E_0041",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0074_y",
+    "caseId": "scifact-v4-0074",
+    "phase": "main",
+    "order": 41
+  },
+  {
+    "assignmentId": "asg_RATER_E_0042",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0039_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0039",
+    "phase": "main",
+    "order": 42
+  },
+  {
+    "assignmentId": "asg_RATER_E_0043",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0040_y",
+    "caseId": "scifact-v4-0040",
+    "phase": "main",
+    "order": 43
+  },
+  {
+    "assignmentId": "asg_RATER_E_0044",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0019_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0019",
+    "phase": "main",
+    "order": 44
+  },
+  {
+    "assignmentId": "asg_RATER_E_0045",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0038_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0038",
+    "phase": "main",
+    "order": 45
+  },
+  {
+    "assignmentId": "asg_RATER_E_0046",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0035_y",
+    "caseId": "scifact-v4-0035",
+    "phase": "main",
+    "order": 46
+  },
+  {
+    "assignmentId": "asg_RATER_E_0047",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0018_y",
+    "caseId": "scifact-v4-0018",
+    "phase": "main",
+    "order": 47
+  },
+  {
+    "assignmentId": "asg_RATER_E_0048",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0020_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0020",
+    "phase": "main",
+    "order": 48
+  },
+  {
+    "assignmentId": "asg_RATER_E_0049",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0087_x",
+    "caseId": "scifact-v4-0087",
+    "phase": "main",
+    "order": 49
+  },
+  {
+    "assignmentId": "asg_RATER_E_0050",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0055_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0055",
+    "phase": "main",
+    "order": 50
+  },
+  {
+    "assignmentId": "asg_RATER_E_0051",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0065_x",
+    "caseId": "scifact-v4-0065",
+    "phase": "main",
+    "order": 51
+  },
+  {
+    "assignmentId": "asg_RATER_E_0052",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0063_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0063",
+    "phase": "main",
+    "order": 52
+  },
+  {
+    "assignmentId": "asg_RATER_E_0053",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0036_x",
+    "caseId": "scifact-v4-0036",
+    "phase": "main",
+    "order": 53
+  },
+  {
+    "assignmentId": "asg_RATER_E_0054",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0069_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0069",
+    "phase": "main",
+    "order": 54
+  },
+  {
+    "assignmentId": "asg_RATER_E_0055",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0141_y",
+    "caseId": "scifact-v4-0141",
+    "phase": "main",
+    "order": 55
+  },
+  {
+    "assignmentId": "asg_RATER_E_0056",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0121_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0121",
+    "phase": "main",
+    "order": 56
+  },
+  {
+    "assignmentId": "asg_RATER_E_0057",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0091_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0091",
+    "phase": "main",
+    "order": 57
+  },
+  {
+    "assignmentId": "asg_RATER_E_0058",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0047_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0047",
+    "phase": "main",
+    "order": 58
+  },
+  {
+    "assignmentId": "asg_RATER_E_0059",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_scifact-v4-0056_y",
+    "caseId": "scifact-v4-0056",
+    "phase": "main",
+    "order": 59
+  },
+  {
+    "assignmentId": "asg_RATER_E_0060",
+    "raterId": "RATER_E",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0048_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0048",
+    "phase": "main",
+    "order": 60
+  },
+  {
+    "assignmentId": "asg_RATER_F_0001",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0013_x",
+    "caseId": "scifact-v4-0013",
+    "phase": "main",
+    "order": 1
+  },
+  {
+    "assignmentId": "asg_RATER_F_0002",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0056_x",
+    "caseId": "scifact-v4-0056",
+    "phase": "main",
+    "order": 2
+  },
+  {
+    "assignmentId": "asg_RATER_F_0003",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0005_y",
+    "caseId": "scifact-v4-0005",
+    "phase": "main",
+    "order": 3
+  },
+  {
+    "assignmentId": "asg_RATER_F_0004",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0039_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0039",
+    "phase": "main",
+    "order": 4
+  },
+  {
+    "assignmentId": "asg_RATER_F_0005",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0082_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0082",
+    "phase": "main",
+    "order": 5
+  },
+  {
+    "assignmentId": "asg_RATER_F_0006",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0069_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0069",
+    "phase": "main",
+    "order": 6
+  },
+  {
+    "assignmentId": "asg_RATER_F_0007",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0054_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0054",
+    "phase": "main",
+    "order": 7
+  },
+  {
+    "assignmentId": "asg_RATER_F_0008",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0038_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0038",
+    "phase": "main",
+    "order": 8
+  },
+  {
+    "assignmentId": "asg_RATER_F_0009",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0144_x",
+    "caseId": "scifact-v4-0144",
+    "phase": "main",
+    "order": 9
+  },
+  {
+    "assignmentId": "asg_RATER_F_0010",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0063_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0063",
+    "phase": "main",
+    "order": 10
+  },
+  {
+    "assignmentId": "asg_RATER_F_0011",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0068_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0068",
+    "phase": "main",
+    "order": 11
+  },
+  {
+    "assignmentId": "asg_RATER_F_0012",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0019_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0019",
+    "phase": "main",
+    "order": 12
+  },
+  {
+    "assignmentId": "asg_RATER_F_0013",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0149_y",
+    "caseId": "scifact-v4-0149",
+    "phase": "main",
+    "order": 13
+  },
+  {
+    "assignmentId": "asg_RATER_F_0014",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0036_x",
+    "caseId": "scifact-v4-0036",
+    "phase": "main",
+    "order": 14
+  },
+  {
+    "assignmentId": "asg_RATER_F_0015",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0121_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0121",
+    "phase": "main",
+    "order": 15
+  },
+  {
+    "assignmentId": "asg_RATER_F_0016",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0059_x",
+    "caseId": "scifact-v4-0059",
+    "phase": "main",
+    "order": 16
+  },
+  {
+    "assignmentId": "asg_RATER_F_0017",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0136_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0136",
+    "phase": "main",
+    "order": 17
+  },
+  {
+    "assignmentId": "asg_RATER_F_0018",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0061_y",
+    "caseId": "scifact-v4-0061",
+    "phase": "main",
+    "order": 18
+  },
+  {
+    "assignmentId": "asg_RATER_F_0019",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0036_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0036",
+    "phase": "main",
+    "order": 19
+  },
+  {
+    "assignmentId": "asg_RATER_F_0020",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0007_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0007",
+    "phase": "main",
+    "order": 20
+  },
+  {
+    "assignmentId": "asg_RATER_F_0021",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0126_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0126",
+    "phase": "main",
+    "order": 21
+  },
+  {
+    "assignmentId": "asg_RATER_F_0022",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0061_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0061",
+    "phase": "main",
+    "order": 22
+  },
+  {
+    "assignmentId": "asg_RATER_F_0023",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0029_x",
+    "caseId": "scifact-v4-0029",
+    "phase": "main",
+    "order": 23
+  },
+  {
+    "assignmentId": "asg_RATER_F_0024",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0094_y",
+    "caseId": "scifact-v4-0094",
+    "phase": "main",
+    "order": 24
+  },
+  {
+    "assignmentId": "asg_RATER_F_0025",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0047_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0047",
+    "phase": "main",
+    "order": 25
+  },
+  {
+    "assignmentId": "asg_RATER_F_0026",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0020_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0020",
+    "phase": "main",
+    "order": 26
+  },
+  {
+    "assignmentId": "asg_RATER_F_0027",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0075_y",
+    "caseId": "scifact-v4-0075",
+    "phase": "main",
+    "order": 27
+  },
+  {
+    "assignmentId": "asg_RATER_F_0028",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0052_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0052",
+    "phase": "main",
+    "order": 28
+  },
+  {
+    "assignmentId": "asg_RATER_F_0029",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0134_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0134",
+    "phase": "main",
+    "order": 29
+  },
+  {
+    "assignmentId": "asg_RATER_F_0030",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0021_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0021",
+    "phase": "main",
+    "order": 30
+  },
+  {
+    "assignmentId": "asg_RATER_F_0031",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0129_x",
+    "caseId": "scifact-v4-0129",
+    "phase": "main",
+    "order": 31
+  },
+  {
+    "assignmentId": "asg_RATER_F_0032",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0084_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0084",
+    "phase": "main",
+    "order": 32
+  },
+  {
+    "assignmentId": "asg_RATER_F_0033",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0087_y",
+    "caseId": "scifact-v4-0087",
+    "phase": "main",
+    "order": 33
+  },
+  {
+    "assignmentId": "asg_RATER_F_0034",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0119_x",
+    "caseId": "scifact-v4-0119",
+    "phase": "main",
+    "order": 34
+  },
+  {
+    "assignmentId": "asg_RATER_F_0035",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0010_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0010",
+    "phase": "main",
+    "order": 35
+  },
+  {
+    "assignmentId": "asg_RATER_F_0036",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0065_x",
+    "caseId": "scifact-v4-0065",
+    "phase": "main",
+    "order": 36
+  },
+  {
+    "assignmentId": "asg_RATER_F_0037",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0068_y",
+    "caseId": "scifact-v4-0068",
+    "phase": "main",
+    "order": 37
+  },
+  {
+    "assignmentId": "asg_RATER_F_0038",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0017_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0017",
+    "phase": "main",
+    "order": 38
+  },
+  {
+    "assignmentId": "asg_RATER_F_0039",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0004_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0004",
+    "phase": "main",
+    "order": 39
+  },
+  {
+    "assignmentId": "asg_RATER_F_0040",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0055_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0055",
+    "phase": "main",
+    "order": 40
+  },
+  {
+    "assignmentId": "asg_RATER_F_0041",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0092_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0092",
+    "phase": "main",
+    "order": 41
+  },
+  {
+    "assignmentId": "asg_RATER_F_0042",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0092_y",
+    "caseId": "scifact-v4-0092",
+    "phase": "main",
+    "order": 42
+  },
+  {
+    "assignmentId": "asg_RATER_F_0043",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0048_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0048",
+    "phase": "main",
+    "order": 43
+  },
+  {
+    "assignmentId": "asg_RATER_F_0044",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0040_y",
+    "caseId": "scifact-v4-0040",
+    "phase": "main",
+    "order": 44
+  },
+  {
+    "assignmentId": "asg_RATER_F_0045",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0137_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0137",
+    "phase": "main",
+    "order": 45
+  },
+  {
+    "assignmentId": "asg_RATER_F_0046",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0120_y",
+    "caseId": "scifact-v4-0120",
+    "phase": "main",
+    "order": 46
+  },
+  {
+    "assignmentId": "asg_RATER_F_0047",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0141_x",
+    "caseId": "scifact-v4-0141",
+    "phase": "main",
+    "order": 47
+  },
+  {
+    "assignmentId": "asg_RATER_F_0048",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0112_y",
+    "caseId": "scifact-v4-0112",
+    "phase": "main",
+    "order": 48
+  },
+  {
+    "assignmentId": "asg_RATER_F_0049",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0044_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0044",
+    "phase": "main",
+    "order": 49
+  },
+  {
+    "assignmentId": "asg_RATER_F_0050",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0091_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0091",
+    "phase": "main",
+    "order": 50
+  },
+  {
+    "assignmentId": "asg_RATER_F_0051",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0018_y",
+    "caseId": "scifact-v4-0018",
+    "phase": "main",
+    "order": 51
+  },
+  {
+    "assignmentId": "asg_RATER_F_0052",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0013_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0013",
+    "phase": "main",
+    "order": 52
+  },
+  {
+    "assignmentId": "asg_RATER_F_0053",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0135_y",
+    "caseId": "scifact-v4-0135",
+    "phase": "main",
+    "order": 53
+  },
+  {
+    "assignmentId": "asg_RATER_F_0054",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0079_x",
+    "caseId": "scifact-v4-0079",
+    "phase": "main",
+    "order": 54
+  },
+  {
+    "assignmentId": "asg_RATER_F_0055",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0074_y",
+    "caseId": "scifact-v4-0074",
+    "phase": "main",
+    "order": 55
+  },
+  {
+    "assignmentId": "asg_RATER_F_0056",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0039_x",
+    "caseId": "scifact-v4-0039",
+    "phase": "main",
+    "order": 56
+  },
+  {
+    "assignmentId": "asg_RATER_F_0057",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0027_x",
+    "caseId": "scifact-v4-0027",
+    "phase": "main",
+    "order": 57
+  },
+  {
+    "assignmentId": "asg_RATER_F_0058",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0077_y",
+    "caseId": "scifact-v4-0077",
+    "phase": "main",
+    "order": 58
+  },
+  {
+    "assignmentId": "asg_RATER_F_0059",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0035_x",
+    "caseId": "scifact-v4-0035",
+    "phase": "main",
+    "order": 59
+  },
+  {
+    "assignmentId": "asg_RATER_F_0060",
+    "raterId": "RATER_F",
+    "stimulusId": "stim_scifact-v4-0122_y",
+    "caseId": "scifact-v4-0122",
+    "phase": "main",
+    "order": 60
+  },
+  {
+    "assignmentId": "asg_RATER_G_0001",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0027_y",
+    "caseId": "scifact-v4-0027",
+    "phase": "main",
+    "order": 1
+  },
+  {
+    "assignmentId": "asg_RATER_G_0002",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0074_x",
+    "caseId": "scifact-v4-0074",
+    "phase": "main",
+    "order": 2
+  },
+  {
+    "assignmentId": "asg_RATER_G_0003",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0021_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0021",
+    "phase": "main",
+    "order": 3
+  },
+  {
+    "assignmentId": "asg_RATER_G_0004",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0075_y",
+    "caseId": "scifact-v4-0075",
+    "phase": "main",
+    "order": 4
+  },
+  {
+    "assignmentId": "asg_RATER_G_0005",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0069_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0069",
+    "phase": "main",
+    "order": 5
+  },
+  {
+    "assignmentId": "asg_RATER_G_0006",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0039_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0039",
+    "phase": "main",
+    "order": 6
+  },
+  {
+    "assignmentId": "asg_RATER_G_0007",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0087_x",
+    "caseId": "scifact-v4-0087",
+    "phase": "main",
+    "order": 7
+  },
+  {
+    "assignmentId": "asg_RATER_G_0008",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0061_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0061",
+    "phase": "main",
+    "order": 8
+  },
+  {
+    "assignmentId": "asg_RATER_G_0009",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0141_y",
+    "caseId": "scifact-v4-0141",
+    "phase": "main",
+    "order": 9
+  },
+  {
+    "assignmentId": "asg_RATER_G_0010",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0084_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0084",
+    "phase": "main",
+    "order": 10
+  },
+  {
+    "assignmentId": "asg_RATER_G_0011",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0055_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0055",
+    "phase": "main",
+    "order": 11
+  },
+  {
+    "assignmentId": "asg_RATER_G_0012",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0020_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0020",
+    "phase": "main",
+    "order": 12
+  },
+  {
+    "assignmentId": "asg_RATER_G_0013",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0044_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0044",
+    "phase": "main",
+    "order": 13
+  },
+  {
+    "assignmentId": "asg_RATER_G_0014",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0122_x",
+    "caseId": "scifact-v4-0122",
+    "phase": "main",
+    "order": 14
+  },
+  {
+    "assignmentId": "asg_RATER_G_0015",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0077_x",
+    "caseId": "scifact-v4-0077",
+    "phase": "main",
+    "order": 15
+  },
+  {
+    "assignmentId": "asg_RATER_G_0016",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0112_y",
+    "caseId": "scifact-v4-0112",
+    "phase": "main",
+    "order": 16
+  },
+  {
+    "assignmentId": "asg_RATER_G_0017",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0126_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0126",
+    "phase": "main",
+    "order": 17
+  },
+  {
+    "assignmentId": "asg_RATER_G_0018",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0068_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0068",
+    "phase": "main",
+    "order": 18
+  },
+  {
+    "assignmentId": "asg_RATER_G_0019",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0004_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0004",
+    "phase": "main",
+    "order": 19
+  },
+  {
+    "assignmentId": "asg_RATER_G_0020",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0061_y",
+    "caseId": "scifact-v4-0061",
+    "phase": "main",
+    "order": 20
+  },
+  {
+    "assignmentId": "asg_RATER_G_0021",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0136_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0136",
+    "phase": "main",
+    "order": 21
+  },
+  {
+    "assignmentId": "asg_RATER_G_0022",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0092_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0092",
+    "phase": "main",
+    "order": 22
+  },
+  {
+    "assignmentId": "asg_RATER_G_0023",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0010_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0010",
+    "phase": "main",
+    "order": 23
+  },
+  {
+    "assignmentId": "asg_RATER_G_0024",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0065_x",
+    "caseId": "scifact-v4-0065",
+    "phase": "main",
+    "order": 24
+  },
+  {
+    "assignmentId": "asg_RATER_G_0025",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0013_x",
+    "caseId": "scifact-v4-0013",
+    "phase": "main",
+    "order": 25
+  },
+  {
+    "assignmentId": "asg_RATER_G_0026",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0134_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0134",
+    "phase": "main",
+    "order": 26
+  },
+  {
+    "assignmentId": "asg_RATER_G_0027",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0135_x",
+    "caseId": "scifact-v4-0135",
+    "phase": "main",
+    "order": 27
+  },
+  {
+    "assignmentId": "asg_RATER_G_0028",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0079_x",
+    "caseId": "scifact-v4-0079",
+    "phase": "main",
+    "order": 28
+  },
+  {
+    "assignmentId": "asg_RATER_G_0029",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0082_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0082",
+    "phase": "main",
+    "order": 29
+  },
+  {
+    "assignmentId": "asg_RATER_G_0030",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0068_x",
+    "caseId": "scifact-v4-0068",
+    "phase": "main",
+    "order": 30
+  },
+  {
+    "assignmentId": "asg_RATER_G_0031",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0059_y",
+    "caseId": "scifact-v4-0059",
+    "phase": "main",
+    "order": 31
+  },
+  {
+    "assignmentId": "asg_RATER_G_0032",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0129_y",
+    "caseId": "scifact-v4-0129",
+    "phase": "main",
+    "order": 32
+  },
+  {
+    "assignmentId": "asg_RATER_G_0033",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0019_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0019",
+    "phase": "main",
+    "order": 33
+  },
+  {
+    "assignmentId": "asg_RATER_G_0034",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0013_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0013",
+    "phase": "main",
+    "order": 34
+  },
+  {
+    "assignmentId": "asg_RATER_G_0035",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0039_y",
+    "caseId": "scifact-v4-0039",
+    "phase": "main",
+    "order": 35
+  },
+  {
+    "assignmentId": "asg_RATER_G_0036",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0137_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0137",
+    "phase": "main",
+    "order": 36
+  },
+  {
+    "assignmentId": "asg_RATER_G_0037",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0005_y",
+    "caseId": "scifact-v4-0005",
+    "phase": "main",
+    "order": 37
+  },
+  {
+    "assignmentId": "asg_RATER_G_0038",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0063_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0063",
+    "phase": "main",
+    "order": 38
+  },
+  {
+    "assignmentId": "asg_RATER_G_0039",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0007_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0007",
+    "phase": "main",
+    "order": 39
+  },
+  {
+    "assignmentId": "asg_RATER_G_0040",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0047_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0047",
+    "phase": "main",
+    "order": 40
+  },
+  {
+    "assignmentId": "asg_RATER_G_0041",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0018_x",
+    "caseId": "scifact-v4-0018",
+    "phase": "main",
+    "order": 41
+  },
+  {
+    "assignmentId": "asg_RATER_G_0042",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0120_y",
+    "caseId": "scifact-v4-0120",
+    "phase": "main",
+    "order": 42
+  },
+  {
+    "assignmentId": "asg_RATER_G_0043",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0149_y",
+    "caseId": "scifact-v4-0149",
+    "phase": "main",
+    "order": 43
+  },
+  {
+    "assignmentId": "asg_RATER_G_0044",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0036_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0036",
+    "phase": "main",
+    "order": 44
+  },
+  {
+    "assignmentId": "asg_RATER_G_0045",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0144_y",
+    "caseId": "scifact-v4-0144",
+    "phase": "main",
+    "order": 45
+  },
+  {
+    "assignmentId": "asg_RATER_G_0046",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0056_x",
+    "caseId": "scifact-v4-0056",
+    "phase": "main",
+    "order": 46
+  },
+  {
+    "assignmentId": "asg_RATER_G_0047",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0092_y",
+    "caseId": "scifact-v4-0092",
+    "phase": "main",
+    "order": 47
+  },
+  {
+    "assignmentId": "asg_RATER_G_0048",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0091_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0091",
+    "phase": "main",
+    "order": 48
+  },
+  {
+    "assignmentId": "asg_RATER_G_0049",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0119_x",
+    "caseId": "scifact-v4-0119",
+    "phase": "main",
+    "order": 49
+  },
+  {
+    "assignmentId": "asg_RATER_G_0050",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0029_x",
+    "caseId": "scifact-v4-0029",
+    "phase": "main",
+    "order": 50
+  },
+  {
+    "assignmentId": "asg_RATER_G_0051",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0038_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0038",
+    "phase": "main",
+    "order": 51
+  },
+  {
+    "assignmentId": "asg_RATER_G_0052",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0017_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0017",
+    "phase": "main",
+    "order": 52
+  },
+  {
+    "assignmentId": "asg_RATER_G_0053",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0094_y",
+    "caseId": "scifact-v4-0094",
+    "phase": "main",
+    "order": 53
+  },
+  {
+    "assignmentId": "asg_RATER_G_0054",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0054_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0054",
+    "phase": "main",
+    "order": 54
+  },
+  {
+    "assignmentId": "asg_RATER_G_0055",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0052_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0052",
+    "phase": "main",
+    "order": 55
+  },
+  {
+    "assignmentId": "asg_RATER_G_0056",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0048_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0048",
+    "phase": "main",
+    "order": 56
+  },
+  {
+    "assignmentId": "asg_RATER_G_0057",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0040_x",
+    "caseId": "scifact-v4-0040",
+    "phase": "main",
+    "order": 57
+  },
+  {
+    "assignmentId": "asg_RATER_G_0058",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0121_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0121",
+    "phase": "main",
+    "order": 58
+  },
+  {
+    "assignmentId": "asg_RATER_G_0059",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0035_y",
+    "caseId": "scifact-v4-0035",
+    "phase": "main",
+    "order": 59
+  },
+  {
+    "assignmentId": "asg_RATER_G_0060",
+    "raterId": "RATER_G",
+    "stimulusId": "stim_scifact-v4-0036_y",
+    "caseId": "scifact-v4-0036",
+    "phase": "main",
+    "order": 60
+  },
+  {
+    "assignmentId": "asg_RATER_H_0001",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0021_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0021",
+    "phase": "main",
+    "order": 1
+  },
+  {
+    "assignmentId": "asg_RATER_H_0002",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0029_x",
+    "caseId": "scifact-v4-0029",
+    "phase": "main",
+    "order": 2
+  },
+  {
+    "assignmentId": "asg_RATER_H_0003",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0120_x",
+    "caseId": "scifact-v4-0120",
+    "phase": "main",
+    "order": 3
+  },
+  {
+    "assignmentId": "asg_RATER_H_0004",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0077_x",
+    "caseId": "scifact-v4-0077",
+    "phase": "main",
+    "order": 4
+  },
+  {
+    "assignmentId": "asg_RATER_H_0005",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0068_x",
+    "caseId": "scifact-v4-0068",
+    "phase": "main",
+    "order": 5
+  },
+  {
+    "assignmentId": "asg_RATER_H_0006",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0126_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0126",
+    "phase": "main",
+    "order": 6
+  },
+  {
+    "assignmentId": "asg_RATER_H_0007",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0074_x",
+    "caseId": "scifact-v4-0074",
+    "phase": "main",
+    "order": 7
+  },
+  {
+    "assignmentId": "asg_RATER_H_0008",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0056_y",
+    "caseId": "scifact-v4-0056",
+    "phase": "main",
+    "order": 8
+  },
+  {
+    "assignmentId": "asg_RATER_H_0009",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0084_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0084",
+    "phase": "main",
+    "order": 9
+  },
+  {
+    "assignmentId": "asg_RATER_H_0010",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0149_y",
+    "caseId": "scifact-v4-0149",
+    "phase": "main",
+    "order": 10
+  },
+  {
+    "assignmentId": "asg_RATER_H_0011",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0040_y",
+    "caseId": "scifact-v4-0040",
+    "phase": "main",
+    "order": 11
+  },
+  {
+    "assignmentId": "asg_RATER_H_0012",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0112_y",
+    "caseId": "scifact-v4-0112",
+    "phase": "main",
+    "order": 12
+  },
+  {
+    "assignmentId": "asg_RATER_H_0013",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0044_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0044",
+    "phase": "main",
+    "order": 13
+  },
+  {
+    "assignmentId": "asg_RATER_H_0014",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0136_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0136",
+    "phase": "main",
+    "order": 14
+  },
+  {
+    "assignmentId": "asg_RATER_H_0015",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0036_x",
+    "caseId": "scifact-v4-0036",
+    "phase": "main",
+    "order": 15
+  },
+  {
+    "assignmentId": "asg_RATER_H_0016",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0004_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0004",
+    "phase": "main",
+    "order": 16
+  },
+  {
+    "assignmentId": "asg_RATER_H_0017",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0092_x",
+    "caseId": "scifact-v4-0092",
+    "phase": "main",
+    "order": 17
+  },
+  {
+    "assignmentId": "asg_RATER_H_0018",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0013_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0013",
+    "phase": "main",
+    "order": 18
+  },
+  {
+    "assignmentId": "asg_RATER_H_0019",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0079_x",
+    "caseId": "scifact-v4-0079",
+    "phase": "main",
+    "order": 19
+  },
+  {
+    "assignmentId": "asg_RATER_H_0020",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0035_x",
+    "caseId": "scifact-v4-0035",
+    "phase": "main",
+    "order": 20
+  },
+  {
+    "assignmentId": "asg_RATER_H_0021",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0119_y",
+    "caseId": "scifact-v4-0119",
+    "phase": "main",
+    "order": 21
+  },
+  {
+    "assignmentId": "asg_RATER_H_0022",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0094_x",
+    "caseId": "scifact-v4-0094",
+    "phase": "main",
+    "order": 22
+  },
+  {
+    "assignmentId": "asg_RATER_H_0023",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0141_y",
+    "caseId": "scifact-v4-0141",
+    "phase": "main",
+    "order": 23
+  },
+  {
+    "assignmentId": "asg_RATER_H_0024",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0052_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0052",
+    "phase": "main",
+    "order": 24
+  },
+  {
+    "assignmentId": "asg_RATER_H_0025",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0039_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0039",
+    "phase": "main",
+    "order": 25
+  },
+  {
+    "assignmentId": "asg_RATER_H_0026",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0005_x",
+    "caseId": "scifact-v4-0005",
+    "phase": "main",
+    "order": 26
+  },
+  {
+    "assignmentId": "asg_RATER_H_0027",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0059_y",
+    "caseId": "scifact-v4-0059",
+    "phase": "main",
+    "order": 27
+  },
+  {
+    "assignmentId": "asg_RATER_H_0028",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0061_y",
+    "caseId": "scifact-v4-0061",
+    "phase": "main",
+    "order": 28
+  },
+  {
+    "assignmentId": "asg_RATER_H_0029",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0027_x",
+    "caseId": "scifact-v4-0027",
+    "phase": "main",
+    "order": 29
+  },
+  {
+    "assignmentId": "asg_RATER_H_0030",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0121_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0121",
+    "phase": "main",
+    "order": 30
+  },
+  {
+    "assignmentId": "asg_RATER_H_0031",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0144_y",
+    "caseId": "scifact-v4-0144",
+    "phase": "main",
+    "order": 31
+  },
+  {
+    "assignmentId": "asg_RATER_H_0032",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0018_y",
+    "caseId": "scifact-v4-0018",
+    "phase": "main",
+    "order": 32
+  },
+  {
+    "assignmentId": "asg_RATER_H_0033",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0068_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0068",
+    "phase": "main",
+    "order": 33
+  },
+  {
+    "assignmentId": "asg_RATER_H_0034",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0069_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0069",
+    "phase": "main",
+    "order": 34
+  },
+  {
+    "assignmentId": "asg_RATER_H_0035",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0061_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0061",
+    "phase": "main",
+    "order": 35
+  },
+  {
+    "assignmentId": "asg_RATER_H_0036",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0054_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0054",
+    "phase": "main",
+    "order": 36
+  },
+  {
+    "assignmentId": "asg_RATER_H_0037",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0122_x",
+    "caseId": "scifact-v4-0122",
+    "phase": "main",
+    "order": 37
+  },
+  {
+    "assignmentId": "asg_RATER_H_0038",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0047_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0047",
+    "phase": "main",
+    "order": 38
+  },
+  {
+    "assignmentId": "asg_RATER_H_0039",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0063_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0063",
+    "phase": "main",
+    "order": 39
+  },
+  {
+    "assignmentId": "asg_RATER_H_0040",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0038_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0038",
+    "phase": "main",
+    "order": 40
+  },
+  {
+    "assignmentId": "asg_RATER_H_0041",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0087_y",
+    "caseId": "scifact-v4-0087",
+    "phase": "main",
+    "order": 41
+  },
+  {
+    "assignmentId": "asg_RATER_H_0042",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0013_x",
+    "caseId": "scifact-v4-0013",
+    "phase": "main",
+    "order": 42
+  },
+  {
+    "assignmentId": "asg_RATER_H_0043",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0065_y",
+    "caseId": "scifact-v4-0065",
+    "phase": "main",
+    "order": 43
+  },
+  {
+    "assignmentId": "asg_RATER_H_0044",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0036_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0036",
+    "phase": "main",
+    "order": 44
+  },
+  {
+    "assignmentId": "asg_RATER_H_0045",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0129_y",
+    "caseId": "scifact-v4-0129",
+    "phase": "main",
+    "order": 45
+  },
+  {
+    "assignmentId": "asg_RATER_H_0046",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0007_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0007",
+    "phase": "main",
+    "order": 46
+  },
+  {
+    "assignmentId": "asg_RATER_H_0047",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0017_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0017",
+    "phase": "main",
+    "order": 47
+  },
+  {
+    "assignmentId": "asg_RATER_H_0048",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0039_x",
+    "caseId": "scifact-v4-0039",
+    "phase": "main",
+    "order": 48
+  },
+  {
+    "assignmentId": "asg_RATER_H_0049",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0010_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0010",
+    "phase": "main",
+    "order": 49
+  },
+  {
+    "assignmentId": "asg_RATER_H_0050",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0020_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0020",
+    "phase": "main",
+    "order": 50
+  },
+  {
+    "assignmentId": "asg_RATER_H_0051",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0048_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0048",
+    "phase": "main",
+    "order": 51
+  },
+  {
+    "assignmentId": "asg_RATER_H_0052",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0134_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0134",
+    "phase": "main",
+    "order": 52
+  },
+  {
+    "assignmentId": "asg_RATER_H_0053",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0091_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0091",
+    "phase": "main",
+    "order": 53
+  },
+  {
+    "assignmentId": "asg_RATER_H_0054",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0055_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0055",
+    "phase": "main",
+    "order": 54
+  },
+  {
+    "assignmentId": "asg_RATER_H_0055",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0019_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0019",
+    "phase": "main",
+    "order": 55
+  },
+  {
+    "assignmentId": "asg_RATER_H_0056",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0135_y",
+    "caseId": "scifact-v4-0135",
+    "phase": "main",
+    "order": 56
+  },
+  {
+    "assignmentId": "asg_RATER_H_0057",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0137_y",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0137",
+    "phase": "main",
+    "order": 57
+  },
+  {
+    "assignmentId": "asg_RATER_H_0058",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0092_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0092",
+    "phase": "main",
+    "order": 58
+  },
+  {
+    "assignmentId": "asg_RATER_H_0059",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_nli4ct-fulltrial-rawline-validation-v4-0082_x",
+    "caseId": "nli4ct-fulltrial-rawline-validation-v4-0082",
+    "phase": "main",
+    "order": 59
+  },
+  {
+    "assignmentId": "asg_RATER_H_0060",
+    "raterId": "RATER_H",
+    "stimulusId": "stim_scifact-v4-0075_x",
+    "caseId": "scifact-v4-0075",
+    "phase": "main",
+    "order": 60
+  }
+]

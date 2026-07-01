@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "Evidence Decision Loops: A Biomedical Informatics Method for Auditable AI Agent Decisions"
+message: "If you use this artifact package, please cite the manuscript and archived release."
+type: software
+authors:
+  - family-names: Wang
+    given-names: Cong
+  - family-names: Xu
+    given-names: Bei
+date-released: 2026-07-01
+version: "0.1.0"
+repository-code: "https://github.com/xiaoxubeii/eviagent-jbi-artifacts"
+license: "MIT"

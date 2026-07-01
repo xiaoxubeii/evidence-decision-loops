@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "React Clinical Source V5 Adjudication",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "recordId",
+    "source",
+    "adjudicationDecision",
+    "finalDecision",
+    "naturalSegments",
+    "requiredEvidence",
+    "confidence",
+    "rationale",
+    "reviewReasons"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "react-clinical-source-v5-adjudication"
+    },
+    "recordId": { "type": "string", "minLength": 1 },
+    "source": { "type": "string", "minLength": 1 },
+    "adjudicationDecision": {
+      "enum": ["accept", "revise", "reject", "human_review"]
+    },
+    "finalDecision": { "type": "string", "minLength": 1 },
+    "naturalSegments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["documentId", "segmentId", "text", "charStart", "charEnd", "role"],
+        "properties": {
+          "documentId": { "type": "string", "minLength": 1 },
+          "segmentId": { "type": "string", "minLength": 1 },
+          "text": { "type": "string", "minLength": 1 },
+          "charStart": { "type": "integer", "minimum": 0 },
+          "charEnd": { "type": "integer", "minimum": 1 },
+          "role": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "requiredEvidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["documentId", "segmentId", "stance"],
+        "properties": {
+          "documentId": { "type": "string", "minLength": 1 },
+          "segmentId": { "type": "string", "minLength": 1 },
+          "stance": { "enum": ["supports", "refutes", "mixed", "neutral"] }
+        }
+      }
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "rationale": { "type": "string", "minLength": 1 },
+    "reviewReasons": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

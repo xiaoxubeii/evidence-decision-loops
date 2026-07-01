@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+*.log
+*.tmp
+.DS_Store
+private/
+**/private/
+**/*access-links*
+**/responses.jsonl
+**/events.jsonl

@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eviagent.local/schema/react-comparison-trace.schema.json",
+  "title": "ReAct-style clinical comparison trace",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "recordId",
+    "method",
+    "steps",
+    "finalDecision",
+    "rationale",
+    "citedEvidenceIds",
+    "requiredHumanReview",
+    "edlGuard",
+    "processCheck",
+    "scores"
+  ],
+  "properties": {
+    "recordId": { "type": "string" },
+    "method": {
+      "type": "string",
+      "enum": ["direct_llm", "cot", "react", "edl"]
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "content"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["thought", "action", "observation", "finish"]
+          },
+          "content": { "type": "string" },
+          "action": { "type": "string" },
+          "input": { "type": "object" },
+          "observation": { "type": "string" }
+        }
+      }
+    },
+    "finalDecision": { "type": "string" },
+    "rationale": { "type": "string" },
+    "citedEvidenceIds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "requiredHumanReview": { "type": "boolean" },
+    "unsafeAction": { "type": "string" },
+    "edlGuard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "errors"],
+      "properties": {
+        "passed": { "type": "boolean" },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "processCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "accessedEvidenceIds", "errors"],
+      "properties": {
+        "passed": { "type": "boolean" },
+        "accessedEvidenceIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decisionCorrect",
+        "evidenceRecall",
+        "evidencePathRecall",
+        "citationValidity",
+        "unsafeAction",
+        "missedEscalation",
+        "auditability",
+        "reasoningValidity",
+        "processGatedCorrect",
+        "unsupportedCorrect",
+        "toolSteps"
+      ],
+      "properties": {
+        "decisionCorrect": { "type": "boolean" },
+        "evidenceRecall": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidencePathRecall": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "citationValidity": { "type": "boolean" },
+        "unsafeAction": { "type": "boolean" },
+        "missedEscalation": { "type": "boolean" },
+        "auditability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "reasoningValidity": { "type": "boolean" },
+        "processGatedCorrect": { "type": "boolean" },
+        "unsupportedCorrect": { "type": "boolean" },
+        "toolSteps": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

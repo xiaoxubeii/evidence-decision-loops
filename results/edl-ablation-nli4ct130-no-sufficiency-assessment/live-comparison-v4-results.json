@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "v4-live-comparison",
+  "mode": "live",
+  "datasetPath": "src/data/react-clinical-source-v4-nli4ct-fulltrial-rawline-audited-main.jsonl",
+  "tracePath": "results/edl-ablation-nli4ct130-no-sufficiency-assessment/live-comparison-v4-traces.jsonl",
+  "resultPath": "results/edl-ablation-nli4ct130-no-sufficiency-assessment/live-comparison-v4-results.json",
+  "records": 130,
+  "traces": 130,
+  "setting": "evidence-seeking",
+  "model": "gpt-5.5",
+  "reasoningEffort": null,
+  "methodSelection": [
+    "edl"
+  ],
+  "methods": {
+    "edl": {
+      "traces": 130,
+      "decisionAccuracy": 0.9307692307692308,
+      "citationValidity": 1,
+      "requiredEvidenceRecall": 0.7766663667450142,
+      "requiredEvidencePrecision": 0.8769114219114218,
+      "citationGranularityMatched": 0.5769230769230769,
+      "searchRequiredEvidenceRecall": 0.8842638848093749,
+      "readRequiredEvidenceRecall": 0.8842638848093749,
+      "evidenceFailureStages": {
+        "none": 75,
+        "citation_miss": 52,
+        "retrieval_miss": 3
+      },
+      "processValidity": 0,
+      "humanReviewRate": 0,
+      "reviewReasonCounts": {},
+      "missedRequiredReviewRate": 0,
+      "unnecessaryReviewRate": 0,
+      "primaryMetric": 0.5769230769230769,
+      "invalidDecisionRate": 0
+    }
+  },
+  "sources": {
+    "nli4ct": {
+      "traces": 130,
+      "methods": {
+        "edl": {
+          "traces": 130,
+          "decisionAccuracy": 0.9307692307692308,
+          "citationValidity": 1,
+          "requiredEvidenceRecall": 0.7766663667450142,
+          "requiredEvidencePrecision": 0.8769114219114218,
+          "citationGranularityMatched": 0.5769230769230769,
+          "searchRequiredEvidenceRecall": 0.8842638848093749,
+          "readRequiredEvidenceRecall": 0.8842638848093749,
+          "evidenceFailureStages": {
+            "none": 75,
+            "citation_miss": 52,
+            "retrieval_miss": 3
+          },
+          "processValidity": 0,
+          "humanReviewRate": 0,
+          "reviewReasonCounts": {},
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0,
+          "primaryMetric": 0.5769230769230769,
+          "invalidDecisionRate": 0
+        }
+      }
+    }
+  }
+}

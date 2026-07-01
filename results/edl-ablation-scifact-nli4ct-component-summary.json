@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "edl-component-ablation-scifact-nli4ct-v1",
+  "generatedAt": "2026-06-30T13:12:25.707Z",
+  "sources": {
+    "scifact": {
+      "label": "SciFact",
+      "dataset": "src/data/react-clinical-source-v4-agree-scifact-135.jsonl",
+      "records": 135,
+      "variants": {
+        "full": {
+          "label": "Full EDL",
+          "dir": "results/edl-ablation-scifact135-full",
+          "metrics": {
+            "traces": 135,
+            "decisionAccuracy": 0.9555555555555556,
+            "primaryMetric": 0.837037037037037,
+            "requiredEvidenceRecall": 0.8888888888888888,
+            "requiredEvidencePrecision": 0.6030864197530862,
+            "searchRequiredEvidenceRecall": null,
+            "readRequiredEvidenceRecall": null,
+            "citationValidity": 1,
+            "processValidity": 1,
+            "humanReviewRate": 0.4,
+            "parseErrorRate": 0,
+            "reviewReasonCounts": {
+              "insufficient_evidence": 54
+            },
+            "evidenceFailureStages": {}
+          }
+        },
+        "no_iterative": {
+          "label": "w/o Iterative Seeking",
+          "dir": "results/edl-ablation-scifact135-no-iterative-seeking",
+          "metrics": {
+            "traces": 135,
+            "decisionAccuracy": 0.9333333333333333,
+            "primaryMetric": 0.725925925925926,
+            "requiredEvidenceRecall": 0.7851851851851852,
+            "requiredEvidencePrecision": 0.6111111111111112,
+            "searchRequiredEvidenceRecall": null,
+            "readRequiredEvidenceRecall": null,
+            "citationValidity": 1,
+            "processValidity": 1,
+            "humanReviewRate": 0.4740740740740741,
+            "parseErrorRate": 0,
+            "reviewReasonCounts": {
+              "insufficient_evidence": 63,
+              "material_conflict": 2,
+              "material_gap": 46
+            },
+            "evidenceFailureStages": {}
+          }
+        },
+        "no_sufficiency": {
+          "label": "w/o Sufficiency Assessment",
+          "dir": "results/edl-ablation-scifact135-no-sufficiency-assessment",
+          "metrics": {
+            "traces": 135,
+            "decisionAccuracy": 0.9481481481481482,
+            "primaryMetric": 0.7925925925925926,
+            "requiredEvidenceRecall": 0.8555555555555555,
+            "requiredEvidencePrecision": 0.6310432569974554,
+            "searchRequiredEvidenceRecall": null,
+            "readRequiredEvidenceRecall": null,
+            "citationValidity": 0.9703703703703703,
+            "processValidity": 1,
+            "humanReviewRate": 0.02962962962962963,
+            "parseErrorRate": 0,
+            "reviewReasonCounts": {
+              "invalid_citation": 4
+            },
+            "evidenceFailureStages": {}
+          }
+        },
+        "no_citation_validation": {
+          "label": "w/o Citation Validation",
+          "dir": "results/edl-ablation-scifact135-no-citation-validation",
+          "metrics": {
+            "traces": 135,
+            "decisionAccuracy": 0.9481481481481482,
+            "primaryMetric": 0.08148148148148149,
+            "requiredEvidenceRecall": 0.08148148148148149,
+            "requiredEvidencePrecision": 0.5769230769230769,
+            "searchRequiredEvidenceRecall": null,
+            "readRequiredEvidenceRecall": null,
+            "citationValidity": 0.0962962962962963,
+            "processValidity": 1,
+            "humanReviewRate": 0.9111111111111111,
+            "parseErrorRate": 0,
+            "reviewReasonCounts": {
+              "insufficient_evidence": 56,
+              "invalid_citation": 122,
+              "material_conflict": 1,
+              "material_gap": 44,
+              "missing_citation": 9
+            },
+            "evidenceFailureStages": {}
+          }
+        }
+      }
+    },
+    "nli4ct": {
+      "label": "NLI4CT",
+      "dataset": "src/data/react-clinical-source-v4-nli4ct-fulltrial-rawline-audited-main.jsonl",
+      "records": 130,
+      "variants": {
+        "full": {
+          "label": "Full EDL",
+          "dir": "results/edl-ablation-nli4ct130-full",
+          "metrics": {
+            "traces": 130,
+            "decisionAccuracy": 0.9230769230769231,
+            "primaryMetric": 0.5384615384615384,
+            "requiredEvidenceRecall": 0.7681025521998928,
+            "requiredEvidencePrecision": 0.8638353313353312,
+            "searchRequiredEvidenceRecall": null,
+            "readRequiredEvidenceRecall": null,
+            "citationValidity": 1,
+            "processValidity": 1,
+            "humanReviewRate": 0.3,
+            "parseErrorRate": 0,
+            "reviewReasonCounts": {
+              "forced_source_label_without_abstain": 29,
+              "insufficient_evidence": 29,
+              "material_conflict": 13,
+              "material_gap": 10
+            },
+            "evidenceFailureStages": {}
+          }
+        },
+        "no_iterative": {
+          "label": "w/o Iterative Seeking",
+          "dir": "results/edl-ablation-nli4ct130-no-iterative-seeking",
+          "metrics": {
+            "traces": 130,
+            "decisionAccuracy": 0.8692307692307693,
+            "primaryMetric": 0.4230769230769231,
+            "requiredEvidenceRecall": 0.6907623019352491,
+            "requiredEvidencePrecision": 0.8520238095238096,
+            "searchRequiredEvidenceRecall": null,
+            "readRequiredEvidenceRecall": null,
+            "citationValidity": 1,
+            "processValidity": 1,
+            "humanReviewRate": 0.38461538461538464,
+            "parseErrorRate": 0,
+            "reviewReasonCounts": {
+              "forced_source_label_without_abstain": 44,
+              "insufficient_evidence": 44,
+              "material_conflict": 9,
+              "material_gap": 23
+            },
+            "evidenceFailureStages": {}
+          }
+        },
+        "no_sufficiency": {
+          "label": "w/o Sufficiency Assessment",
+          "dir": "results/edl-ablation-nli4ct130-no-sufficiency-assessment",
+          "metrics": {
+            "traces": 130,
+            "decisionAccuracy": 0.9307692307692308,
+            "primaryMetric": 0.5769230769230769,
+            "requiredEvidenceRecall": 0.7766663667450142,
+            "requiredEvidencePrecision": 0.8769114219114218,
+            "searchRequiredEvidenceRecall": null,
+            "readRequiredEvidenceRecall": null,
+            "citationValidity": 1,
+            "processValidity": 1,
+            "humanReviewRate": 0,
+            "parseErrorRate": 0,
+            "reviewReasonCounts": {},
+            "evidenceFailureStages": {}
+          }
+        },
+        "no_citation_validation": {
+          "label": "w/o Citation Validation",
+          "dir": "results/edl-ablation-nli4ct130-no-citation-validation",
+          "metrics": {
+            "traces": 130,
+            "decisionAccuracy": 0.9230769230769231,
+            "primaryMetric": 0.11538461538461539,
+            "requiredEvidenceRecall": 0.14440781440781436,
+            "requiredEvidencePrecision": 0.8009157509157508,
+            "searchRequiredEvidenceRecall": null,
+            "readRequiredEvidenceRecall": null,
+            "citationValidity": 0.2,
+            "processValidity": 1,
+            "humanReviewRate": 0.8307692307692308,
+            "parseErrorRate": 0,
+            "reviewReasonCounts": {
+              "forced_source_label_without_abstain": 34,
+              "insufficient_evidence": 34,
+              "invalid_citation": 104,
+              "material_conflict": 13,
+              "material_gap": 14
+            },
+            "evidenceFailureStages": {}
+          }
+        }
+      }
+    }
+  }
+}

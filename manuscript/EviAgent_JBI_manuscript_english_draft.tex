@@ -1,0 +1,428 @@
+% !TeX program = pdflatex
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{microtype}
+\usepackage{authblk}
+\usepackage{caption}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue,
+  urlcolor=blue
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{3em}
+
+\title{Evidence Decision Loops: A Biomedical Informatics Method for Auditable AI Agent Decisions}
+\author[1]{Cong Wang}
+\author[2]{Bei Xu}
+\affil[1]{Department of Cardiology, Zhongshan Hospital, Fudan University, Shanghai, China}
+\affil[2]{Panvascular and Cardiac Rehabilitation Innovation Laboratory, Shanghai, China}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\textbf{Objective:} Evidence-supported biomedical AI agents can retrieve sources, cite evidence, and return plausible answers without producing an auditable decision-level evidence record. We developed Evidence Decision Loops (EDL) as a biomedical informatics method for evaluating whether AI-agent decisions include a checkable evidence contract.
+
+\textbf{Methods:} EDL defines an evidence-decision record schema, a workflow protocol, and a scoring contract that represent source-native tasks or claims, cited evidence identifiers, evidence assessments, gaps, conflicts, final decisions, provenance, and human review routing. We constructed a unified public-source benchmark from SciFact, PubMedQA, and NLI4CT. From 460 candidate records, an LLM-audit procedure retained 390 main evaluation records with 1413 required evidence segments. We evaluated Direct, chain-of-thought (CoT), ReAct, and EDL in a given-evidence setting, and ReAct and EDL in an evidence-seeking setting. The main evaluation used \texttt{gpt-5.5}; MiniMax-M3 and EDL component ablation were treated as supplementary automated analyses. A blind human-audit study is ongoing and is included here as a protocol placeholder rather than as outcome data.
+
+\textbf{Results:} In the given-evidence setting, EDL achieved the highest primary metric (0.785) and required evidence recall (0.935), whereas ReAct achieved the highest decision accuracy (0.915). In the evidence-seeking setting, EDL achieved a higher primary metric (0.728 vs 0.654), required evidence recall (0.900 vs 0.773), search recall (0.937 vs 0.060), and read recall (0.937 vs 0.896) than ReAct, while ReAct had higher decision accuracy (0.928 vs 0.882). EDL routed 111 of 390 evidence-seeking records for human review. Supplementary MiniMax-M3 and ablation analyses supported the interpretation that EDL primarily improves evidence-process quality rather than final-label accuracy.
+
+\textbf{Conclusion:} EDL separates answer correctness from auditable decision quality. Its contribution is a reproducible pre-deployment evaluation method for evidence-supported biomedical AI agents, not a claim of autonomous clinical safety or deployment readiness.
+\end{abstract}
+
+\textbf{Keywords:} biomedical informatics; AI agents; evidence retrieval; auditability; retrieval-augmented generation; human review; clinical trial evidence
+
+\section{Introduction}
+
+Large language models and AI agents are increasingly being evaluated for biomedical evidence retrieval, question answering, scientific claim verification, and clinical information work \cite{moor2023foundation,singhal2023clinical,rajpurkar2022health}. These applications are evidence intensive: the relevant question is not only whether a model returns a correct label, but also whether a reviewer can inspect the evidence process that led to the decision.
+
+Existing evaluation approaches capture important but incomplete aspects of this problem. Accuracy measures whether the final label matches a reference answer. Retrieval metrics measure whether relevant sources or passages are found. ReAct-style agents expose tool-use traces that show search and reading actions \cite{yao2023react}. These outputs are useful, but they do not necessarily define a decision-level evidence contract. A correct answer can be unsupported, a retrieved passage can be irrelevant to the decisive claim, and a tool trace can be visible without recording gaps, conflicts, or human review requirements.
+
+We developed Evidence Decision Loops (EDL) to make the decision artifact itself evaluable. EDL requires an AI agent to produce a structured evidence-decision record that records cited evidence identifiers, evidence sufficiency, unresolved gaps or conflicts, and human-review routing. The method is designed for pre-deployment biomedical informatics evaluation, where the goal is to assess whether evidence-supported agent decisions are auditable before they are considered for downstream workflow use.
+
+We evaluated EDL on a unified public-source benchmark constructed from SciFact, PubMedQA, and NLI4CT \cite{wadden2020scifact,jin2019pubmedqa,jullien2023nli4ct}. The benchmark uses one evidence-construction and scoring protocol across the three sources while preserving source-native task semantics and evidence granularity. The main evaluation used \texttt{gpt-5.5} on 390 audit-retained records in two settings: a given-evidence setting, in which relevant evidence segments are supplied to the model, and an evidence-seeking setting, in which the agent must search and read a fixed evidence library.
+
+This study makes three contributions. First, it defines EDL as a decision-record schema and workflow protocol for auditable evidence-supported biomedical AI-agent decisions. Second, it provides a unified benchmark construction and scoring protocol across three public biomedical evidence resources. Third, it empirically shows that EDL improves evidence coverage and auditability metrics while not necessarily optimizing final decision accuracy.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{edl_main.png}
+\caption{Study framework. Public-source records are audited for evaluability, converted into a unified benchmark, processed by comparison methods, and scored for decision accuracy, evidence coverage, citation validity, process validity, and human review routing.}
+\label{fig:study-framework}
+\end{figure}
+
+\section*{Statement of Significance}
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.28\linewidth}p{0.66\linewidth}@{}}
+\toprule
+Problem or issue & Biomedical AI agents may answer with citations without a record of evidence sufficiency, gaps, conflicts, or review needs. \\
+What is already known & RAG, ReAct, and biomedical verification benchmarks assess retrieval, tool traces, labels, or evidence selection. \\
+What this paper adds & EDL defines and evaluates an evidence-decision record for scoring evidence coverage, citation validity, process validity, and review routing. \\
+Who would benefit & Developers, evaluators, informatics researchers, and expert reviewers who need pre-deployment audit and failure localization. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Background and Related Work}
+
+\subsection{Evidence-grounded biomedical AI}
+
+Biomedical AI systems are increasingly evaluated in tasks that require evidence grounding rather than unconstrained text generation \cite{rajpurkar2022health,topol2019highperformance,esteva2019deep}. Scientific claim verification, biomedical question answering, and clinical-trial inference provide public-source settings in which answers can be evaluated against labels and evidence annotations \cite{wadden2020scifact,jin2019pubmedqa,jullien2023nli4ct}. These resources support reproducible evaluation, but their labels and evidence annotations must be converted into a common record format before they can support cross-source agent comparisons.
+
+\subsection{RAG and tool-using agents}
+
+Retrieval-augmented generation (RAG) links generation to retrieved evidence, and ReAct-style agents interleave reasoning and tool use \cite{lewis2020rag,yao2023react}. In this study, ReAct is treated as a tool-using, agentic RAG baseline because it searches and reads a fixed evidence library before submitting a decision. This baseline is important because it exposes tool traces and provides a strong comparison for evidence-seeking behavior. EDL differs from ReAct by requiring a structured evidence-decision record and validation contract, rather than relying on the visibility of the tool trace alone.
+
+\subsection{Auditability and human review}
+
+Biomedical AI evaluation also requires attention to intended use, explainability, quality management, and human-AI interaction \cite{mcnamara2024clinicianai,overgaard2023qms,castner2024expertgaze,wekenborg2025humanai}. EDL contributes to this line of work by operationalizing auditability at the level of the decision artifact. It asks whether the output records the evidence state in a form that can be checked by software and reviewed by humans. The method therefore complements, rather than replaces, expert review and clinical governance.
+
+\section{Evidence Decision Loop Method}
+
+\subsection{Method overview}
+
+EDL is a workflow and record protocol for evidence-supported AI-agent decisions. The loop converts a task into claims, retrieves or receives evidence, assesses whether the evidence is sufficient, validates citations, records gaps and conflicts, and produces a structured final decision and an explicit human-review routing status. The key output is not only a label, but an evidence-decision record that can be scored independently of hidden model reasoning.
+
+In this implementation, EDL was operationalized as a controller around the model rather than as a single prompt. In the given-evidence setting, the controller received all record evidence as viewed segments. In the evidence-seeking setting, it used a fixed evidence library with search and read tools. The controller then requested an evidence-sufficiency assessment, obtained a structured final submission, validated cited document and segment identifiers, appended an explicit process-validation step, and derived human-review routing from evidence insufficiency, gaps, conflicts, citation failures, and runtime errors. Thus, EDL was evaluated through the observable decision record and tool/process trace, not through hidden model reasoning.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.74\textheight,keepaspectratio]{edl_workflow_english.png}
+\caption{Evidence Decision Loop workflow and auditable decision-record architecture. EDL turns a decision problem and evidence-access process into a structured record containing the statement or question, cited evidence identifiers, evidence assessments, gaps, conflicts, review routing, final decision, and provenance.}
+\label{fig:edl-workflow}
+\end{figure}
+
+\subsection{Decision states}
+
+EDL separates the source-native final decision from the evidence state and review-routing status. The final decision must be one of the allowed labels for the source record. Evidence sufficiency is assessed separately as sufficient, insufficient, or conflicting, and unresolved insufficiency, material gaps or conflicts, missing or invalid citations, and runtime failures can trigger human-review routing. Conflicting evidence is therefore treated as a review-triggering evidence state even when a stopping condition requires the controller to proceed to structured submission. A plausible natural-language rationale is not sufficient if the cited evidence is missing, invalid, incomplete, or contradicted.
+
+\subsection{Evidence-decision record}
+
+The EDL record combines record metadata, the source-native task or claim, the final decision, cited document and segment identifiers, evidence assessments, gap and conflict assessments, human-review routing, process trace metadata, scores, and provenance. The complete schema is provided in Supplementary Table S8. Missing or malformed structured fields are treated as missing or invalid rather than inferred from free text.
+
+\subsection{Audit and scoring contract}
+
+The scoring contract checks whether cited document and segment identifiers exist in the current record, whether required evidence was cited and accessed, whether the final decision matches the source label, whether the process trace contains the required search or read, assessment, and validation steps, and whether human-review routing was triggered for evidence insufficiency, material gaps or conflicts, citation failures, or runtime errors. This separates final-answer error, evidence-access error, citation error, process error, and review-routing error.
+
+\section{Benchmark and Data Construction}
+
+\subsection{Source-first benchmark design}
+
+The benchmark is source first: it preserves public source labels and evidence annotations rather than synthesizing new clinical judgments. Each record includes public-source metadata, a biomedical claim or question, one or two source documents with segment-level text, required evidence identifiers, a source-native gold decision, allowed decision labels, and a JSONL structure readable by the runner and scorer.
+
+\subsection{Main evaluation dataset}
+
+We constructed 460 candidate public-source records from SciFact, PubMedQA, and NLI4CT. An LLM-audit procedure assessed whether source labels and required evidence were mutually consistent, whether cited segments were locatable, and whether the records could be scored programmatically. The audit retained 390 records for the main evaluation: 135 SciFact records, 125 PubMedQA records, and 130 NLI4CT records. The retained records contain 1413 required evidence segments.
+
+All three sources used the same evidence-construction workflow. Each candidate record was converted into source documents, citable segments, required \texttt{documentId}/\texttt{segmentId} evidence identifiers, source-native decisions, allowed label sets, and JSONL scoring records. Source differences were preserved in task semantics and segment granularity rather than in the scoring protocol.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\linewidth]{dataset_audit_flow_mermaid_english.png}
+\caption{Dataset construction and LLM-audit flow. The 460 candidate records yielded 390 main evaluation records and 70 audit-excluded or review-queue records.}
+\label{fig:dataset-audit-flow}
+\end{figure}
+
+Source composition of the candidate, retained, and audit-excluded records is provided in the supplement. The main evaluation records contained between 1 and 61 required evidence segments. Two hundred fifty records required one segment, 42 required two segments, 54 required three to five segments, and 44 required six or more segments. We used required evidence count as an operational stratification of evidence complexity, not as a complete model of open-ended clinical evidence synthesis.
+
+\subsection{Data governance}
+
+The benchmark uses public biomedical and clinical-trial evidence sources and avoids private patient records, credentialed clinical records, and protected health information. This design supports reproducible pre-deployment evaluation but does not establish clinical safety, diagnostic utility, or autonomous workflow readiness. The reporting package is organized around input JSONL files, trace JSONL files, result JSON files, figure source data, and reproducibility manifests.
+
+\section{Experimental Design}
+
+\subsection{Evaluation settings and comparison methods}
+
+The automated experiments used two complementary settings. In the given-evidence setting, relevant source segments were provided in the model context. This setting isolates evidence interpretation, citation quality, and decision-record quality. In the evidence-seeking setting, agents received the task and a searchable fixed evidence library; they had to search and read evidence before submitting a final decision.
+
+All comparison methods used the same source-native records, allowed decision labels, citation format, and scoring contract. Direct prompted the model to produce the structured final answer in a single step. CoT used a reasoning-oriented prompt but was evaluated only on the submitted structured output rather than on hidden or free-form reasoning. ReAct used the same fixed evidence library as EDL in the evidence-seeking setting and interacted with search and read tools before submitting a structured final decision. EDL used the same evidence-access tools but added controller-level evidence-sufficiency assessment, citation validation, process validation, and derived human-review routing.
+
+\begin{table}[H]
+\centering
+\caption{Comparison methods.}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{p{0.15\linewidth}p{0.12\linewidth}p{0.45\linewidth}p{0.22\linewidth}}
+\toprule
+Setting & Method & Evidence access & Role \\
+\midrule
+Given evidence & Direct & Relevant evidence segments supplied in context & Answer-only baseline \\
+Given evidence & CoT \cite{wei2022cot} & Relevant evidence segments supplied in context & Reasoning-prompt baseline \\
+Given evidence & ReAct \cite{yao2023react} & Context evidence plus tool-style trajectory & Tool-use baseline \\
+Given evidence & EDL & Context evidence plus structured evidence-decision record & Audit-record method \\
+Evidence seeking & ReAct \cite{yao2023react} & Fixed evidence library with BM25 search and segment reading \cite{robertson1995okapi,robertson2009bm25} & Tool-using / agentic RAG baseline \\
+Evidence seeking & EDL & Fixed evidence library with BM25 search, segment review, evidence assessment, and validation & Active evidence-seeking audit method \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\subsection{Evidence-seeking controls}
+
+The evidence-seeking setting used BM25 retrieval to reduce differences in search space \cite{robertson1995okapi,robertson2009bm25}. Short abstract sources used a default BM25 top-5 search. Longer trial-report records used neighbor expansion and section-aware logic. ReAct used a forced-submit fallback when the tool budget was exhausted; the fallback allowed final decision submission but no further search or reading. EDL added evidence sufficiency assessment and citation validation before final submission.
+
+The search tool was record scoped rather than open-web retrieval. For each evidence-seeking record, \texttt{search\_segments} queried only the fixed evidence library attached to that record and returned candidate segment identifiers, snippets, and metadata. Agents then used \texttt{read\_segment} to inspect the full frozen segment text before citing it. ReAct and EDL used the same search and read tools, the same admissible citation identifiers, and the same scoring contract. This design made the evidence-seeking comparison focus on tool-use and evidence-decision behavior rather than on differences in external retrieval access.
+
+\subsection{Main evaluation, cross-model check, and ablation analyses}
+
+The main evaluation used \texttt{gpt-5.5}. Both settings used the same 390 main evaluation records. The given-evidence setting produced 1560 traces across Direct, CoT, ReAct, and EDL. The evidence-seeking setting produced 780 traces across ReAct and EDL. Trace-level metadata, including model and reasoning-effort fields, were retained in the reproducibility package.
+
+We used two supplementary analyses to assess model dependence and EDL component contribution without redefining the main evaluation dataset. MiniMax-M3 was used as a cross-model check. EDL component ablations were run on the SciFact and NLI4CT evidence-seeking subsets using the same records, model backend, evidence library, allowed labels, and scoring contract as full EDL while removing one controller feature at a time: iterative evidence seeking, evidence-sufficiency assessment, or citation validation. These ablations were used to interpret whether EDL's evidence-process gains depended on coordinated controller components and to localize failure modes such as reduced evidence recall, invalid citations, or loss of human-review routing.
+
+\subsection{Ongoing blind human-audit protocol}
+
+The blind online human-audit study is ongoing. We include it here as a protocol placeholder to document the planned evaluation of whether structured evidence-decision records improve human review. The balanced study bundle contains 60 cases, with 30 SciFact and 30 NLI4CT cases, and eight planned raters. Each case has ReAct and EDL materials anonymized as report formats X and Y. Outcome analyses, inter-rater reliability, and expert-response results will be added only after data collection and governance review are complete.
+
+\section{Metrics and Statistical Analysis}
+
+Decision accuracy is exact agreement between the submitted decision and the source-native gold decision. Required evidence recall is the proportion of gold required evidence segments covered by valid final citations. Required evidence precision is the proportion of valid final citations that are required evidence segments.
+
+Citation validity requires every cited evidence segment to exist in the current record and to include both a valid \texttt{documentId} and \texttt{segmentId}. The primary metric is a binary record-level score: it equals 1 only when the final decision is correct, citations are valid, and required evidence recall is 1.
+
+In the evidence-seeking setting, search recall measures whether search outputs covered required evidence segments, and read recall measures whether segments opened through reading tools or EDL inspection covered required evidence. Process validity evaluates externally recorded process steps rather than hidden model reasoning.
+
+Human review routing metrics describe EDL review flags. The human review rate is the proportion of records with \texttt{requiredHumanReview=true}. Review reasons include insufficient evidence, material gaps, material conflicts, missing or invalid citations, parse errors, tool errors, model errors, and forced source labels when the label space does not allow abstention. These metrics estimate review-queue size and conservatism; they do not represent completed expert review.
+
+A tabular metric dictionary is provided in the supplement. The current analysis reports record-level means and source-stratified descriptive results. Because all methods in a setting are run on the same records, within-setting comparisons are paired at the record level. We do not claim confidence intervals, statistical significance, or mixed-effects human-audit effects in this draft.
+
+\section{Results}
+
+The main evaluation completed all planned traces. The given-evidence setting produced 1560 traces with no missing outputs, provider failures, or invalid decisions. The evidence-seeking setting produced 780 traces with no invalid decisions; 83 ReAct traces used the forced-submit fallback and were included in scoring.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{main_results_overview.png}
+\caption{Primary metric overview. Points show record-level mean scores for each method. EDL improved the primary metric and required evidence recall in both settings, whereas ReAct retained the highest final decision accuracy. No confidence intervals or statistical significance claims are reported in this draft.}
+\label{fig:main-results-overview}
+\end{figure}
+
+\subsection{Main results in the given-evidence setting}
+
+In the given-evidence setting, EDL had the highest primary metric and required evidence recall, while ReAct had the highest decision accuracy. Direct and CoT remained strong when evidence was already supplied, but they did not provide an externally checkable search, reading, evidence-assessment, or validation process.
+
+\begin{table}[H]
+\centering
+\caption{Main evaluation results in the given-evidence setting.}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+Method & Traces & Accuracy & Primary & Required recall & Required precision & Citation valid & Invalid decision \\
+\midrule
+Direct & 390 & 0.897 & 0.595 & 0.802 & 0.851 & 0.995 & 0.000 \\
+CoT & 390 & 0.913 & 0.613 & 0.808 & 0.852 & 0.997 & 0.000 \\
+ReAct & 390 & 0.915 & 0.654 & 0.827 & 0.850 & 1.000 & 0.000 \\
+EDL & 390 & 0.897 & 0.785 & 0.935 & 0.797 & 1.000 & 0.000 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+This result supports EDL's evidence coverage and audit-record advantage, but it should not be interpreted as a universal final-label accuracy advantage.
+
+\subsection{Main results in the evidence-seeking setting}
+
+In the evidence-seeking setting, EDL improved evidence-process metrics relative to ReAct, whereas ReAct achieved higher final decision accuracy. EDL had higher primary metric, required evidence recall, required evidence precision, search recall, read recall, citation validity, and process validity.
+
+\begin{table}[H]
+\centering
+\caption{Main evaluation results in the evidence-seeking setting.}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Method & Traces & Accuracy & Primary & Required recall & Required precision & Search recall & Read recall & Citation valid & Process valid & Invalid decision \\
+\midrule
+ReAct & 390 & 0.928 & 0.654 & 0.773 & 0.786 & 0.060 & 0.896 & 0.997 & 0.997 & 0.000 \\
+EDL & 390 & 0.882 & 0.728 & 0.900 & 0.819 & 0.937 & 0.937 & 1.000 & 1.000 & 0.000 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+EDL routed 111 of 390 evidence-seeking records for human review, a review rate of 0.285. The most common triggers were insufficient evidence (101 records), forced source-label decisions when no abstention label was available (49 records), material gaps (10 records), and material conflicts (13 records). A single record could have multiple review reasons.
+
+\subsection{Source and evidence-complexity stratification}
+
+EDL's advantages and limitations varied by source. In SciFact, EDL achieved a higher primary metric and required evidence recall than ReAct, despite lower decision accuracy. In PubMedQA, both methods reached complete required evidence coverage, but EDL had lower final \texttt{yes/no/maybe} decision accuracy. In NLI4CT, EDL substantially improved search recall, read recall, required evidence recall, and primary metric relative to ReAct, but both methods were challenged by long trial reports with multiple required evidence segments.
+
+\begin{table}[H]
+\centering
+\caption{Evidence-seeking source-stratified results.}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llrrrrrr}
+\toprule
+Source & Method & Traces & Accuracy & Primary & Required recall & Search recall & Read recall \\
+\midrule
+SciFact & ReAct & 135 & 0.993 & 0.859 & 0.874 & 0.000 & 0.985 \\
+SciFact & EDL & 135 & 0.948 & 0.874 & 0.933 & 0.967 & 0.967 \\
+PubMedQA & ReAct & 125 & 0.912 & 0.912 & 1.000 & 0.000 & 1.000 \\
+PubMedQA & EDL & 125 & 0.768 & 0.768 & 1.000 & 1.000 & 1.000 \\
+NLI4CT & ReAct & 130 & 0.877 & 0.192 & 0.449 & 0.180 & 0.703 \\
+NLI4CT & EDL & 130 & 0.923 & 0.538 & 0.768 & 0.844 & 0.844 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{source_stratified_heatmap.png}
+\caption{Source-stratified differences in the evidence-seeking setting. Cells show EDL minus ReAct record-level mean scores. Positive values favor EDL and negative values favor ReAct. The largest EDL gains were in search recall and in NLI4CT evidence-process metrics, while PubMedQA showed lower final decision accuracy and primary metric for EDL.}
+\label{fig:source-stratified-heatmap}
+\end{figure}
+
+Stratifying records by required evidence count showed that high-segment records were more difficult for both methods. In the given-evidence setting, EDL required evidence recall was 0.964 for one-segment records, 0.964 for two-segment records, 0.941 for three- to five-segment records, and 0.735 for records with six or more required evidence segments. In the evidence-seeking setting, the corresponding EDL recalls were 0.972, 0.917, 0.848, and 0.535. The complete matrices are provided in the supplement.
+
+\subsection{Supplementary model and component checks}
+
+In the SciFact evidence-seeking subset, EDL's primary metric was higher than ReAct's in both \texttt{gpt-5.5} and MiniMax-M3. With \texttt{gpt-5.5}, EDL and ReAct had primary metrics of 0.874 and 0.859, respectively. With MiniMax-M3, EDL and ReAct had primary metrics of 0.830 and 0.800, respectively. The complete three-source MiniMax-M3 supplementary evaluation is provided in the supplement.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{cross_model_scifact_replication.png}
+\caption{SciFact evidence-seeking cross-model replication. EDL had higher primary metric and required evidence recall than ReAct in both \texttt{gpt-5.5} and MiniMax-M3, while ReAct retained high final decision accuracy.}
+\label{fig:cross-model-scifact}
+\end{figure}
+
+Component ablation supported the interpretation that EDL's contribution depends on multiple coordinated components. In SciFact, the full EDL primary metric was 0.837; removing iterative seeking reduced it to 0.726, removing sufficiency assessment yielded 0.793, and removing citation validation reduced citation validity and the primary metric. In NLI4CT, removing citation validation reduced the primary metric from 0.538 to 0.115. Removing sufficiency assessment increased the NLI4CT primary metric to 0.577 but eliminated review routing, so it should not be interpreted as a safer workflow strategy.
+
+\section{Discussion}
+
+This study developed and evaluated EDL as a biomedical informatics method for auditable evidence-supported AI-agent decisions. The main finding is that final decision accuracy, evidence coverage, and auditable process quality are distinct evaluation targets. Direct and CoT can perform well when evidence is supplied, and ReAct remains a strong tool-using, agentic RAG baseline. EDL's contribution is that it requires a structured evidence-decision record and produces higher evidence coverage and a higher primary metric in the main evaluation.
+
+The informatics contribution lies in the decision artifact. EDL specifies what an evidence-supported AI-agent output should contain if it is to be auditable: the source-native task or claim, cited evidence identifiers, evidence assessments, gap status, conflict status, human review routing, and provenance. This record can be generated by different model backends and scored independently of hidden chain-of-thought reasoning.
+
+The supplementary analyses are consistent with this interpretation but should not be read as independent validation of deployment readiness. The MiniMax-M3 check suggests that the evidence-process pattern is not limited to the primary model backend, and the component ablations suggest that EDL's behavior depends on coordinated controller features rather than on a single prompt change. In particular, iterative evidence seeking, evidence-sufficiency assessment, and citation validation contribute to different parts of the auditability profile.
+
+Human review routing further illustrates the distinction between evidence-process quality and expert adjudication. EDL routed 111 of 390 evidence-seeking records to review. This estimate is useful for review-queue planning and failure localization, but it is not a completed expert-review result. The ongoing blind audit is included as a placeholder for a planned analysis of whether structured EDL records improve human detection of errors or reduce audit burden.
+
+The comparison with ReAct and RAG should therefore be framed carefully. ReAct is not a weak or irrelevant baseline; it is the relevant tool-using baseline in this study and achieved higher final decision accuracy in the all-source evidence-seeking setting. EDL should be interpreted as improving evidence-process quality and auditability rather than as a general-purpose accuracy optimizer.
+
+The source-stratified results show why this distinction matters. In SciFact, EDL improved the primary metric and required evidence recall. In PubMedQA, EDL found the required evidence but had difficulty calibrating final \texttt{yes/no/maybe} labels. In NLI4CT, EDL improved search and reading coverage in long trial reports, while both methods struggled with complete citation coverage across many required evidence segments.
+
+EDL is a pre-deployment evaluation framework. It does not establish clinical safety, diagnostic efficacy, treatment utility, or readiness for autonomous deployment. Its purpose is to determine whether evidence-supported AI-agent decisions produce inspectable information artifacts that can support governance, audit, and human review.
+
+\section{Limitations}
+
+First, the main evaluation used \texttt{gpt-5.5} as the primary model backend. MiniMax-M3 was included as a supplementary evaluation, but the results do not establish model-family independence across all vendors, reasoning budgets, or tool-runtime configurations.
+
+Second, the benchmark uses public biomedical and clinical-trial evidence resources rather than patient-level clinical records. This supports reproducibility and avoids protected health information, but it limits claims about deployment in clinical environments.
+
+Third, the main evaluation set was filtered through LLM-audit for source-label and evidence consistency. The results therefore apply most directly to records whose source labels and required evidence can be programmatically scored. Audit-excluded or review-queue records remain important targets for future adjudication.
+
+Fourth, the evidence-seeking environment used a fixed evidence library and constrained retrieval tools. This design supports controlled comparison, but it does not represent open-web evidence gathering or all possible retrieval strategies.
+
+Fifth, the statistical analysis is descriptive. The paired record structure supports direct method comparison within each setting, but this draft does not report confidence intervals, statistical significance tests, or formal uncertainty models.
+
+Sixth, the blind human-audit component is ongoing and is currently reported only as a protocol and software implementation. No human-subjects effect sizes, inter-rater reliability estimates, or expert-review outcomes are reported in this draft.
+
+\section{Conclusion}
+
+EDL provides a method for evaluating whether evidence-supported biomedical AI agents produce auditable decision artifacts. In a unified public-source benchmark, EDL improved evidence coverage and the primary metric relative to comparison methods, while ReAct often retained higher final decision accuracy. EDL also produced explicit review-routing flags for cases with evidence insufficiency, gaps, conflicts, or citation failures. These findings support EDL as a pre-deployment biomedical informatics evaluation method for auditable AI-agent decisions, not as a claim of autonomous clinical safety.
+
+\section*{Data and Code Availability}
+
+The data, code, and materials supporting the reported analyses are available at \url{ANONYMIZED_REVIEW_URL} for review and will be deposited in a public archival repository upon acceptance \cite{eviagent2026artifacts,eviagent2026software}. The repository includes the canonical benchmark dataset, audit outputs, trace files, result summaries, figure source data, LLM-audit summaries, \texttt{gpt-5.5} dual-setting results, MiniMax-M3 supplementary results, EDL component ablation summaries, prompt templates, schema files, reproducibility manifests, the EDL runner, the V4 comparison runner, the LLM-audit runner, the human-audit study builder, analysis scripts, manuscript verification utilities, and the human-audit protocol bundle. Materials that cannot be redistributed will be listed in the repository manifest with the corresponding access restrictions.
+
+\section*{Ethics Statement}
+
+The automated evaluation used public-source benchmark records and did not involve protected health information, private patient records, patient contact, intervention, or identifiable human-subject data. The blind human-audit component is ongoing and is reported here only as a protocol and software implementation; no expert-response data are analyzed in the present manuscript. Expert-response reporting will require institutional review board approval, exemption, or a non-human-subjects determination before analysis, and the report will describe consent, compensation, data minimization, access control, storage, and retention procedures.
+
+\section*{Declaration of Competing Interest}
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Funding}
+
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+\section*{Author Contributions}
+
+Cong Wang: Conceptualization, Methodology (clinical and experimental design), Investigation, clinical interpretation, Validation, Writing -- original draft, Writing -- review and editing. Bei Xu: Methodology (algorithm design), Software (implementation and engineering), Data curation, Formal analysis, Investigation (experiment execution), Visualization, Validation, Writing -- review and editing. All authors reviewed and approved the final manuscript.
+
+\section*{Declaration of Generative AI and AI-Assisted Technologies in the Writing Process}
+
+During the preparation of this work, the authors used OpenAI ChatGPT/Codex to assist with manuscript restructuring, language editing, consistency checking, and LaTeX drafting support. The authors reviewed, edited, and verified the content as needed and take full responsibility for the content of the publication. Generative AI tools were not listed as authors and were not used to make independent scientific, clinical, or statistical judgments.
+
+\begin{thebibliography}{99}
+
+\bibitem{moor2023foundation}
+M. Moor, O. Banerjee, Z.S.H. Abad, et al., Foundation models for generalist medical artificial intelligence, \emph{Nature} 616 (2023) 259--265. \url{https://doi.org/10.1038/s41586-023-05881-4}
+
+\bibitem{singhal2023clinical}
+K. Singhal, S. Azizi, T. Tu, et al., Large language models encode clinical knowledge, \emph{Nature} 620 (2023) 172--180. \url{https://doi.org/10.1038/s41586-023-06291-2}
+
+\bibitem{rajpurkar2022health}
+P. Rajpurkar, E. Chen, O. Banerjee, E.J. Topol, AI in health and medicine, \emph{Nat. Med.} 28 (2022) 31--38. \url{https://doi.org/10.1038/s41591-021-01614-0}
+
+\bibitem{topol2019highperformance}
+E.J. Topol, High-performance medicine: the convergence of human and artificial intelligence, \emph{Nat. Med.} 25 (2019) 44--56. \url{https://doi.org/10.1038/s41591-018-0300-7}
+
+\bibitem{esteva2019deep}
+A. Esteva, A. Robicquet, B. Ramsundar, et al., A guide to deep learning in healthcare, \emph{Nat. Med.} 25 (2019) 24--29. \url{https://doi.org/10.1038/s41591-018-0316-z}
+
+\bibitem{mcnamara2024clinicianai}
+S.L. McNamara, P.H. Yi, W. Lotter, The clinician-AI interface: intended use and explainability in FDA-cleared AI devices for medical image interpretation, \emph{npj Digit. Med.} 7 (2024) 80. \url{https://doi.org/10.1038/s41746-024-01080-1}
+
+\bibitem{overgaard2023qms}
+S.M. Overgaard, M.G. Graham, T. Brereton, et al., Implementing quality management systems to close the AI translation gap and facilitate safe, ethical, and effective health AI solutions, \emph{npj Digit. Med.} 6 (2023) 218. \url{https://doi.org/10.1038/s41746-023-00968-8}
+
+\bibitem{lewis2020rag}
+P. Lewis, E. Perez, A. Piktus, et al., Retrieval-augmented generation for knowledge-intensive NLP tasks, in: \emph{Advances in Neural Information Processing Systems 33}, 2020, pp. 9459--9474. Available from: \url{https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html}
+
+\bibitem{yao2023react}
+S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, Y. Cao, ReAct: synergizing reasoning and acting in language models, in: \emph{Proceedings of the International Conference on Learning Representations}, 2023. Available from: \url{https://openreview.net/forum?id=WE_vluYUL-X}
+
+\bibitem{wadden2020scifact}
+D. Wadden, S. Lin, K. Lo, L.L. Wang, M. van Zuylen, A. Cohan, H. Hajishirzi, Fact or fiction: verifying scientific claims, in: \emph{Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing}, 2020, pp. 7534--7550. \url{https://doi.org/10.18653/v1/2020.emnlp-main.609}
+
+\bibitem{jin2019pubmedqa}
+Q. Jin, B. Dhingra, Z. Liu, W.W. Cohen, X. Lu, PubMedQA: a dataset for biomedical research question answering, in: \emph{Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing}, 2019, pp. 2567--2577. \url{https://doi.org/10.18653/v1/D19-1259}
+
+\bibitem{jullien2023nli4ct}
+M. Jullien, M. Valentino, H. Frost, P. O'Regan, D. Landers, A. Freitas, NLI4CT: multi-evidence natural language inference for clinical trial reports, in: \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, 2023, pp. 16745--16764. \url{https://doi.org/10.18653/v1/2023.emnlp-main.1041}
+
+\bibitem{castner2024expertgaze}
+N. Castner, L. Arsiwala-Scheppach, S. Mertens, et al., Expert gaze as a usability indicator of medical AI decision support systems: a preliminary study, \emph{npj Digit. Med.} 7 (2024) 199. \url{https://doi.org/10.1038/s41746-024-01192-8}
+
+\bibitem{wekenborg2025humanai}
+M.K. Wekenborg, S. Gilbert, J.N. Kather, Examining human-AI interaction in real-world healthcare beyond the laboratory, \emph{npj Digit. Med.} 8 (2025) 169. \url{https://doi.org/10.1038/s41746-025-01559-5}
+
+\bibitem{wilkinson2016fair}
+M.D. Wilkinson, M. Dumontier, I.J.J. Aalbersberg, et al., The FAIR Guiding Principles for scientific data management and stewardship, \emph{Sci. Data} 3 (2016) 160018. \url{https://doi.org/10.1038/sdata.2016.18}
+
+\bibitem{huerta2023fairai}
+E.A. Huerta, B. Blaiszik, L. Brinson, et al., FAIR for AI: an interdisciplinary and international community building perspective, \emph{Sci. Data} 10 (2023) 487. \url{https://doi.org/10.1038/s41597-023-02298-6}
+
+\bibitem{wei2022cot}
+J. Wei, X. Wang, D. Schuurmans, et al., Chain-of-thought prompting elicits reasoning in large language models, in: \emph{Advances in Neural Information Processing Systems 35}, 2022, pp. 24824--24837. Available from: \url{https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html}
+
+\bibitem{robertson1995okapi}
+S.E. Robertson, S. Walker, S. Jones, M.M. Hancock-Beaulieu, M. Gatford, Okapi at TREC-3, in: D.K. Harman (Ed.), \emph{Overview of the Third Text REtrieval Conference (TREC-3)}, NIST Special Publication 500-225, 1995, pp. 109--126. Available from: \url{https://trec.nist.gov/pubs/trec3/t3_proceedings.html}
+
+\bibitem{robertson2009bm25}
+S. Robertson, H. Zaragoza, The probabilistic relevance framework: BM25 and beyond, \emph{Found. Trends Inf. Retr.} 3 (2009) 333--389. \url{https://doi.org/10.1561/1500000019}
+
+\bibitem{eviagent2026artifacts}
+[dataset] Anonymous authors, EviAgent benchmark artifacts and blind-audit materials [dataset], anonymous review repository or Zenodo, v1, 2026. \texttt{ANONYMIZED\_REVIEW\_URL}
+
+\bibitem{eviagent2026software}
+Anonymous authors, EviAgent evidence-decision-loop evaluation code [software], anonymous review repository or Zenodo, v1, 2026. \texttt{ANONYMIZED\_REVIEW\_URL}
+
+\end{thebibliography}
+
+\end{document}

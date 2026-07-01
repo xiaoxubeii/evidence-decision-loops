@@ -1,0 +1,30 @@
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif", "fontSize": "22px", "primaryColor": "#eef4f7", "primaryBorderColor": "#55707d", "primaryTextColor": "#17262d", "lineColor": "#566873", "tertiaryColor": "#f7f4eb"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 42, "rankSpacing": 44}}}%%
+flowchart TB
+    I["Statement / Question"]
+    E["Evidence source"]
+    S{"Evidence sufficiency assessment"}
+    M["Request more evidence"]
+    D["Decision submission"]
+    V["Gap / conflict assessment<br/>+ citation validation"]
+    R["Review routing"]
+    O["Evidence audit record<br/>+ scores"]
+
+    I --> E
+    E --> S
+    S -->|insufficient /<br/>needs more evidence| M
+    M --> E
+    S -->|sufficient or<br/>max iterations reached| D
+    D --> V
+    V --> R
+    R --> O
+
+    classDef input fill:#eef4f7,stroke:#55707d,color:#17262d,stroke-width:1.2px;
+    classDef process fill:#f6f2e8,stroke:#8a744f,color:#241e15,stroke-width:1.2px;
+    classDef decision fill:#f2e8e6,stroke:#8b5f59,color:#2d1c19,stroke-width:1.2px;
+    classDef output fill:#eef3ea,stroke:#5d7a57,color:#172612,stroke-width:1.2px;
+    classDef note fill:#f7f7f7,stroke:#7c8589,color:#23292c,stroke-dasharray: 4 3;
+
+    class I,E input;
+    class M,R,D,V process;
+    class S decision;
+    class O output;

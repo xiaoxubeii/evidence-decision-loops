@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/eviagent/react-clinical-source-v4-agent-output.schema.json",
+  "title": "React Clinical Source V4 Agent Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision", "citedEvidence"],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "citedEvidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["documentId", "segmentId"],
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "segmentId": {
+            "type": "string",
+            "pattern": "^seg-[0-9]+$"
+          }
+        }
+      }
+    },
+    "rationale": {
+      "type": "string"
+    }
+  }
+}

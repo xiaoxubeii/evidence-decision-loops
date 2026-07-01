@@ -1,0 +1,11 @@
+flowchart LR
+    A["Candidate public-source records<br/>n = 460"]
+    B["LLM audit<br/>label-evidence consistency<br/>locatable segments<br/>JSONL scoreable"]
+    C["Main evaluation set<br/>agree<br/>n = 390"]
+    D["Audit-excluded / review-queue records<br/>disagree / uncertain<br/>n = 70"]
+    E["Audit purpose<br/>ensure scoreability and source consistency<br/>not selected by tested-method performance"]
+
+    A --> B
+    B -->|agree| C
+    B -->|disagree / uncertain| D
+    B -.-> E

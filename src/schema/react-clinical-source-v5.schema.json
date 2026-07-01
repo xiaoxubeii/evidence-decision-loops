@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "React Clinical Source V5 Adjudicated Benchmark",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schemaVersion",
+    "id",
+    "source",
+    "sourceRecordId",
+    "task",
+    "allowedDecisions",
+    "goldDecision",
+    "documents",
+    "requiredEvidence",
+    "adjudication"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "react-clinical-source-v5" },
+    "id": { "type": "string", "minLength": 1 },
+    "source": { "type": "string", "minLength": 1 },
+    "sourceRecordId": { "type": "string", "minLength": 1 },
+    "task": { "type": "object" },
+    "allowedDecisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "goldDecision": { "type": "string", "minLength": 1 },
+    "documents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["documentId", "segments"],
+        "properties": {
+          "documentId": { "type": "string", "minLength": 1 },
+          "segments": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": ["segmentId", "index", "text", "charStart", "charEnd", "sourceTextHash"],
+              "properties": {
+                "segmentId": { "type": "string", "minLength": 1 },
+                "index": { "type": "integer", "minimum": 0 },
+                "charStart": { "type": "integer", "minimum": 0 },
+                "charEnd": { "type": "integer", "minimum": 1 },
+                "sourceTextHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+                "text": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "requiredEvidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["documentId", "segmentId", "stance"],
+        "properties": {
+          "documentId": { "type": "string", "minLength": 1 },
+          "segmentId": { "type": "string", "minLength": 1 },
+          "stance": { "enum": ["supports", "refutes", "mixed", "neutral"] }
+        }
+      }
+    },
+    "adjudication": {
+      "type": "object",
+      "required": ["sourceRecordId", "adjudicationDecision", "confidence"],
+      "properties": {
+        "sourceRecordId": { "type": "string", "minLength": 1 },
+        "adjudicationDecision": { "enum": ["accept", "revise"] },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    }
+  }
+}

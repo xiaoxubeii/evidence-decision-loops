@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "react-clinical-source-v4-main-three-source-canonical-nli4ct-manifest",
+  "outputDataset": "src/data/react-clinical-source-v4-main-three-source-canonical-nli4ct.jsonl",
+  "outputFrozenDir": "results/live-comparison-v4-main-three-source-canonical-nli4ct-frozen-evidence-full",
+  "outputEvidenceSeekingDir": "results/live-comparison-v4-main-three-source-canonical-nli4ct-evidence-seeking-full",
+  "sourceDatasets": {
+    "oldAgreeDataset": "src/data/react-clinical-source-v4-agree.jsonl",
+    "canonicalNli4ctDataset": "src/data/react-clinical-source-v4-nli4ct-fulltrial-rawline-audited-main.jsonl"
+  },
+  "sourceResultDirs": {
+    "oldFrozenDir": "results/live-comparison-v4-agree-default-frozen-evidence-full",
+    "oldEvidenceSeekingDir": "results/live-comparison-v4-agree-default-evidence-seeking-react-edl-bm25-topk5-full",
+    "canonicalNli4ctFrozenDir": "results/live-comparison-v4-nli4ct-fulltrial-rawline-audited-main-frozen-evidence-full",
+    "canonicalNli4ctEvidenceSeekingDir": "results/live-comparison-v4-nli4ct-fulltrial-rawline-audited-main-evidence-seeking-react-forced-submit-edl-full"
+  },
+  "selectionRule": "Use SciFact and PubMedQA records/traces from the V4 agree main run; replace the NLI4CT arm with canonical full-trial raw-line audited-main records/traces.",
+  "records": 390,
+  "oldAgreeRecords": 401,
+  "retainedOldNonNli4ctRecords": 260,
+  "canonicalNli4ctRecords": 130,
+  "bySource": {
+    "scifact": 135,
+    "pubmedqa": 125,
+    "nli4ct": 130
+  },
+  "byGoldDecision": {
+    "scifact:SUPPORT": 42,
+    "scifact:CONTRADICT": 44,
+    "scifact:NEI": 49,
+    "pubmedqa:yes": 43,
+    "pubmedqa:no": 43,
+    "pubmedqa:maybe": 39,
+    "nli4ct:Entailment": 65,
+    "nli4ct:Contradiction": 65
+  },
+  "requiredEvidenceCountDistribution": {
+    "1": 250,
+    "2": 42,
+    "3": 10,
+    "4": 34,
+    "5": 10,
+    "6": 1,
+    "7": 3,
+    "8": 3,
+    "9": 6,
+    "10": 4,
+    "13": 2,
+    "14": 2,
+    "15": 2,
+    "16": 2,
+    "17": 2,
+    "18": 1,
+    "20": 1,
+    "24": 3,
+    "26": 2,
+    "27": 1,
+    "28": 2,
+    "30": 1,
+    "36": 2,
+    "50": 1,
+    "54": 1,
+    "56": 1,
+    "61": 1
+  },
+  "frozenTraces": 1560,
+  "evidenceSeekingTraces": 780,
+  "frozenResultPath": "results/live-comparison-v4-main-three-source-canonical-nli4ct-frozen-evidence-full/live-comparison-v4-results.json",
+  "evidenceSeekingResultPath": "results/live-comparison-v4-main-three-source-canonical-nli4ct-evidence-seeking-full/live-comparison-v4-results.json"
+}

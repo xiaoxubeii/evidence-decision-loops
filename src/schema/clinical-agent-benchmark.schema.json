@@ -1,0 +1,266 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eviagent.local/schema/clinical-agent-benchmark.schema.json",
+  "title": "ReAct-style clinical EDL benchmark task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "taskFamily",
+    "question",
+    "availableTools",
+    "frozenDocuments",
+    "goldDecision",
+    "goldEvidenceIds",
+    "expectedConflicts",
+    "expectedReviewRequired",
+    "unsafeIf",
+    "goldRationale",
+    "evaluationPartition",
+    "quality"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+-[0-9]{3}$"
+    },
+    "sourceRecordId": {
+      "type": "string"
+    },
+    "sourceDataset": {
+      "type": "string"
+    },
+    "sourceSplit": {
+      "type": "string"
+    },
+    "sourceScenario": {
+      "type": "string",
+      "enum": [
+        "fact_verification",
+        "data_eligibility",
+        "policy_authorization",
+        "due_diligence"
+      ]
+    },
+    "taskFamily": {
+      "type": "string",
+      "enum": [
+        "clinical_evidence_verification",
+        "clinical_governance_device_diligence"
+      ]
+    },
+    "question": {
+      "type": "string",
+      "minLength": 20
+    },
+    "syntheticCase": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "availableTools": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "string",
+        "enum": ["search", "open_document", "inspect_evidence", "submit_decision"]
+      },
+      "contains": {
+        "const": "submit_decision"
+      }
+    },
+    "frozenDocuments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/frozenDocument"
+      }
+    },
+    "goldDecision": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "refuted",
+        "insufficient_evidence"
+      ]
+    },
+    "goldEvidenceIds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "requiredEvidenceIds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "contextEvidenceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "evaluationPartition": {
+      "type": "string",
+      "enum": ["clean", "stress"]
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceAdapter", "labelMapping", "coverage", "riskFlags", "evaluationPartition"],
+      "properties": {
+        "sourceAdapter": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "labelSemantics"],
+          "properties": {
+            "name": { "type": "string" },
+            "labelSemantics": { "type": "string" }
+          }
+        },
+        "labelMapping": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["sourceGoldDecision", "finalGoldDecision", "relabeled"],
+          "properties": {
+            "sourceLabel": {
+              "anyOf": [
+                { "type": "string" },
+                { "type": "null" }
+              ]
+            },
+            "sourceGoldDecision": { "type": "string" },
+            "finalGoldDecision": { "type": "string" },
+            "relabeled": { "type": "boolean" }
+          }
+        },
+        "coverage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["claimTokenCount", "evidenceTokenCount", "overlapTokenCount", "overlapRatio", "missingClaimTokens"],
+          "properties": {
+            "claimTokenCount": { "type": "integer", "minimum": 0 },
+            "evidenceTokenCount": { "type": "integer", "minimum": 0 },
+            "overlapTokenCount": { "type": "integer", "minimum": 0 },
+            "overlapRatio": { "type": "number", "minimum": 0, "maximum": 1 },
+            "missingClaimTokens": {
+              "type": "array",
+              "items": { "type": "string" },
+              "uniqueItems": true
+            }
+          }
+        },
+        "riskFlags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "claim_evidence_entity_mismatch",
+              "gold_relabeled_to_insufficient_evidence",
+              "expected_human_review",
+              "low_claim_evidence_coverage",
+              "source_label_semantic_compression",
+              "question_polarity_sensitive"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "evaluationPartition": {
+          "type": "string",
+          "enum": ["clean", "stress"]
+        }
+      }
+    },
+    "expectedConflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["description", "evidenceIds"],
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 10
+          },
+          "evidenceIds": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "expectedReviewRequired": {
+      "type": "boolean"
+    },
+    "unsafeIf": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "goldRationale": {
+      "type": "string",
+      "minLength": 20
+    }
+  },
+  "$defs": {
+    "frozenDocument": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "sourceType", "url", "snapshotDate", "excerpt"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^(doc|ev)-[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 5
+        },
+        "sourceType": {
+          "type": "string",
+          "enum": [
+            "benchmark",
+            "paper",
+            "policy",
+            "protocol",
+            "public_benchmark_record",
+            "clinical_trial_report",
+            "scientific_abstract",
+            "public_database",
+            "synthetic_guideline",
+            "synthetic_trial_criteria",
+            "synthetic_drug_label",
+            "synthetic_policy",
+            "synthetic_regulatory_record",
+            "synthetic_adverse_event_record",
+            "synthetic_vendor_document"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^(benchmark://|https?://)"
+        },
+        "snapshotDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 30
+        }
+      }
+    }
+  }
+}

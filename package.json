@@ -1,0 +1,23 @@
+{
+  "name": "eviagent-jbi-artifacts",
+  "version": "0.1.0",
+  "private": false,
+  "type": "commonjs",
+  "description": "Data, code, and reproducibility artifacts for the EviAgent Evidence Decision Loop JBI manuscript.",
+  "scripts": {
+    "validate": "node scripts/validate_release.js",
+    "run:main": "node src/scripts/run_live_comparison_v4.js --dataset data/canonical_main_390.jsonl --out-dir results/reproduction-smoke --sample-per-source 1 --methods direct,cot,react,edl --setting frozen-evidence --check",
+    "human-audit:build": "node src/scripts/build_human_audit_study.js",
+    "human-audit:serve": "node src/scripts/serve_human_audit_study.js",
+    "human-audit:analyze": "node src/scripts/analyze_human_audit_study.js"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.1.48",
+    "@langchain/langgraph": "^1.3.2",
+    "@langchain/openai": "^1.4.7",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.61.1"
+  }
+}

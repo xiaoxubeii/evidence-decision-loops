@@ -1,0 +1,391 @@
+{
+  "schemaVersion": "v4-live-comparison",
+  "mode": "live",
+  "datasetPath": "src/data/react-clinical-source-v4-main-three-source-canonical-nli4ct.jsonl",
+  "tracePath": "results/live-comparison-v4-minimax-m3-canonical-nli4ct-frozen-evidence-full/live-comparison-v4-traces.jsonl",
+  "resultPath": "results/live-comparison-v4-minimax-m3-canonical-nli4ct-frozen-evidence-full/live-comparison-v4-results.json",
+  "records": 390,
+  "traces": 1560,
+  "setting": "frozen-evidence",
+  "model": "MiniMax-M3",
+  "reasoningEffort": "medium",
+  "methodSelection": [
+    "direct",
+    "cot",
+    "react",
+    "edl"
+  ],
+  "methods": {
+    "direct": {
+      "traces": 390,
+      "decisionAccuracy": 0.8769230769230769,
+      "citationValidity": 0.9948717948717949,
+      "requiredEvidenceRecall": 0.7999436809853259,
+      "requiredEvidencePrecision": 0.8281439207985609,
+      "citationGranularityMatched": 0.676923076923077,
+      "searchRequiredEvidenceRecall": null,
+      "readRequiredEvidenceRecall": null,
+      "evidenceFailureStages": {},
+      "processValidity": null,
+      "humanReviewRate": 0.005128205128205128,
+      "reviewReasonCounts": {
+        "missing_citation": 2,
+        "invalid_citation": 2
+      },
+      "missedRequiredReviewRate": 0,
+      "unnecessaryReviewRate": 0,
+      "primaryMetric": 0.5615384615384615,
+      "invalidDecisionRate": 0
+    },
+    "cot": {
+      "traces": 390,
+      "decisionAccuracy": 0.8589743589743589,
+      "citationValidity": 0.9948717948717949,
+      "requiredEvidenceRecall": 0.7966609944689587,
+      "requiredEvidencePrecision": 0.8336892488954346,
+      "citationGranularityMatched": 0.6743589743589744,
+      "searchRequiredEvidenceRecall": null,
+      "readRequiredEvidenceRecall": null,
+      "evidenceFailureStages": {},
+      "processValidity": null,
+      "humanReviewRate": 0.005128205128205128,
+      "reviewReasonCounts": {
+        "missing_citation": 2,
+        "invalid_citation": 2
+      },
+      "missedRequiredReviewRate": 0,
+      "unnecessaryReviewRate": 0,
+      "primaryMetric": 0.5461538461538461,
+      "invalidDecisionRate": 0
+    },
+    "react": {
+      "traces": 390,
+      "decisionAccuracy": 0.8641025641025641,
+      "citationValidity": 0.9974358974358974,
+      "requiredEvidenceRecall": 0.8156242039286696,
+      "requiredEvidencePrecision": 0.8189087301587303,
+      "citationGranularityMatched": 0.6846153846153846,
+      "searchRequiredEvidenceRecall": 0.07178915813531198,
+      "readRequiredEvidenceRecall": 0.24373708791636503,
+      "evidenceFailureStages": {
+        "retrieval_miss": 348,
+        "none": 13,
+        "read_miss": 10,
+        "decision_miss_after_evidence": 1,
+        "citation_miss": 18
+      },
+      "processValidity": 0.09230769230769231,
+      "humanReviewRate": 0.002564102564102564,
+      "reviewReasonCounts": {
+        "invalid_citation": 1
+      },
+      "missedRequiredReviewRate": 0,
+      "unnecessaryReviewRate": 0.002564102564102564,
+      "primaryMetric": 0.5615384615384615,
+      "invalidDecisionRate": 0
+    },
+    "edl": {
+      "traces": 390,
+      "decisionAccuracy": 0.8743589743589744,
+      "citationValidity": 0.9923076923076923,
+      "requiredEvidenceRecall": 0.9059215723736102,
+      "requiredEvidencePrecision": 0.7853691026171645,
+      "citationGranularityMatched": 0.8307692307692308,
+      "searchRequiredEvidenceRecall": 0,
+      "readRequiredEvidenceRecall": 1,
+      "evidenceFailureStages": {
+        "retrieval_miss": 390
+      },
+      "processValidity": 1,
+      "humanReviewRate": 0.46923076923076923,
+      "reviewReasonCounts": {
+        "material_gap": 104,
+        "insufficient_evidence": 85,
+        "material_conflict": 78,
+        "missing_citation": 2,
+        "invalid_citation": 3,
+        "forced_source_label_without_abstain": 31
+      },
+      "missedRequiredReviewRate": 0,
+      "unnecessaryReviewRate": 0.46923076923076923,
+      "primaryMetric": 0.717948717948718,
+      "invalidDecisionRate": 0
+    }
+  },
+  "sources": {
+    "scifact": {
+      "traces": 540,
+      "methods": {
+        "direct": {
+          "traces": 135,
+          "decisionAccuracy": 0.9111111111111111,
+          "citationValidity": 0.9851851851851852,
+          "requiredEvidenceRecall": 0.8962962962962963,
+          "requiredEvidencePrecision": 0.6196741854636593,
+          "citationGranularityMatched": 0.8888888888888888,
+          "searchRequiredEvidenceRecall": null,
+          "readRequiredEvidenceRecall": null,
+          "evidenceFailureStages": {},
+          "processValidity": null,
+          "humanReviewRate": 0.014814814814814815,
+          "reviewReasonCounts": {
+            "missing_citation": 2,
+            "invalid_citation": 2
+          },
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0,
+          "primaryMetric": 0.8,
+          "invalidDecisionRate": 0
+        },
+        "cot": {
+          "traces": 135,
+          "decisionAccuracy": 0.9111111111111111,
+          "citationValidity": 0.9851851851851852,
+          "requiredEvidenceRecall": 0.8962962962962963,
+          "requiredEvidencePrecision": 0.6376655925528107,
+          "citationGranularityMatched": 0.8888888888888888,
+          "searchRequiredEvidenceRecall": null,
+          "readRequiredEvidenceRecall": null,
+          "evidenceFailureStages": {},
+          "processValidity": null,
+          "humanReviewRate": 0.014814814814814815,
+          "reviewReasonCounts": {
+            "missing_citation": 2,
+            "invalid_citation": 2
+          },
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0,
+          "primaryMetric": 0.8,
+          "invalidDecisionRate": 0
+        },
+        "react": {
+          "traces": 135,
+          "decisionAccuracy": 0.9259259259259259,
+          "citationValidity": 1,
+          "requiredEvidenceRecall": 0.9222222222222223,
+          "requiredEvidencePrecision": 0.6171252204585539,
+          "citationGranularityMatched": 0.9111111111111111,
+          "searchRequiredEvidenceRecall": 0.06666666666666667,
+          "readRequiredEvidenceRecall": 0.25925925925925924,
+          "evidenceFailureStages": {
+            "retrieval_miss": 126,
+            "none": 7,
+            "read_miss": 1,
+            "decision_miss_after_evidence": 1
+          },
+          "processValidity": 0.07407407407407407,
+          "humanReviewRate": 0,
+          "reviewReasonCounts": {},
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0,
+          "primaryMetric": 0.8444444444444444,
+          "invalidDecisionRate": 0
+        },
+        "edl": {
+          "traces": 135,
+          "decisionAccuracy": 0.9111111111111111,
+          "citationValidity": 0.9777777777777777,
+          "requiredEvidenceRecall": 0.9296296296296296,
+          "requiredEvidencePrecision": 0.6064844877344877,
+          "citationGranularityMatched": 0.9259259259259259,
+          "searchRequiredEvidenceRecall": 0,
+          "readRequiredEvidenceRecall": 1,
+          "evidenceFailureStages": {
+            "retrieval_miss": 135
+          },
+          "processValidity": 1,
+          "humanReviewRate": 0.5481481481481482,
+          "reviewReasonCounts": {
+            "material_gap": 48,
+            "insufficient_evidence": 54,
+            "material_conflict": 21,
+            "missing_citation": 2,
+            "invalid_citation": 3
+          },
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0.5481481481481482,
+          "primaryMetric": 0.837037037037037,
+          "invalidDecisionRate": 0
+        }
+      }
+    },
+    "pubmedqa": {
+      "traces": 500,
+      "methods": {
+        "direct": {
+          "traces": 125,
+          "decisionAccuracy": 0.736,
+          "citationValidity": 1,
+          "requiredEvidenceRecall": 1,
+          "requiredEvidencePrecision": 1,
+          "citationGranularityMatched": 1,
+          "searchRequiredEvidenceRecall": null,
+          "readRequiredEvidenceRecall": null,
+          "evidenceFailureStages": {},
+          "processValidity": null,
+          "humanReviewRate": 0,
+          "reviewReasonCounts": {},
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0,
+          "primaryMetric": 0.736,
+          "invalidDecisionRate": 0
+        },
+        "cot": {
+          "traces": 125,
+          "decisionAccuracy": 0.704,
+          "citationValidity": 1,
+          "requiredEvidenceRecall": 1,
+          "requiredEvidencePrecision": 1,
+          "citationGranularityMatched": 1,
+          "searchRequiredEvidenceRecall": null,
+          "readRequiredEvidenceRecall": null,
+          "evidenceFailureStages": {},
+          "processValidity": null,
+          "humanReviewRate": 0,
+          "reviewReasonCounts": {},
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0,
+          "primaryMetric": 0.704,
+          "invalidDecisionRate": 0
+        },
+        "react": {
+          "traces": 125,
+          "decisionAccuracy": 0.704,
+          "citationValidity": 1,
+          "requiredEvidenceRecall": 1,
+          "requiredEvidencePrecision": 1,
+          "citationGranularityMatched": 1,
+          "searchRequiredEvidenceRecall": 0.016,
+          "readRequiredEvidenceRecall": 0.296,
+          "evidenceFailureStages": {
+            "retrieval_miss": 123,
+            "read_miss": 2
+          },
+          "processValidity": 0,
+          "humanReviewRate": 0,
+          "reviewReasonCounts": {},
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0,
+          "primaryMetric": 0.704,
+          "invalidDecisionRate": 0
+        },
+        "edl": {
+          "traces": 125,
+          "decisionAccuracy": 0.752,
+          "citationValidity": 1,
+          "requiredEvidenceRecall": 1,
+          "requiredEvidencePrecision": 1,
+          "citationGranularityMatched": 1,
+          "searchRequiredEvidenceRecall": 0,
+          "readRequiredEvidenceRecall": 1,
+          "evidenceFailureStages": {
+            "retrieval_miss": 125
+          },
+          "processValidity": 1,
+          "humanReviewRate": 0.4,
+          "reviewReasonCounts": {
+            "insufficient_evidence": 16,
+            "material_gap": 45,
+            "forced_source_label_without_abstain": 16,
+            "material_conflict": 4
+          },
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0.4,
+          "primaryMetric": 0.752,
+          "invalidDecisionRate": 0
+        }
+      }
+    },
+    "nli4ct": {
+      "traces": 520,
+      "methods": {
+        "direct": {
+          "traces": 130,
+          "decisionAccuracy": 0.9769230769230769,
+          "citationValidity": 1,
+          "requiredEvidenceRecall": 0.5075233506482859,
+          "requiredEvidencePrecision": 0.8761782661782663,
+          "citationGranularityMatched": 0.14615384615384616,
+          "searchRequiredEvidenceRecall": null,
+          "readRequiredEvidenceRecall": null,
+          "evidenceFailureStages": {},
+          "processValidity": null,
+          "humanReviewRate": 0,
+          "reviewReasonCounts": {},
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0,
+          "primaryMetric": 0.14615384615384616,
+          "invalidDecisionRate": 0
+        },
+        "cot": {
+          "traces": 130,
+          "decisionAccuracy": 0.9538461538461539,
+          "citationValidity": 1,
+          "requiredEvidenceRecall": 0.4976752910991842,
+          "requiredEvidencePrecision": 0.8743223443223446,
+          "citationGranularityMatched": 0.13846153846153847,
+          "searchRequiredEvidenceRecall": null,
+          "readRequiredEvidenceRecall": null,
+          "evidenceFailureStages": {},
+          "processValidity": null,
+          "humanReviewRate": 0,
+          "reviewReasonCounts": {},
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0,
+          "primaryMetric": 0.13076923076923078,
+          "invalidDecisionRate": 0
+        },
+        "react": {
+          "traces": 130,
+          "decisionAccuracy": 0.9538461538461539,
+          "citationValidity": 0.9923076923076923,
+          "requiredEvidenceRecall": 0.5276418425552393,
+          "requiredEvidencePrecision": 0.8543269230769233,
+          "citationGranularityMatched": 0.14615384615384616,
+          "searchRequiredEvidenceRecall": 0.13075208979055133,
+          "readRequiredEvidenceRecall": 0.17736510990294094,
+          "evidenceFailureStages": {
+            "retrieval_miss": 99,
+            "citation_miss": 18,
+            "none": 6,
+            "read_miss": 7
+          },
+          "processValidity": 0.2,
+          "humanReviewRate": 0.007692307692307693,
+          "reviewReasonCounts": {
+            "invalid_citation": 1
+          },
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0.007692307692307693,
+          "primaryMetric": 0.13076923076923078,
+          "invalidDecisionRate": 0
+        },
+        "edl": {
+          "traces": 130,
+          "decisionAccuracy": 0.9538461538461539,
+          "citationValidity": 1,
+          "requiredEvidenceRecall": 0.7908416401977524,
+          "requiredEvidencePrecision": 0.7606299256299253,
+          "citationGranularityMatched": 0.5692307692307692,
+          "searchRequiredEvidenceRecall": 0,
+          "readRequiredEvidenceRecall": 1,
+          "evidenceFailureStages": {
+            "retrieval_miss": 130
+          },
+          "processValidity": 1,
+          "humanReviewRate": 0.45384615384615384,
+          "reviewReasonCounts": {
+            "material_conflict": 53,
+            "insufficient_evidence": 15,
+            "material_gap": 11,
+            "forced_source_label_without_abstain": 15
+          },
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0.45384615384615384,
+          "primaryMetric": 0.5615384615384615,
+          "invalidDecisionRate": 0
+        }
+      }
+    }
+  }
+}

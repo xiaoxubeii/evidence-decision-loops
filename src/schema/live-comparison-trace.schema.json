@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eviagent.local/schema/live-comparison-trace.schema.json",
+  "title": "Live clinical comparison trace",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "recordId",
+    "method",
+    "model",
+    "reasoningEffort",
+    "promptSha256",
+    "startedAt",
+    "latencyMs",
+    "steps",
+    "finalDecision",
+    "citedEvidenceIds",
+    "requiredHumanReview",
+    "rationale",
+    "rawResponse",
+    "edlGuard",
+    "processCheck",
+    "scores"
+  ],
+  "properties": {
+    "recordId": { "type": "string" },
+    "method": {
+      "type": "string",
+      "enum": ["direct_llm", "cot", "react", "edl"]
+    },
+    "model": { "type": "string" },
+    "reasoningEffort": {
+      "type": ["string", "null"],
+      "enum": [null, "minimal", "low", "medium", "high"]
+    },
+    "promptSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "latencyMs": {
+      "type": "number",
+      "minimum": 0
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "content"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["thought", "action", "observation", "finish"]
+          },
+          "content": { "type": "string" },
+          "action": { "type": "string" },
+          "input": { "type": "object" },
+          "observation": { "type": "string" }
+        }
+      }
+    },
+    "finalDecision": { "type": "string" },
+    "citedEvidenceIds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "requiredHumanReview": { "type": "boolean" },
+    "rationale": { "type": "string" },
+    "rawResponse": { "type": "string" },
+    "parseError": { "type": "string" },
+    "unsafeAction": { "type": "string" },
+    "edlMaxIterations": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "edlStoppingReason": {
+      "type": "string",
+      "enum": ["validation_passed", "max_iterations", "tool_error", "invalid_artifact", "model_error"]
+    },
+    "edlIterationTrace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "iteration",
+          "evidenceRequests",
+          "validationValid",
+          "validationErrors",
+          "observationCount",
+          "accessedEvidenceIds",
+          "toolEvents"
+        ],
+        "properties": {
+          "iteration": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "evidenceRequests": {
+            "type": "array",
+            "items": { "type": "object" }
+          },
+          "validationValid": { "type": "boolean" },
+          "validationErrors": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "observationCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "accessedEvidenceIds": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "toolEvents": {
+            "type": "array",
+            "items": { "type": "object" }
+          },
+          "toolError": { "type": "string" }
+        }
+      }
+    },
+    "edlGuard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "errors"],
+      "properties": {
+        "passed": { "type": "boolean" },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "processCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "accessedEvidenceIds", "errors"],
+      "properties": {
+        "passed": { "type": "boolean" },
+        "accessedEvidenceIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decisionCorrect",
+        "evidenceRecall",
+        "evidencePathRecall",
+        "citationValidity",
+        "unsafeAction",
+        "missedEscalation",
+        "auditability",
+        "reasoningValidity",
+        "processGatedCorrect",
+        "unsupportedCorrect",
+        "toolSteps"
+      ],
+      "properties": {
+        "decisionCorrect": { "type": "boolean" },
+        "evidenceRecall": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidencePathRecall": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "citationValidity": { "type": "boolean" },
+        "unsafeAction": { "type": "boolean" },
+        "missedEscalation": { "type": "boolean" },
+        "auditability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "reasoningValidity": { "type": "boolean" },
+        "processGatedCorrect": { "type": "boolean" },
+        "unsupportedCorrect": { "type": "boolean" },
+        "toolSteps": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

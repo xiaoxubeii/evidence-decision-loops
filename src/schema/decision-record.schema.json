@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eviagent.local/schemas/edl-decision-record.schema.json",
+  "title": "Evidence Decision Loop Benchmark Record",
+  "type": "object",
+  "required": [
+    "id",
+    "scenario",
+    "question",
+    "goldDecision",
+    "goldEvidenceIds",
+    "expectedConflict",
+    "frozenEvidence",
+    "claims",
+    "prediction"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "scenario": {
+      "type": "string",
+      "enum": [
+        "fact_verification",
+        "data_eligibility",
+        "policy_authorization",
+        "due_diligence"
+      ]
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goldDecision": {
+      "$ref": "#/$defs/decisionLabel"
+    },
+    "goldEvidenceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expectedConflict": {
+      "type": "boolean"
+    },
+    "expectedPolicyViolation": {
+      "type": "boolean"
+    },
+    "frozenEvidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/frozenEvidence"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    },
+    "prediction": {
+      "$ref": "#/$defs/prediction"
+    }
+  },
+  "$defs": {
+    "decisionLabel": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "refuted",
+        "insufficient_evidence"
+      ]
+    },
+    "frozenEvidence": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "sourceType",
+        "snapshotDate",
+        "excerpt"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "sourceType": {
+          "type": "string",
+          "enum": [
+            "benchmark",
+            "public_database",
+            "policy",
+            "paper",
+            "filing",
+            "protocol"
+          ]
+        },
+        "url": {
+          "type": "string"
+        },
+        "snapshotDate": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "excerpt": {
+          "type": "string"
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "required": [
+        "id",
+        "text",
+        "requiredEvidenceIds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "requiredEvidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "required": [
+        "claimId",
+        "judgment",
+        "citedEvidenceIds"
+      ],
+      "properties": {
+        "claimId": {
+          "type": "string"
+        },
+        "judgment": {
+          "type": "string",
+          "enum": [
+            "supports",
+            "refutes",
+            "insufficient",
+            "conflicted"
+          ]
+        },
+        "citedEvidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "gap": {
+          "type": "string"
+        },
+        "conflict": {
+          "type": "string"
+        }
+      }
+    },
+    "prediction": {
+      "type": "object",
+      "required": [
+        "decision",
+        "citedClaimIds",
+        "citedEvidenceIds",
+        "evaluations",
+        "gaps",
+        "conflicts",
+        "expertReview"
+      ],
+      "properties": {
+        "decision": {
+          "$ref": "#/$defs/decisionLabel"
+        },
+        "citedClaimIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "citedEvidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evaluations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evaluation"
+          }
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "description",
+              "evidenceIds"
+            ],
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "evidenceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "expertReview": {
+          "type": "object",
+          "required": [
+            "required",
+            "reason"
+          ],
+          "properties": {
+            "required": {
+              "type": "boolean"
+            },
+            "reason": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

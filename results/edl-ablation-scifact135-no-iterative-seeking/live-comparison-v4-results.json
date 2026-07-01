@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "v4-live-comparison",
+  "mode": "live",
+  "datasetPath": "src/data/react-clinical-source-v4-agree-scifact-135.jsonl",
+  "tracePath": "results/edl-ablation-scifact135-no-iterative-seeking/live-comparison-v4-traces.jsonl",
+  "resultPath": "results/edl-ablation-scifact135-no-iterative-seeking/live-comparison-v4-results.json",
+  "records": 135,
+  "traces": 135,
+  "setting": "evidence-seeking",
+  "model": "gpt-5.5",
+  "reasoningEffort": null,
+  "methodSelection": [
+    "edl"
+  ],
+  "methods": {
+    "edl": {
+      "traces": 135,
+      "decisionAccuracy": 0.9333333333333333,
+      "citationValidity": 1,
+      "requiredEvidenceRecall": 0.7851851851851852,
+      "requiredEvidencePrecision": 0.6111111111111112,
+      "citationGranularityMatched": 0.7851851851851852,
+      "searchRequiredEvidenceRecall": 0.7851851851851852,
+      "readRequiredEvidenceRecall": 0.7851851851851852,
+      "evidenceFailureStages": {
+        "none": 98,
+        "retrieval_miss": 29,
+        "decision_miss_after_evidence": 8
+      },
+      "processValidity": 1,
+      "humanReviewRate": 0.4740740740740741,
+      "reviewReasonCounts": {
+        "insufficient_evidence": 63,
+        "material_gap": 46,
+        "material_conflict": 2
+      },
+      "missedRequiredReviewRate": 0,
+      "unnecessaryReviewRate": 0.4740740740740741,
+      "primaryMetric": 0.725925925925926,
+      "invalidDecisionRate": 0
+    }
+  },
+  "sources": {
+    "scifact": {
+      "traces": 135,
+      "methods": {
+        "edl": {
+          "traces": 135,
+          "decisionAccuracy": 0.9333333333333333,
+          "citationValidity": 1,
+          "requiredEvidenceRecall": 0.7851851851851852,
+          "requiredEvidencePrecision": 0.6111111111111112,
+          "citationGranularityMatched": 0.7851851851851852,
+          "searchRequiredEvidenceRecall": 0.7851851851851852,
+          "readRequiredEvidenceRecall": 0.7851851851851852,
+          "evidenceFailureStages": {
+            "none": 98,
+            "retrieval_miss": 29,
+            "decision_miss_after_evidence": 8
+          },
+          "processValidity": 1,
+          "humanReviewRate": 0.4740740740740741,
+          "reviewReasonCounts": {
+            "insufficient_evidence": 63,
+            "material_gap": 46,
+            "material_conflict": 2
+          },
+          "missedRequiredReviewRate": 0,
+          "unnecessaryReviewRate": 0.4740740740740741,
+          "primaryMetric": 0.725925925925926,
+          "invalidDecisionRate": 0
+        }
+      }
+    }
+  }
+}
