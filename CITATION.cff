@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-title: "Evidence Decision Loops: A Biomedical Informatics Method for Auditable AI Agent Decisions"
-message: "If you use this artifact package, please cite the manuscript and archived release."
+title: "Evidence Decision Loops (EDL)"
+message: "If you use this repository, please cite the manuscript and archived release or commit used for analysis."
 type: software
 authors:
   - family-names: Wang
@@ -9,5 +9,5 @@ authors:
     given-names: Bei
 date-released: 2026-07-01
 version: "0.1.0"
-repository-code: "https://github.com/xiaoxubeii/eviagent-jbi-artifacts"
+repository-code: "https://github.com/xiaoxubeii/evidence-decision-loops"
 license: "MIT"
