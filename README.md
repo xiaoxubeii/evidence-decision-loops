@@ -1,61 +1,49 @@
-# EviAgent Evidence Decision Loop Artifacts
+# Evidence Decision Loops (EDL)
 
-This repository contains the data, code, prompts, schemas, results, manuscript files, and protocol materials supporting the manuscript:
+This repository contains the reference implementation, benchmark, and reproducibility resources for **Evidence Decision Loops (EDL)**: an evidence-decision protocol for auditable LLM-supported biomedical reasoning.
 
-**Evidence Decision Loops: A Biomedical Informatics Method for Auditable AI Agent Decisions**
+The repository accompanies the EDL manuscript and includes source-native benchmark records, controller and scoring code, prompts and schemas, saved traces, result summaries, figures, and manuscript materials.
 
-The package is intended to support peer review and reproducibility for the Journal of Biomedical Informatics submission. It includes the canonical benchmark records used in the main analyses, precomputed model traces and result summaries, EDL controller/scoring code, prompt and schema files, manuscript source, and an ongoing blind human-audit protocol bundle.
+## What EDL Evaluates
 
-## What Is Included
+EDL structures a record-scoped evidence loop in which a system seeks or receives evidence, records its evidence state, validates cited identifiers and process fields, and routes unresolved records for review. The evaluated controller implementation is compared with Direct, chain-of-thought, and ReAct workflows on public-source biomedical benchmark records from SciFact, PubMedQA, and NLI4CT.
 
-- `data/`: canonical benchmark JSONL files and construction manifest.
-- `results/`: main `gpt-5.5` traces/results, MiniMax-M3 supplementary traces/results, and EDL component-ablation outputs.
-- `src/scripts/`: EDL controller, scoring, trace metrics, benchmark runners, and human-audit protocol scripts.
-- `src/prompts/`: method prompts used by Direct, CoT, ReAct, and EDL.
-- `src/schema/`: benchmark, trace, and output schemas.
+The main evaluation is restricted to an audit-evaluable benchmark cohort. Its primary endpoint is **benchmark-defined answer-and-evidence binding**: a submitted decision must be correct, cite valid identifiers, and cover the required evidence segments. Structural citation validity and process validity do not independently establish citation entailment, substantive evidence sufficiency, gap/conflict correctness, clinical safety, or deployment readiness.
+
+## Intended Use
+
+EDL is intended for pre-deployment evaluation and research-stage audits of LLM-supported biomedical evidence reasoning operating on a record-scoped evidence corpus. It is not a diagnostic, treatment-recommendation, patient-ranking, or autonomous clinical-decision system. Review-routing signals require qualified human assessment.
+
+## Repository Contents
+
+- `data/`: canonical benchmark JSONL files and construction manifests.
+- `results/`: saved model traces, primary and supplementary result summaries, bootstrap artifacts, and component-ablation outputs.
+- `src/` and `scripts/`: controller, scoring, benchmark, audit, and analysis code.
+- `src/prompts/` and `src/schema/`: prompts and record, trace, and output schemas.
 - `figures/`: manuscript figure assets and source data.
-- `manuscript/`: English manuscript TeX/PDF and supplementary-material draft.
-- `human_audit/`: ongoing blind human-audit protocol materials. This directory does not include completed expert-response outcome data.
-- `docs/`: artifact manifest, data dictionary, and reproduction guide.
+- `manuscript/`: manuscript source, PDF, and supplementary materials.
+- `human_audit/`: blinded expert-audit protocol, assignments, anonymized stimuli, and permitted derived exports. Raw expert-response data and direct identifiers are access controlled.
+- `docs/`: artifact manifest, data dictionary, and reproduction guidance.
 
-## Quick Start
-
-Install Node dependencies:
+## Reproducibility
 
 ```bash
 npm install
-```
-
-Run the release sanity check:
-
-```bash
 npm run validate
 ```
 
-Inspect the main result summaries:
+Saved traces and result summaries permit inspection of manuscript results without rerunning paid model APIs. Re-running live provider calls requires credentials and may yield different outputs as provider-side models change.
 
-```bash
-cat results/live-comparison-v4-main-three-source-canonical-nli4ct-dual-setting-summary.md
-cat results/live-comparison-v4-minimax-m3-canonical-nli4ct-dual-setting-summary.md
-cat results/edl-ablation-scifact-nli4ct-component-summary.md
-```
+The evidence-seeking environment is record scoped: `search_segments` searches only the fixed evidence library attached to each record, and `read_segment` opens frozen segment text by `documentId` and `segmentId`.
 
-## Reproducibility Notes
+## Human-Audit Materials
 
-The repository includes precomputed traces and result summaries so that manuscript tables and figures can be checked without re-running paid model APIs. Re-running live model comparisons requires provider credentials and may produce small changes if provider-side model implementations change.
-
-The evidence-seeking tools are record-scoped: `search_segments` searches only the fixed evidence library attached to each benchmark record, and `read_segment` opens frozen segment text by `documentId` and `segmentId`.
-
-## Human-Audit Status
-
-The blind human-audit component is ongoing. This repository includes protocol and study-bundle materials for transparency, but it does not report or include completed expert-response outcomes, inter-rater reliability, or human-subjects effect estimates.
-
-Private study administration files, expert access links, event logs, and response files are intentionally excluded.
+The repository documents the blinded clinical-expert audit design and provides permitted study materials for reproducibility. The audit uses selected benchmark report classes; its results characterize conditional interception patterns in that sample rather than overall error prevalence, prospective reviewer effectiveness, or clinical safety. Raw expert-response records, access links, event logs, and direct identifiers are not publicly distributed.
 
 ## Citation
 
-If this repository is used, cite the manuscript and archived release. A `CITATION.cff` file is included for citation managers.
+Use the repository's `CITATION.cff` file and cite the archived release or commit used for analysis.
 
 ## License
 
-Code is released under the MIT License. Data, manuscript materials, figures, and documentation are released under Creative Commons Attribution 4.0 International unless a source dataset imposes additional restrictions. See `docs/DATA_DICTIONARY.md` for provenance notes.
+Code is released under the MIT License. Data, manuscript materials, figures, and documentation are released under Creative Commons Attribution 4.0 International unless source-dataset terms require otherwise. See `docs/DATA_DICTIONARY.md` for provenance notes.
