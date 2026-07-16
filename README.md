@@ -27,7 +27,7 @@ EDL is intended for pre-deployment evaluation and research-stage audits of LLM-s
 
 ## Reproducibility
 
-The fixed reproducibility target for the current manuscript is the [v0.2.0 release](https://github.com/xiaoxubeii/evidence-decision-loops/releases/tag/v0.2.0), not the mutable `main` branch. Its release assets include the final manuscript source package, PDF, TeX source, supplementary material, and `SHA256SUMS-v0.2.0.txt` checksum manifest.
+The fixed reproducibility target for the current manuscript is the [v0.2.1 release](https://github.com/xiaoxubeii/evidence-decision-loops/releases/tag/v0.2.1), not the mutable `main` branch. Its release assets include the final manuscript source package, PDF, TeX source, supplementary material, and `SHA256SUMS-v0.2.1.txt` checksum manifest.
 
 ```bash
 npm install
@@ -40,11 +40,11 @@ The evidence-seeking environment is record scoped: `search_segments` searches on
 
 ## Human-Audit Materials
 
-The repository documents the blinded clinical-expert audit design and provides permitted study materials for reproducibility. The audit uses selected benchmark report classes; its descriptive rating-level results characterize conditional interception patterns in that sample rather than overall error prevalence, prospective reviewer effectiveness, or clinical safety. Raw expert-response records, access links, event logs, and direct identifiers are not publicly distributed.
+The repository documents the blinded clinical-expert audit design and provides permitted study materials for reproducibility. The audit uses selected benchmark report classes; its descriptive rating-level results characterize conditional interception patterns in that sample rather than overall error prevalence, prospective reviewer effectiveness, or clinical safety. Raw expert-response records, access links, event logs, and direct identifiers are not publicly distributed. Requests for deidentified rating data and corresponding audit-analysis outputs may be directed to the corresponding author through the manuscript submission contact and are considered under the ethics determination and institutional data-governance requirements.
 
 ## Citation
 
-Use the repository's `CITATION.cff` file and cite the fixed v0.2.0 release for the current manuscript analyses.
+Use the repository's `CITATION.cff` file and cite the fixed v0.2.1 release for the current manuscript analyses.
 
 ## License
 
