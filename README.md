@@ -27,7 +27,7 @@ EDL is intended for pre-deployment evaluation and research-stage audits of LLM-s
 
 ## Reproducibility
 
-The fixed reproducibility target for the current manuscript is the [v0.2.4 release](https://github.com/xiaoxubeii/evidence-decision-loops/releases/tag/v0.2.4), not the mutable `main` branch. Its release assets include `EDL_JBI_manuscript_en.pdf`, `EDL_JBI_manuscript_en.tex`, `EDL_JBI_supplementary_materials_en.pdf`, `EDL_JBI_supplementary_materials_en.md`, the final source package, and `SHA256SUMS-v0.2.4.txt`.
+The fixed reproducibility target for the current manuscript is the [v0.2.5 release](https://github.com/xiaoxubeii/evidence-decision-loops/releases/tag/v0.2.5), not the mutable `main` branch. Its release assets include `EDL_JBI_manuscript_en.pdf`, `EDL_JBI_manuscript_en.tex`, `EDL_JBI_supplementary_materials_en.pdf`, `EDL_JBI_supplementary_materials_en.md`, the final source package, and `SHA256SUMS-v0.2.5.txt`.
 
 ```bash
 npm install
@@ -44,7 +44,7 @@ The repository documents the blinded clinical-expert audit design and provides p
 
 ## Citation
 
-Use the repository's `CITATION.cff` file and cite the fixed v0.2.4 release for the current manuscript analyses.
+Use the repository's `CITATION.cff` file and cite the fixed v0.2.5 release for the current manuscript analyses.
 
 ## License
 
