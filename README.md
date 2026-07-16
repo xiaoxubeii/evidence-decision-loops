@@ -1,6 +1,6 @@
 # Evidence Decision Loops (EDL)
 
-This repository contains the reference implementation, benchmark, and reproducibility resources for **Evidence Decision Loops (EDL)**: an evidence-decision protocol for auditable LLM-supported biomedical reasoning.
+This repository contains the reference implementation, benchmark, and reproducibility resources for **Evidence Decision Loops (EDL)**: an evidence-decision protocol for record-level, structurally auditable LLM-supported biomedical reasoning.
 
 The repository accompanies the EDL manuscript and includes source-native benchmark records, controller and scoring code, prompts and schemas, saved traces, result summaries, figures, and manuscript materials.
 
@@ -27,6 +27,8 @@ EDL is intended for pre-deployment evaluation and research-stage audits of LLM-s
 
 ## Reproducibility
 
+The fixed reproducibility target for the current manuscript is the [v0.2.0 release](https://github.com/xiaoxubeii/evidence-decision-loops/releases/tag/v0.2.0), not the mutable `main` branch. Its release assets include the final manuscript source package, PDF, TeX source, supplementary material, and `SHA256SUMS-v0.2.0.txt` checksum manifest.
+
 ```bash
 npm install
 npm run validate
@@ -38,11 +40,11 @@ The evidence-seeking environment is record scoped: `search_segments` searches on
 
 ## Human-Audit Materials
 
-The repository documents the blinded clinical-expert audit design and provides permitted study materials for reproducibility. The audit uses selected benchmark report classes; its results characterize conditional interception patterns in that sample rather than overall error prevalence, prospective reviewer effectiveness, or clinical safety. Raw expert-response records, access links, event logs, and direct identifiers are not publicly distributed.
+The repository documents the blinded clinical-expert audit design and provides permitted study materials for reproducibility. The audit uses selected benchmark report classes; its descriptive rating-level results characterize conditional interception patterns in that sample rather than overall error prevalence, prospective reviewer effectiveness, or clinical safety. Raw expert-response records, access links, event logs, and direct identifiers are not publicly distributed.
 
 ## Citation
 
-Use the repository's `CITATION.cff` file and cite the archived release or commit used for analysis.
+Use the repository's `CITATION.cff` file and cite the fixed v0.2.0 release for the current manuscript analyses.
 
 ## License
 
