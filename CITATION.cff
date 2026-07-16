@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "Evidence Decision Loops (EDL)"
-message: "If you use this repository, please cite the manuscript and the fixed v0.2.1 release used for analysis."
+message: "If you use this repository, please cite the manuscript and the fixed v0.2.2 release used for analysis."
 type: software
 authors:
   - family-names: Wang
@@ -8,6 +8,6 @@ authors:
   - family-names: Xu
     given-names: Bei
 date-released: 2026-07-16
-version: "0.2.1"
+version: "0.2.2"
 repository-code: "https://github.com/xiaoxubeii/evidence-decision-loops"
 license: "MIT"
