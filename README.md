@@ -10,7 +10,7 @@ EDL is intended for pre-deployment evaluation and research-stage audits of LLM-s
 
 ## Reproducibility
 
-The fixed reproducibility target for the current manuscript is the [v0.2.6 release](https://github.com/xiaoxubeii/evidence-decision-loops/releases/tag/v0.2.6), not the mutable `main` branch. Its release assets include the English manuscript PDF/TeX, supplementary-materials PDF/TeX, the final source package, the submission ZIP, and `SHA256SUMS-v0.2.6.txt`.
+The fixed reproducibility target for the current manuscript is the [v0.2.8 release](https://github.com/xiaoxubeii/evidence-decision-loops/releases/tag/v0.2.8), not the mutable `main` branch. Its release assets include the English manuscript PDF/TeX, supplementary-materials PDF/TeX, the final source package, the submission ZIP, and `SHA256SUMS-v0.2.8.txt`.
 
 The supplementary-materials TeX source uses page-width-constrained `adjustbox` tables and compiles with XeLaTeX in landscape layout.
 
@@ -19,7 +19,7 @@ npm install
 npm run validate
 ```
 
-Saved traces and result summaries permit inspection of manuscript results without rerunning paid model APIs. Re-running live provider calls requires credentials and may yield different outputs as provider-side models change.
+Saved traces and result summaries permit inspection of manuscript results without rerunning paid model APIs. The final Supplementary Table S18 values and their source paths are indexed in `results/edl-ablation-s18-final-summary.md` and `.json`; the three updated SciFact feature-removal trace directories use the S14 SciFact runtime configuration, while the Full row is reused from the main evidence-seeking run. Re-running live provider calls requires credentials and may yield different outputs as provider-side models change.
 
 ## Human-Audit Materials
 
@@ -27,4 +27,4 @@ The repository documents the blinded clinical-expert audit design and provides p
 
 ## Citation
 
-Use the repository's `CITATION.cff` file and cite the fixed v0.2.6 release for the current manuscript analyses.
+Use the repository's `CITATION.cff` file and cite the fixed v0.2.8 release for the current manuscript analyses.

@@ -35,15 +35,18 @@
 - `results/live-comparison-v4-minimax-m3-canonical-nli4ct-dual-setting-summary.json`
 - `results/live-comparison-v4-minimax-m3-canonical-nli4ct-frozen-evidence-full/`
 - `results/live-comparison-v4-minimax-m3-canonical-nli4ct-evidence-seeking-react-edl-full/`
-- `results/edl-ablation-scifact-nli4ct-component-summary.md`
-- `results/edl-ablation-scifact-nli4ct-component-summary.json`
-- `results/edl-ablation-*`
+- `results/edl-ablation-s18-final-summary.md`
+- `results/edl-ablation-s18-final-summary.json`
+- `results/edl-ablation-scifact135-s14-medium-bm25-topk5-no-selfcheck-*`
+- `results/edl-ablation-nli4ct130-*`
+- Historical pre-S18-reconciliation ablation directories and summaries are retained for provenance but are not manuscript result sources.
 
 ## Manuscript and Figures
 
-- `manuscript/EviAgent_JBI_manuscript_english_draft.tex`
-- `manuscript/EviAgent_JBI_manuscript_english_draft.pdf`
-- `manuscript/EviAgent_JBI_supplementary_materials_english_draft.md`
+- `manuscript/EDL_JBI_manuscript_en.tex`
+- `manuscript/EDL_JBI_manuscript_en.pdf`
+- `manuscript/EDL_JBI_supplementary_materials_en.tex`
+- `manuscript/EDL_JBI_supplementary_materials_en.pdf`
 - `figures/`
 
 ## Intentionally Excluded

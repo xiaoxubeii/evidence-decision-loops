@@ -1,0 +1,1139 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  8pt,
+]{extarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[landscape,margin=0.35in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{adjustbox}
+\usepackage{xurl}
+\sloppy
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{supplementary-materials-for-evidence-decision-loops}{%
+\section{Supplementary Materials for "Evidence Decision
+Loops"}\label{supplementary-materials-for-evidence-decision-loops}}
+
+Updated: 2026-07-16
+
+This supplement supports the English JBI manuscript. It contains dataset
+composition, trace completeness, full metric matrices, bootstrap
+confidence intervals, schema and prompt indexes, supplementary model and
+ablation results, blinded clinical-expert audit design and results,
+baseline-fairness controls, and reproducibility paths.
+
+\hypertarget{supplementary-table-s1-source-composition-of-candidate-main-evaluation-and-non-retained-records}{%
+\subsection{Supplementary Table S1. Source composition of candidate,
+main evaluation, and non-retained
+records}\label{supplementary-table-s1-source-composition-of-candidate-main-evaluation-and-non-retained-records}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lrrrrr@{}}
+\toprule\noalign{}
+Split & Records & SciFact & PubMedQA & NLI4CT & Required evidence
+segments \\
+
+Candidate set & 460 & 150 & 150 & 160 & 1635 \\
+Main evaluation set & 390 & 135 & 125 & 130 & 1413 \\
+Non-retained or further-adjudication records & 70 & 15 & 25 & 30 &
+222 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s2-source-label-distribution}{%
+\subsection{Supplementary Table S2. Source-label
+distribution}\label{supplementary-table-s2-source-label-distribution}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+llrr@{}}
+\toprule\noalign{}
+Source & Label & Candidate set & Main evaluation set \\
+
+SciFact & SUPPORT & 50 & 42 \\
+SciFact & CONTRADICT & 50 & 44 \\
+SciFact & NEI & 50 & 49 \\
+PubMedQA & yes & 50 & 43 \\
+PubMedQA & no & 50 & 43 \\
+PubMedQA & maybe & 50 & 39 \\
+NLI4CT & Entailment & 80 & 65 \\
+NLI4CT & Contradiction & 80 & 65 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s3-main-evaluation-trace-completeness}{%
+\subsection{Supplementary Table S3. Main evaluation trace
+completeness}\label{supplementary-table-s3-main-evaluation-trace-completeness}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+llrrlrrrl@{}}
+\toprule\noalign{}
+Model & Setting & Expected traces & Observed traces & Methods & Invalid
+& Missing & Provider failures & Parse or fallback flags \\
+
+\texttt{gpt-5.5} & Given evidence & 1560 & 1560 & direct,cot,react,edl &
+0 & 0 & 0 & none \\
+\texttt{gpt-5.5} & Evidence seeking & 780 & 780 & react,edl & 0 & 0 & 0
+& forced\_submit:83 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s4-evaluation-metric-dictionary}{%
+\subsection{Supplementary Table S4. Evaluation metric
+dictionary}\label{supplementary-table-s4-evaluation-metric-dictionary}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lll@{}}
+\toprule\noalign{}
+Metric & Scope and role & Definition \\
+
+Decision accuracy & All methods; final-label correctness & Exact
+agreement between the submitted decision and the source-native gold
+decision. \\
+Primary metric & All methods; joint answer-and-evidence success & Binary
+record-level score equal to 1 only when the final decision is correct,
+citations are valid, and required evidence recall is 1. \\
+Required evidence recall & All methods; evidence coverage & Proportion
+of gold required evidence segments covered by valid final citations. \\
+Required evidence precision & All methods; citation specificity &
+Proportion of valid final citations that correspond to required evidence
+segments. \\
+Citation validity & All methods; structural citation correctness &
+Whether every cited evidence segment exists in the current record and
+contains valid \texttt{documentId} and \texttt{segmentId} fields. \\
+Search-output coverage & Evidence-seeking setting; diagnostic process
+metric & Proportion of required evidence segments returned by search
+outputs before reading. This metric is used for failure localization
+rather than as a primary EDL-ReAct performance endpoint. \\
+Read recall & Evidence-seeking setting; inspected-evidence coverage &
+Proportion of required evidence segments opened by read tools or EDL
+inspection. \\
+Process validity & EDL and process traces; audit conformance & Whether
+externally recorded process steps satisfy the evaluation protocol;
+hidden model reasoning is not scored. \\
+Human review rate and reasons & EDL review routing; review-queue
+characterization & Proportion of records flagged for human review and
+the associated review reasons. \\
+Invalid decision rate & All methods; output-contract failure &
+Proportion of submitted decisions outside the source-native allowed
+label space or not parseable as a final decision. \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s5-edl-review-routing-in-the-evidence-seeking-setting}{%
+\subsection{Supplementary Table S5. EDL review routing in the
+evidence-seeking
+setting}\label{supplementary-table-s5-edl-review-routing-in-the-evidence-seeking-setting}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lrrrrr@{}}
+\toprule\noalign{}
+Source & Traces & Review rate & Insufficient evidence & Forced source
+label & Material gap or conflict \\
+
+All & 390 & 0.285 & 101 & 49 & 23 \\
+SciFact & 135 & 0.385 & 52 & 0 & 0 \\
+PubMedQA & 125 & 0.160 & 20 & 20 & 0 \\
+NLI4CT & 130 & 0.300 & 29 & 29 & 23 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s6-scifact-evidence-seeking-cross-model-replication}{%
+\subsection{Supplementary Table S6. SciFact evidence-seeking cross-model
+replication}\label{supplementary-table-s6-scifact-evidence-seeking-cross-model-replication}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+llrrrrrrl@{}}
+\toprule\noalign{}
+Model & Method & Traces & Accuracy & Primary metric & Required recall &
+Search-output coverage & Read recall & Parse or fallback flags \\
+
+\texttt{gpt-5.5} & ReAct & 135 & 0.993 & 0.859 & 0.874 & 0.000 & 0.985 &
+forced\_submit:4 \\
+\texttt{gpt-5.5} & EDL & 135 & 0.948 & 0.874 & 0.933 & 0.967 & 0.967 &
+none \\
+MiniMax-M3 & ReAct & 135 & 0.904 & 0.800 & 0.900 & 0.937 & 0.941 &
+forced\_submit:31 \\
+MiniMax-M3 & EDL & 135 & 0.889 & 0.830 & 0.948 & 0.974 & 0.974 & none \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s7-given-evidence-results-by-required-evidence-segment-count}{%
+\subsection{Supplementary Table S7. Given-evidence results by required
+evidence segment
+count}\label{supplementary-table-s7-given-evidence-results-by-required-evidence-segment-count}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lrrrrr@{}}
+\toprule\noalign{}
+Method & Required evidence segments & Traces & Accuracy & Primary metric
+& Required evidence recall \\
+
+Direct & 1 & 250 & 0.856 & 0.788 & 0.932 \\
+Direct & 2 & 42 & 0.976 & 0.524 & 0.762 \\
+Direct & 3-\/-5 & 54 & 0.981 & 0.241 & 0.634 \\
+Direct & 6+ & 44 & 0.955 & 0.000 & 0.305 \\
+CoT & 1 & 250 & 0.884 & 0.820 & 0.936 \\
+CoT & 2 & 42 & 0.976 & 0.476 & 0.738 \\
+CoT & 3-\/-5 & 54 & 0.981 & 0.259 & 0.628 \\
+CoT & 6+ & 44 & 0.932 & 0.000 & 0.371 \\
+ReAct & 1 & 250 & 0.888 & 0.828 & 0.940 \\
+ReAct & 2 & 42 & 0.976 & 0.619 & 0.798 \\
+ReAct & 3-\/-5 & 54 & 0.981 & 0.407 & 0.715 \\
+ReAct & 6+ & 44 & 0.932 & 0.000 & 0.348 \\
+EDL & 1 & 250 & 0.852 & 0.816 & 0.964 \\
+EDL & 2 & 42 & 1.000 & 0.952 & 0.964 \\
+EDL & 3-\/-5 & 54 & 0.981 & 0.889 & 0.941 \\
+EDL & 6+ & 44 & 0.955 & 0.318 & 0.735 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s8-evidence-seeking-results-by-required-evidence-segment-count}{%
+\subsection{Supplementary Table S8. Evidence-seeking results by required
+evidence segment
+count}\label{supplementary-table-s8-evidence-seeking-results-by-required-evidence-segment-count}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lrrrrrrr@{}}
+\toprule\noalign{}
+Method & Required evidence segments & Traces & Accuracy & Primary metric
+& Required evidence recall & Search-output coverage & Read recall \\
+
+ReAct & 1 & 250 & 0.952 & 0.892 & 0.940 & 0.000 & 0.992 \\
+ReAct & 2 & 42 & 0.952 & 0.571 & 0.690 & 0.095 & 0.821 \\
+ReAct & 3-\/-5 & 54 & 0.870 & 0.148 & 0.456 & 0.228 & 0.668 \\
+ReAct & 6+ & 44 & 0.841 & 0.000 & 0.290 & 0.160 & 0.702 \\
+EDL & 1 & 250 & 0.856 & 0.828 & 0.972 & 0.984 & 0.984 \\
+EDL & 2 & 42 & 0.952 & 0.833 & 0.917 & 0.964 & 0.964 \\
+EDL & 3-\/-5 & 54 & 0.944 & 0.630 & 0.848 & 0.884 & 0.884 \\
+EDL & 6+ & 44 & 0.886 & 0.182 & 0.535 & 0.705 & 0.705 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s9-schema-and-field-definition-index}{%
+\subsection{Supplementary Table S9. Schema and field-definition
+index}\label{supplementary-table-s9-schema-and-field-definition-index}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lll@{}}
+\toprule\noalign{}
+Artifact & Path & Main role \\
+
+EDL decision record schema &
+\url{src/schema/decision-record.schema.json} & Defines benchmark
+record fields and prediction fields, including final decision, cited
+claims, cited evidence, claim evaluations, gaps, conflicts, and expert
+review. \\
+Live comparison trace schema &
+\url{src/schema/live-comparison-trace.schema.json} & Defines
+trace-level fields including \texttt{recordId}, \texttt{method},
+\texttt{model}, \texttt{reasoningEffort}, \texttt{promptSha256},
+\texttt{steps}, \texttt{finalDecision}, \texttt{citedEvidenceIds},
+\texttt{requiredHumanReview}, \texttt{edlGuard}, \texttt{processCheck},
+and \texttt{scores}. \\
+V4 audit output schema &
+\url{src/schema/react-clinical-source-v4-audit-output.schema.json} &
+Constrains pre-evaluation consistency-audit outputs, including audit
+decision, suggested decision, confidence, rationale, and segment-level
+cited evidence. \\
+Human audit study schema &
+\url{results/human-audit-scifact-nli4ct-balanced-docker/study.json} &
+Records the completed blind-audit sample size, source targets, rater
+count, seed, source data, and trace path. \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s10-prompt-and-template-index}{%
+\subsection{Supplementary Table S10. Prompt and template
+index}\label{supplementary-table-s10-prompt-and-template-index}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lll@{}}
+\toprule\noalign{}
+Method or stage & Path & Contract summary \\
+
+V4 base evidence contract &
+\url{src/prompts/v4\_evidence\_verification\_base.md} & Use only
+frozen evidence; do not use external knowledge; final decision must be
+one of \texttt{allowedDecisions}; citations must include
+\texttt{documentId} and \texttt{segmentId}; return JSON only. \\
+Direct & \url{src/prompts/v4\_method\_direct.md} & Read the record
+prompt and submit one JSON answer. \\
+CoT & \url{src/prompts/v4\_method\_cot.md} & Use internal reasoning
+if needed, but return only final JSON. \\
+ReAct & \url{src/prompts/v4\_method\_react.md} & Search before
+reading, continue when evidence is insufficient, and submit a
+JSON-compatible decision with segment-level citations. \\
+EDL & \url{src/prompts/v4\_method\_edl.md} & Search, read, assess
+sufficiency, validate citations, repair invalid citations, and submit
+one final decision. \\
+LLM-assisted pre-evaluation consistency audit &
+\url{src/scripts/run\_v4\_llm\_audit.js} & Judges whether
+source-native gold decisions are supported by frozen segment-level
+evidence and emits structured JSON. \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s11-pre-evaluation-consistency-audit-filtering-summary}{%
+\subsection{Supplementary Table S11. Pre-evaluation consistency-audit
+filtering
+summary}\label{supplementary-table-s11-pre-evaluation-consistency-audit-filtering-summary}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lrlrrl@{}}
+\toprule\noalign{}
+Source & Candidate records & Main inclusion rule & Included &
+Non-retained or further adjudication & Audit artifact \\
+
+SciFact & 150 & \texttt{auditDecision=agree} & 135 & 15 &
+\url{results/v4-llm-audit-full/v4-llm-audit-summary.md} \\
+PubMedQA & 150 & \texttt{auditDecision=agree} & 125 & 25 &
+\url{results/v4-llm-audit-full/v4-llm-audit-summary.md} \\
+NLI4CT & 160 & \texttt{includeInMain=true} & 130 & 30 &
+\url{results/v4-llm-audit-nli4ct-fulltrial-rawline-validation-160-full/v4-llm-audit-summary.md} \\
+All & 460 & Unified pre-evaluation consistency audit and canonical
+dataset construction & 390 & 70 &
+\url{results/final-canonical-audit-merge/final-relevant-audit-summary.md} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+The final-relevant audit merge is provided in
+\url{results/final-canonical-audit-merge/}. It combines the
+SciFact/PubMedQA audit records from
+\url{results/v4-llm-audit-full/v4-llm-audit-results.jsonl} with the
+corrected NLI4CT audit records from
+\url{results/v4-llm-audit-nli4ct-fulltrial-rawline-validation-160-full/v4-llm-audit-results.jsonl}.
+The NLI4CT canonical audit over 160 records produced 138 agree, 11
+disagree, and 11 uncertain audit decisions; 130 records were marked
+\texttt{includeInMain=true}. The audit recorded 24 partial-evidence
+cases, 16 granularity issues, and no material conflicts.
+
+\hypertarget{supplementary-table-s12-derived-exclusion-reason-taxonomy-for-non-retained-records}{%
+\subsection{Supplementary Table S12. Derived exclusion-reason taxonomy
+for non-retained
+records}\label{supplementary-table-s12-derived-exclusion-reason-taxonomy-for-non-retained-records}}
+
+The 70 non-retained records were assigned to a derived, mutually
+exclusive taxonomy from the final-relevant audit outputs. Categories
+were applied in priority order: label-evidence disagreement, unclear
+label support, insufficient or partial required evidence, evidence
+granularity or missing-context problems, and other scoring-protocol
+refinement. The taxonomy summarizes why records were not included in the
+programmatically scored main evaluation set; it was not used as a
+model-performance endpoint.
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lr@{}}
+\toprule\noalign{}
+Exclusion reason & Records \\
+
+Label-evidence disagreement & 50 \\
+Unclear label support & 12 \\
+Insufficient or partial required evidence & 8 \\
+Evidence granularity or missing-context problem & 0 \\
+Other scoring-protocol refinement & 0 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lrrrr@{}}
+\toprule\noalign{}
+Source & Label-evidence disagreement & Unclear label support &
+Insufficient or partial required evidence & Total non-retained \\
+
+SciFact & 14 & 1 & 0 & 15 \\
+PubMedQA & 25 & 0 & 0 & 25 \\
+NLI4CT & 11 & 11 & 8 & 30 \\
+All & 50 & 12 & 8 & 70 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-appendix-a-cohort-construction-and-execution-chronology}{%
+\subsection{Supplementary Appendix A. Cohort construction and execution
+chronology}\label{supplementary-appendix-a-cohort-construction-and-execution-chronology}}
+
+The comparative cohort was defined before comparative execution from
+source-record audit metadata, without access to Direct, CoT, ReAct, or
+EDL outputs. The 390 audit-retained records were then used as the common
+input cohort for every workflow. The 70 records not retained by the
+audit were not rerun or rescored post hoc. This appendix reports the
+traceability artifacts supporting that chronology; it is not a
+prospective preregistration.
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lll@{}}
+\toprule\noalign{}
+Stage & Traceability artifact & Role \\
+
+Candidate-record audit &
+\url{results/final-canonical-audit-merge/final-relevant-audit-summary.md}
+and its linked record-level audit outputs & Documents audit decisions
+across the 460 candidate records and the source-record basis for
+retention. \\
+Retained cohort &
+\url{src/data/react-clinical-source-v4-main-three-source-canonical-nli4ct.jsonl}
+& Canonical 390-record audit-retained comparative cohort. \\
+Cohort manifest &
+\url{results/react-clinical-source-v4-main-three-source-canonical-nli4ct-manifest.json}
+& Records the main dataset composition and the paths to comparison
+outputs. \\
+Given-evidence comparison &
+\url{results/live-comparison-v4-main-three-source-canonical-nli4ct-frozen-evidence-full/live-comparison-v4-results.json}
+& Records the 390-record input cohort across Direct, CoT, ReAct, and
+EDL. \\
+Evidence-seeking comparison &
+\url{results/live-comparison-v4-main-three-source-canonical-nli4ct-evidence-seeking-full/live-comparison-v4-results.json}
+& Records the same 390-record input cohort across ReAct and EDL. \\
+Versioned public release & Evidence Decision Loops release
+\href{https://github.com/xiaoxubeii/evidence-decision-loops/releases/tag/v0.2.8}{\texttt{v0.2.8}},
+including \texttt{SHA256SUMS-v0.2.8.txt} & Fixed reproducibility target
+for the audit, cohort, manifests, comparison outputs, and final
+manuscript assets; it is not the mutable repository head. \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s13-full-given-evidence-source-x-method-x-metric-matrix}{%
+\subsection{Supplementary Table S13. Full given-evidence source x method
+x metric
+matrix}\label{supplementary-table-s13-full-given-evidence-source-x-method-x-metric-matrix}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+llrrrrrrr@{}}
+\toprule\noalign{}
+Source & Method & Traces & Accuracy & Primary metric & Required recall &
+Required precision & Citation validity & Review rate \\
+
+SciFact & Direct & 135 & 0.948 & 0.800 & 0.859 & 0.645 & 0.985 &
+0.015 \\
+SciFact & CoT & 135 & 0.963 & 0.800 & 0.856 & 0.649 & 0.993 & 0.007 \\
+SciFact & ReAct & 135 & 0.956 & 0.815 & 0.867 & 0.648 & 1.000 & 0.000 \\
+SciFact & EDL & 135 & 0.963 & 0.881 & 0.922 & 0.621 & 1.000 & 0.415 \\
+PubMedQA & Direct & 125 & 0.760 & 0.760 & 1.000 & 1.000 & 1.000 &
+0.000 \\
+PubMedQA & CoT & 125 & 0.800 & 0.800 & 1.000 & 1.000 & 1.000 & 0.000 \\
+PubMedQA & ReAct & 125 & 0.816 & 0.816 & 1.000 & 1.000 & 1.000 &
+0.000 \\
+PubMedQA & EDL & 125 & 0.744 & 0.744 & 1.000 & 1.000 & 1.000 & 0.160 \\
+NLI4CT & Direct & 130 & 0.977 & 0.223 & 0.551 & 0.917 & 1.000 & 0.000 \\
+NLI4CT & CoT & 130 & 0.969 & 0.238 & 0.575 & 0.919 & 1.000 & 0.000 \\
+NLI4CT & ReAct & 130 & 0.969 & 0.331 & 0.619 & 0.916 & 1.000 & 0.000 \\
+NLI4CT & EDL & 130 & 0.977 & 0.723 & 0.886 & 0.786 & 1.000 & 0.154 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s14-full-evidence-seeking-source-x-method-x-metric-matrix}{%
+\subsection{Supplementary Table S14. Full evidence-seeking source x
+method x metric
+matrix}\label{supplementary-table-s14-full-evidence-seeking-source-x-method-x-metric-matrix}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+llrrrrrrrrr@{}}
+\toprule\noalign{}
+Source & Method & Traces & Accuracy & Primary metric & Final required
+recall & Required precision & Search-output coverage & Read recall &
+Citation validity & Review rate \\
+
+SciFact & ReAct & 135 & 0.993 & 0.859 & 0.874 & 0.643 & 0.000 & 0.985 &
+1.000 & 0.000 \\
+SciFact & EDL & 135 & 0.948 & 0.874 & 0.933 & 0.608 & 0.967 & 0.967 &
+1.000 & 0.385 \\
+PubMedQA & ReAct & 125 & 0.912 & 0.912 & 1.000 & 1.000 & 0.000 & 1.000 &
+1.000 & 0.000 \\
+PubMedQA & EDL & 125 & 0.768 & 0.768 & 1.000 & 1.000 & 1.000 & 1.000 &
+1.000 & 0.160 \\
+NLI4CT & ReAct & 130 & 0.877 & 0.192 & 0.449 & 0.727 & 0.180 & 0.703 &
+0.992 & 0.008 \\
+NLI4CT & EDL & 130 & 0.923 & 0.538 & 0.768 & 0.864 & 0.844 & 0.844 &
+1.000 & 0.300 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s15-sensitivity-endpoints-for-the-evidence-seeking-edl-react-comparison}{%
+\subsection{Supplementary Table S15. Sensitivity endpoints for the
+evidence-seeking EDL-ReAct
+comparison}\label{supplementary-table-s15-sensitivity-endpoints-for-the-evidence-seeking-edl-react-comparison}}
+
+These endpoints separate final-label accuracy from evidence-process and
+answer-evidence binding measures. Source-balanced primary metric is the
+unweighted mean of the SciFact, PubMedQA, and NLI4CT source-level
+primary metrics reported in Supplementary Table S14. Differences are EDL
+minus ReAct.
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+llrrr@{}}
+\toprule\noalign{}
+Endpoint & What it tests & ReAct & EDL & Difference \\
+
+Final-label accuracy & Answer correctness only & 0.928 & 0.882 &
+-0.046 \\
+Primary metric & Correct answer plus complete valid required-evidence
+binding & 0.654 & 0.728 & 0.074 \\
+Required evidence recall & Coverage of required evidence in final
+citations & 0.773 & 0.900 & 0.127 \\
+Required evidence precision & Proportion of final citations that are
+required evidence & 0.786 & 0.819 & 0.033 \\
+Citation validity & Structural validity of cited document and segment
+identifiers & 0.997 & 1.000 & 0.003 \\
+Read recall & Required evidence opened through read/inspection steps &
+0.896 & 0.937 & 0.041 \\
+Source-balanced primary metric & Whether primary-metric direction
+depends on source mix & 0.654 & 0.727 & 0.072 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s16-pubmedqa-evidence-seeking-label-calibration-profile}{%
+\subsection{Supplementary Table S16. PubMedQA evidence-seeking
+label-calibration
+profile}\label{supplementary-table-s16-pubmedqa-evidence-seeking-label-calibration-profile}}
+
+All PubMedQA evidence-seeking traces had complete required evidence
+recall, complete read recall, and valid final citations. This table
+therefore isolates final-label calibration errors under complete
+evidence availability. Rows are gold source-native labels and columns
+are submitted labels.
+
+ReAct confusion matrix:
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lrrrr@{}}
+\toprule\noalign{}
+Gold label & Submitted yes & Submitted no & Submitted maybe &
+Accuracy \\
+
+yes & 43 & 0 & 0 & 1.000 \\
+no & 0 & 43 & 0 & 1.000 \\
+maybe & 10 & 1 & 28 & 0.718 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+EDL confusion matrix:
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lrrrr@{}}
+\toprule\noalign{}
+Gold label & Submitted yes & Submitted no & Submitted maybe &
+Accuracy \\
+
+yes & 39 & 0 & 4 & 0.907 \\
+no & 0 & 42 & 1 & 0.977 \\
+maybe & 18 & 6 & 15 & 0.385 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+Error-overlap and routing summary:
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lr@{}}
+\toprule\noalign{}
+Error profile & Value \\
+
+ReAct wrong decisions & 11 \\
+EDL wrong decisions & 29 \\
+Wrong for both methods & 9 \\
+Wrong for EDL only & 20 \\
+Wrong for ReAct only & 2 \\
+EDL errors on gold \texttt{maybe} records submitted as \texttt{yes/no} &
+24 \\
+EDL errors on gold \texttt{yes/no} records submitted as \texttt{maybe} &
+5 \\
+EDL PubMedQA review reasons: \texttt{insufficient\_evidence} & 20 \\
+EDL PubMedQA review reasons:
+\texttt{forced\_source\_label\_without\_abstain} & 20 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+The reproducible artifact for this table is generated by
+\texttt{node\ src/scripts/analyze\_v4\_pubmedqa\_calibration.js\ -\/-write}
+and stored as \url{results/v4-pubmedqa-calibration-profile.json} and
+\url{results/v4-pubmedqa-calibration-profile.md}.
+
+\hypertarget{supplementary-table-s17-minimax-m3-three-source-supplementary-evaluation}{%
+\subsection{Supplementary Table S17. MiniMax-M3 three-source
+supplementary
+evaluation}\label{supplementary-table-s17-minimax-m3-three-source-supplementary-evaluation}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+llrrrrrrrrrr@{}}
+\toprule\noalign{}
+Setting & Method & Traces & Accuracy & Primary metric & Required recall
+& Required precision & Search-output coverage & Read recall & Citation
+validity & Review rate & Invalid decision \\
+
+Given evidence & Direct & 390 & 0.877 & 0.562 & 0.800 & 0.828 & n/a &
+n/a & 0.995 & 0.005 & 0.000 \\
+Given evidence & CoT & 390 & 0.859 & 0.546 & 0.797 & 0.834 & n/a & n/a &
+0.995 & 0.005 & 0.000 \\
+Given evidence & ReAct & 390 & 0.864 & 0.562 & 0.816 & 0.819 & n/a & n/a
+& 0.997 & 0.003 & 0.000 \\
+Given evidence & EDL & 390 & 0.874 & 0.718 & 0.906 & 0.785 & n/a & n/a &
+0.992 & 0.469 & 0.000 \\
+Evidence seeking & ReAct & 390 & 0.887 & 0.615 & 0.814 & 0.796 & 0.909 &
+0.917 & 0.997 & 0.003 & 0.000 \\
+Evidence seeking & EDL & 390 & 0.854 & 0.685 & 0.890 & 0.795 & 0.932 &
+0.932 & 0.997 & 0.526 & 0.003 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+MiniMax-M3 is a supplementary evaluation and not a co-primary
+replacement for the \texttt{gpt-5.5} main evaluation.
+
+\hypertarget{supplementary-table-s18-edl-component-ablation-matrix}{%
+\subsection{Supplementary Table S18. EDL component ablation
+matrix}\label{supplementary-table-s18-edl-component-ablation-matrix}}
+
+The Full EDL reference for each source was reused from the corresponding
+main evidence-seeking experiment; no additional model inference was
+performed for either Full reference row. The three SciFact
+feature-removal variants were newly executed on the same 135 records
+using \texttt{gpt-5.5}, medium reasoning effort, BM25, controller-fixed
+top-5 retrieval, a maximum of three evidence rounds, a minimum of two
+rounds and three viewed segments before declaring sufficiency, and no
+pre-submission citation self-check. Each variant was configured to
+remove the named controller component within its source-specific runtime
+configuration. The NLI4CT variants retained source-aware query planning,
+BM25 neighbor expansion, and controller-fixed top-5 retrieval. The
+optional citation self-check was retained except in the NLI4CT
+no-citation-validation variant. In the no-citation-validation variants,
+the cited-identifier output rule and citation-error validation/repair
+gate were disabled, while post-submission benchmark scoring still
+calculated citation-identifier validity. The comparisons are therefore
+descriptive within-source configuration contrasts, not a pooled
+ablation under one uniform cross-source runtime configuration or
+estimates of isolated component effects. Each record--variant cell
+contains one completed output; repeated-run variability was not
+estimated.
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+llrrrrrrrl@{}}
+\toprule\noalign{}
+Source & Variant & Traces & Accuracy & Primary metric & Required recall
+& Required precision & Citation validity & Review rate & Main review
+reasons \\
+
+SciFact & Full EDL reference & 135 & 0.948 & 0.874 & 0.933 & 0.608 & 1.000 & 0.385
+& insufficient\_evidence:52 \\
+SciFact & Without iterative seeking & 135 & 0.933 & 0.785 & 0.822 &
+0.602 & 1.000 & 0.481 & insufficient\_evidence:65,
+material\_gap:50 \\
+SciFact & Without sufficiency assessment & 135 & 0.948 & 0.815 & 0.870 &
+0.637 & 0.985 & 0.015 & invalid\_citation:2 \\
+SciFact & Without citation validation & 135 & 0.941 & 0.059 & 0.067 &
+0.731 & 0.067 & 0.948 & insufficient\_evidence:55,
+invalid\_citation:126, material\_conflict:1, material\_gap:42,
+missing\_citation:9 \\
+NLI4CT & Full EDL reference & 130 & 0.923 & 0.538 & 0.768 & 0.864 & 1.000 & 0.300
+& forced\_source\_label\_without\_abstain:29, insufficient\_evidence:29,
+material\_conflict:13, material\_gap:10 \\
+NLI4CT & Without iterative seeking & 130 & 0.869 & 0.423 & 0.691 & 0.852
+& 1.000 & 0.385 & forced\_source\_label\_without\_abstain:44,
+insufficient\_evidence:44, material\_conflict:9, material\_gap:23 \\
+NLI4CT & Without sufficiency assessment & 130 & 0.931 & 0.577 & 0.777 &
+0.877 & 1.000 & 0.000 & none \\
+NLI4CT & Without citation validation & 130 & 0.923 & 0.115 & 0.144 &
+0.801 & 0.200 & 0.831 & forced\_source\_label\_without\_abstain:34,
+insufficient\_evidence:34, invalid\_citation:104, material\_conflict:13,
+material\_gap:14 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s19-paired-bootstrap-confidence-intervals-for-key-evidence-seeking-metrics}{%
+\subsection{Supplementary Table S19. Paired bootstrap confidence
+intervals for key evidence-seeking
+metrics}\label{supplementary-table-s19-paired-bootstrap-confidence-intervals-for-key-evidence-seeking-metrics}}
+
+Intervals were computed from existing record-level trace scores with
+10,000 record-level bootstrap resamples. No additional model inference
+was performed. Differences are EDL minus ReAct.
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lrrrl@{}}
+\toprule\noalign{}
+Metric & ReAct & EDL & Difference & 95\% CI \\
+
+Primary metric & 0.654 & 0.728 & 0.074 & {[}0.026, 0.123{]} \\
+Required evidence recall & 0.773 & 0.900 & 0.127 & {[}0.096, 0.158{]} \\
+Required evidence precision & 0.786 & 0.819 & 0.033 & {[}0.006,
+0.061{]} \\
+Search-output coverage (diagnostic) & 0.060 & 0.937 & 0.877 & {[}0.845,
+0.907{]} \\
+Read recall & 0.896 & 0.937 & 0.041 & {[}0.015, 0.068{]} \\
+Decision accuracy & 0.928 & 0.882 & -0.046 & {[}-0.079, -0.013{]} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+The full artifact is \url{results/v4-main-bootstrap-ci.json}, with a
+rendered table in \url{results/v4-main-bootstrap-ci.md}.
+
+\hypertarget{supplementary-table-s20-blinded-clinical-expert-audit-design-and-results}{%
+\subsection{Supplementary Table S20. Blinded clinical-expert audit
+design and
+results}\label{supplementary-table-s20-blinded-clinical-expert-audit-design-and-results}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+ll@{}}
+\toprule\noalign{}
+Item & Current value \\
+
+Main audit bundle &
+\url{results/human-audit-scifact-nli4ct-balanced-docker/} \\
+Created at & 2026-07-02T17:59:02.015Z \\
+Random seed &
+\texttt{eviagent-human-audit-scifact-nli4ct-balanced-v1} \\
+Sample size & 60 cases \\
+Source stratification & 30 SciFact cases and 30 NLI4CT cases \\
+Sampling design & Selected cases balanced by preclassified
+output-success and output-failure patterns; see \texttt{study.json} for
+source-specific targets \\
+Clinical experts & 8 raters (\texttt{RATER\_A}-\/-\texttt{RATER\_H}) \\
+Assignment mode & \texttt{all\_raters\_balanced} \\
+Raters per case/format & 4 \\
+Method anonymization & Anonymous report formats; method names and
+benchmark-derived correctness fields hidden during rating \\
+Rater instructions & \texttt{human-audit-expert-instructions.md};
+defines acceptance/interception and the 1-\/-5 confidence and
+cognitive-load anchors \\
+Input data &
+\url{src/data/react-clinical-source-v4-main-three-source-canonical-nli4ct.jsonl} \\
+Input traces &
+\url{results/live-comparison-v4-main-three-source-canonical-nli4ct-evidence-seeking-full/live-comparison-v4-traces.jsonl} \\
+Raw submissions & 485 rows, including 5 superseded revisions \\
+Final analytic ratings & 480 ratings: 240 EDL and 240 ReAct \\
+Revision rule & Retain the highest revision number for each
+assignment \\
+Missing data and review time & No final analytic record was missing an
+outcome, rating, or elapsed-time field; no duration-based exclusions
+were applied (range, 16.2-\/-356.9 s) \\
+Failure-report ratings per method & 120 scoring-defined
+decision-or-evidence-binding failures \\
+Acceptable-report ratings per method & 120 reports satisfying both
+correct decision and primary metric \\
+Derived descriptive results & \texttt{exports/human-audit-results.json}
+and \texttt{exports/human-audit-results.md} \\
+Attempted crossed-model analysis &
+\url{src/scripts/analyze\_human\_audit\_mixed\_effects.py}; the two
+fits did not converge and are not reported inferentially \\
+Reporting status & Completed clinical-expert audit; descriptive results
+are reported in the main manuscript; attempted clustered sensitivity
+models are documented in Supplementary Note S21 as non-convergent \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+The raw response file and rater credentials remain in the
+access-controlled \texttt{private/} directory and are not part of the
+public submission source package. An older SciFact-only pilot bundle
+exists in the working project but is not included in this release and is
+not used as the balanced clinical-expert audit result.
+
+\hypertarget{supplementary-note-s21-attempted-crossed-random-effects-analysis-of-the-blinded-clinical-expert-audit}{%
+\subsection{Supplementary Note S21. Attempted crossed random-effects
+analysis of the blinded clinical-expert
+audit}\label{supplementary-note-s21-attempted-crossed-random-effects-analysis-of-the-blinded-clinical-expert-audit}}
+
+We attempted separate logistic random-intercept models for the two
+binary outcomes:
+\texttt{interception\ \textasciitilde{}\ method\ +\ (1\ \textbar{}\ rater)\ +\ (1\ \textbar{}\ case)}.
+Both fits were marked non-convergent in the frozen analysis artifact. We
+therefore do not report model-based odds ratios, confidence intervals,
+or p values. The rating-level summaries below are descriptive only and
+do not estimate real-world error prevalence, clinical safety,
+prospective reviewer effectiveness, or deployment performance.
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lrrl@{}}
+\toprule\noalign{}
+Outcome subset & EDL & ReAct & Attempted model status \\
+
+Interception among preclassified benchmark-failure reports & 73/120
+(60.8\%) & 40/120 (33.3\%) & Non-convergent; no inferential estimate
+reported \\
+False interception among preclassified acceptable reports & 2/120
+(1.7\%) & 12/120 (10.0\%) & Non-convergent; no inferential estimate
+reported \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+The frozen analysis artifacts remain available for transparency, but are
+not used as inferential evidence in the manuscript.
+
+\hypertarget{supplementary-table-s22-trace-derived-qualitative-example}{%
+\subsection{Supplementary Table S22. Trace-derived qualitative
+example}\label{supplementary-table-s22-trace-derived-qualitative-example}}
+
+This illustrative example is taken from the frozen evidence-seeking
+traces and is not used as a separate outcome analysis. It shows how the
+primary metric distinguishes final-label correctness from complete
+evidence binding.
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lll@{}}
+\toprule\noalign{}
+Field & ReAct & EDL \\
+
+Record & \texttt{scifact-v4-0014} & \texttt{scifact-v4-0014} \\
+Source task & SciFact statement verification: a diminished ovarian
+reserve does not solely indicate infertility in an a priori
+non-infertile population & Same record \\
+Gold decision & \texttt{SUPPORT} & \texttt{SUPPORT} \\
+Submitted decision & \texttt{SUPPORT} & \texttt{SUPPORT} \\
+Decision correct & 1 & 1 \\
+Required evidence ID & \texttt{scifact-doc-13497630:seg-8} &
+\texttt{scifact-doc-13497630:seg-8} \\
+Final cited evidence IDs & \texttt{scifact-doc-13497630:seg-2};
+\texttt{scifact-doc-13497630:seg-11} &
+\texttt{scifact-doc-13497630:seg-11};
+\texttt{scifact-doc-13497630:seg-2};
+\texttt{scifact-doc-13497630:seg-8};
+\texttt{scifact-doc-13497630:seg-9};
+\texttt{scifact-doc-13497630:seg-12} \\
+Required evidence recall & 0.000 & 1.000 \\
+Required evidence precision & 0.000 & 0.200 \\
+Citation validity & 1 & 1 \\
+Primary metric & 0 & 1 \\
+Interpretation & The final label was correct, but the submitted
+citations did not include the required evidence segment. & The final
+label was correct and the final citations included the required evidence
+segment, although with lower citation precision because additional
+segments were cited. \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+The required segment reports that elevated serum FSH, a marker of
+diminished ovarian reserve, was not associated with a significantly
+different predicted probability of conception over 6 or 12 cycles. The
+example illustrates why final-label accuracy alone is insufficient for
+evaluating evidence-supported decision records.
+
+\hypertarget{supplementary-table-s23-reproducibility-configuration-and-baseline-fairness-controls}{%
+\subsection{Supplementary Table S23. Reproducibility configuration and
+baseline-fairness
+controls}\label{supplementary-table-s23-reproducibility-configuration-and-baseline-fairness-controls}}
+
+This table summarizes the configuration needed to interpret the
+EDL-ReAct comparison as a workflow-level comparison with matched
+evidence access and scoring. It is not a claim that ReAct and EDL used
+identical controller complexity, reasoning-effort configuration, or
+computational resources.
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+ll@{}}
+\toprule\noalign{}
+Dimension & Main configuration \\
+
+Main dataset &
+\url{src/data/react-clinical-source-v4-main-three-source-canonical-nli4ct.jsonl};
+390 audit-retained records from SciFact, PubMedQA, and NLI4CT \\
+Dataset manifest &
+\url{results/react-clinical-source-v4-main-three-source-canonical-nli4ct-manifest.json} \\
+Main model backend & \texttt{gpt-5.5} for the primary automated
+evaluation \\
+Trace metadata & Trace files retain \texttt{model},
+\texttt{reasoningEffort}, \texttt{promptSha256}, method, record ID,
+submitted decision, cited evidence IDs, process checks, EDL guard
+fields, and score fields \\
+Given-evidence methods & Direct, CoT, ReAct, and EDL; 390 records x 4
+methods = 1560 traces \\
+Evidence-seeking methods & ReAct and EDL; 390 records x 2 methods = 780
+traces \\
+Matched comparison fields & Same records, source-native label spaces,
+admissible citation identifiers, fixed evidence libraries, output
+schema, and scoring code within each setting \\
+Evidence access & Record-scoped fixed evidence libraries only; no
+open-web retrieval \\
+Search and read tools & \texttt{search\_segments} returns candidate
+segment identifiers/snippets from the fixed record library;
+\texttt{read\_segment} opens frozen segment text before citation \\
+Retrieval configuration & BM25 search; short abstract sources used
+default top-5 search, while longer NLI4CT trial reports used neighbor
+expansion and section-aware logic \\
+ReAct baseline role & Strong tool-using / agentic RAG baseline, not an
+answer-only strawman \\
+ReAct fallback handling & Forced-submit fallback when the configured
+tool budget was exhausted; 83 evidence-seeking ReAct traces used this
+fallback and remained in scoring \\
+EDL controller additions & Evidence-sufficiency assessment,
+sufficiency-driven query updating, citation validation, process
+validation, gap/conflict recording, and derived human-review routing \\
+Compute interpretation & Matched records, evidence access, and scoring
+only; not matched for reasoning-effort configuration, total model calls,
+tool calls, latency, token use, monetary cost, or controller
+complexity \\
+Prompt artifacts & \url{src/prompts/v4\_method\_direct.md},
+\url{src/prompts/v4\_method\_cot.md},
+\url{src/prompts/v4\_method\_react.md},
+\url{src/prompts/v4\_method\_edl.md}, and
+\url{src/prompts/v4\_evidence\_verification\_base.md} \\
+Scoring contract & Source-native final-label accuracy, required evidence
+recall/precision, citation validity, process validity, read recall in
+evidence seeking, and the joint answer-and-evidence primary metric \\
+Statistical inference & Record-level paired nonparametric bootstrap with
+10,000 resamples, computed from existing trace scores without additional
+model inference \\
+Supplementary checks & MiniMax-M3 cross-model evaluation and
+SciFact/NLI4CT EDL component ablations are supplementary analyses, not
+replacements for the \texttt{gpt-5.5} main evaluation \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\hypertarget{supplementary-table-s24-reproducibility-paths-and-verification-entry-points}{%
+\subsection{Supplementary Table S24. Reproducibility paths and
+verification entry
+points}\label{supplementary-table-s24-reproducibility-paths-and-verification-entry-points}}
+
+\begin{center}
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{@{}
+lll@{}}
+\toprule\noalign{}
+Category & Path or command & Role \\
+
+Main dataset manifest &
+\url{results/react-clinical-source-v4-main-three-source-canonical-nli4ct-manifest.json}
+& Records main dataset composition, labels, required evidence
+distribution, and result paths. \\
+Main dataset &
+\url{src/data/react-clinical-source-v4-main-three-source-canonical-nli4ct.jsonl}
+& Canonical three-source main dataset. \\
+\texttt{gpt-5.5} given-evidence results &
+\url{results/live-comparison-v4-main-three-source-canonical-nli4ct-frozen-evidence-full/live-comparison-v4-results.json}
+& 390 records x 4 methods = 1560 traces. \\
+\texttt{gpt-5.5} evidence-seeking results &
+\url{results/live-comparison-v4-main-three-source-canonical-nli4ct-evidence-seeking-full/live-comparison-v4-results.json}
+& 390 records x 2 methods = 780 traces. \\
+Dual-setting main summary &
+\url{results/live-comparison-v4-main-three-source-canonical-nli4ct-dual-setting-summary.md}
+& Source for main given-evidence and evidence-seeking summaries. \\
+MiniMax-M3 summary &
+\url{results/live-comparison-v4-minimax-m3-canonical-nli4ct-dual-setting-summary.md}
+& Three-source supplementary model evaluation. \\
+EDL ablation summary &
+\url{results/edl-ablation-s18-final-summary.md} &
+SciFact and NLI4CT component ablation. \\
+Bootstrap CI script &
+\texttt{node\ src/scripts/analyze\_v4\_bootstrap\_ci.js\ -\/-write\ -\/-iterations\ 10000}
+& Generates record-level bootstrap confidence intervals from existing
+trace scores without model inference. \\
+Bootstrap CI artifact & \url{results/v4-main-bootstrap-ci.json} and
+\url{results/v4-main-bootstrap-ci.md} & Main paired confidence
+intervals for evidence-seeking EDL-ReAct comparisons and supplementary
+given-evidence comparisons. \\
+PubMedQA calibration script &
+\texttt{node\ src/scripts/analyze\_v4\_pubmedqa\_calibration.js\ -\/-write}
+& Regenerates the PubMedQA confusion matrices and label-calibration
+profile from the canonical dataset and evidence-seeking traces. \\
+PubMedQA calibration artifact &
+\url{results/v4-pubmedqa-calibration-profile.json} and
+\url{results/v4-pubmedqa-calibration-profile.md} & Source for
+Supplementary Table S16. \\
+JBI V4 reproducibility check &
+\texttt{npm\ run\ paper:jbi-v4:reproducibility:check} & Verifies the
+current JBI/V4 artifact paths, core record/trace counts, and PubMedQA
+calibration artifact drift. \\
+Human audit build & \texttt{npm\ run\ human-audit:build} & Generates
+balanced blind-audit study bundle. \\
+Human audit analysis &
+\texttt{node\ src/scripts/analyze\_human\_audit\_study.js\ -\/-study-dir\ results/human-audit-scifact-nli4ct-balanced-docker}
+& Regenerates the locked derived audit summaries from final ratings. \\
+Repository tests & \texttt{npm\ test} & Project-level test entry
+point. \\
+English manuscript compile &
+\texttt{cd\ content\ \&\&\ pdflatex\ -interaction=nonstopmode\ -halt-on-error\ EDL\_JBI\_manuscript\_en.tex}
+& Compiles the English manuscript. \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+Trace metadata note: main trace files retain \texttt{model} and
+\texttt{reasoningEffort} fields. The manuscript therefore describes the
+main analysis as the \texttt{gpt-5.5} evaluation and reports exact run
+metadata through the reproducibility package rather than asserting a
+single uniform reasoning-effort value for every merged trace.
+
+\hypertarget{supplementary-note-s25-release-and-controlled-access-statement}{%
+\subsection{Supplementary Note S25. Release and controlled-access
+statement}\label{supplementary-note-s25-release-and-controlled-access-statement}}
+
+The fixed reproducibility target for this manuscript is the public
+Evidence Decision Loops \texttt{v0.2.8} release, which provides the
+source package, final manuscript assets, and
+\texttt{SHA256SUMS-v0.2.8.txt} checksum manifest. The tagged repository
+contains the benchmark, frozen traces, result summaries, code, prompts,
+schemas, and permitted expert-audit materials.
+
+Completed expert-response records, rater credentials, access links, and
+direct identifiers are not publicly distributed. Requests for
+deidentified rating data and corresponding audit-analysis outputs may be
+directed to the corresponding author through the submission contact.
+Requests are considered under the ethics determination (ZS09437881),
+informed-consent conditions, and institutional data-governance
+requirements; this release does not authorize unrestricted
+redistribution of those records.
+
+\end{document}

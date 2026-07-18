@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "edl-ablation-s18-final-v1",
+  "interpretation": "within-source exploratory component analysis",
+  "repeatedRunsPerRecordVariant": 1,
+  "sources": {
+    "scifact": {
+      "records": 135,
+      "fullReferenceReusedFromMain": true,
+      "fullReferencePath": "results/live-comparison-v4-main-three-source-canonical-nli4ct-evidence-seeking-full/live-comparison-v4-results.json",
+      "variantConfiguration": {
+        "model": "gpt-5.5",
+        "reasoningEffort": "medium",
+        "searchMode": "bm25",
+        "topK": 5,
+        "maxEvidenceRounds": 3,
+        "minEvidenceRounds": 2,
+        "minViewedSegmentsBeforeSufficient": 3,
+        "citationSelfCheck": false
+      },
+      "variants": {
+        "full_reference": {"path": "results/live-comparison-v4-main-three-source-canonical-nli4ct-evidence-seeking-full/live-comparison-v4-results.json", "traces": 135, "accuracy": 0.9481481481481482, "primaryMetric": 0.8740740740740741, "requiredRecall": 0.9333333333333333, "requiredPrecision": 0.6077777777777776, "citationIdentifierValidity": 1.0, "reviewRate": 0.3851851851851852},
+        "no_iterative": {"path": "results/edl-ablation-scifact135-s14-medium-bm25-topk5-no-selfcheck-no-iterative/live-comparison-v4-results.json", "traces": 135, "accuracy": 0.9333333333333333, "primaryMetric": 0.7851851851851852, "requiredRecall": 0.8222222222222222, "requiredPrecision": 0.602469135802469, "citationIdentifierValidity": 1.0, "reviewRate": 0.48148148148148145},
+        "no_sufficiency": {"path": "results/edl-ablation-scifact135-s14-medium-bm25-topk5-no-selfcheck-no-sufficiency/live-comparison-v4-results.json", "traces": 135, "accuracy": 0.9481481481481482, "primaryMetric": 0.8148148148148148, "requiredRecall": 0.8703703703703703, "requiredPrecision": 0.6372180451127819, "citationIdentifierValidity": 0.9851851851851852, "reviewRate": 0.014814814814814815},
+        "no_citation_validation": {"path": "results/edl-ablation-scifact135-s14-medium-bm25-topk5-no-selfcheck-no-citation-validation/live-comparison-v4-results.json", "traces": 135, "accuracy": 0.9407407407407408, "primaryMetric": 0.05925925925925926, "requiredRecall": 0.06666666666666667, "requiredPrecision": 0.7314814814814814, "citationIdentifierValidity": 0.06666666666666667, "reviewRate": 0.9481481481481482}
+      }
+    },
+    "nli4ct": {
+      "records": 130,
+      "fullReferenceReusedFromMain": true,
+      "fullReferencePath": "results/live-comparison-v4-main-three-source-canonical-nli4ct-evidence-seeking-full/live-comparison-v4-results.json",
+      "configurationNote": "Source-aware query planning, BM25 neighbor expansion, and controller-fixed topK=5 were retained. Citation self-check was retained except in the no-citation-validation variant; post-submission benchmark scoring still calculated citation-identifier validity.",
+      "variants": {
+        "full_reference": {"path": "results/live-comparison-v4-main-three-source-canonical-nli4ct-evidence-seeking-full/live-comparison-v4-results.json", "traces": 130, "accuracy": 0.9230769230769231, "primaryMetric": 0.5384615384615384, "requiredRecall": 0.7681025521998928, "requiredPrecision": 0.8638353313353312, "citationIdentifierValidity": 1.0, "reviewRate": 0.3},
+        "no_iterative": {"path": "results/edl-ablation-nli4ct130-no-iterative-seeking/live-comparison-v4-results.json", "traces": 130, "accuracy": 0.8692307692307693, "primaryMetric": 0.4230769230769231, "requiredRecall": 0.6907623019352491, "requiredPrecision": 0.8520238095238096, "citationIdentifierValidity": 1.0, "reviewRate": 0.38461538461538464},
+        "no_sufficiency": {"path": "results/edl-ablation-nli4ct130-no-sufficiency-assessment/live-comparison-v4-results.json", "traces": 130, "accuracy": 0.9307692307692308, "primaryMetric": 0.5769230769230769, "requiredRecall": 0.7766663667450142, "requiredPrecision": 0.8769114219114218, "citationIdentifierValidity": 1.0, "reviewRate": 0.0},
+        "no_citation_validation": {"path": "results/edl-ablation-nli4ct130-no-citation-validation/live-comparison-v4-results.json", "traces": 130, "accuracy": 0.9230769230769231, "primaryMetric": 0.11538461538461539, "requiredRecall": 0.14440781440781436, "requiredPrecision": 0.8009157509157508, "citationIdentifierValidity": 0.2, "reviewRate": 0.8307692307692308}
+      }
+    }
+  }
+}

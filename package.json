@@ -1,9 +1,9 @@
 {
-  "name": "eviagent-jbi-artifacts",
-  "version": "0.1.0",
+  "name": "evidence-decision-loops-artifacts",
+  "version": "0.2.8",
   "private": false,
   "type": "commonjs",
-  "description": "Data, code, and reproducibility artifacts for the EviAgent Evidence Decision Loop JBI manuscript.",
+  "description": "Data, code, and reproducibility artifacts for the Evidence Decision Loops JBI manuscript.",
   "scripts": {
     "validate": "node scripts/validate_release.js",
     "run:main": "node src/scripts/run_live_comparison_v4.js --dataset data/canonical_main_390.jsonl --out-dir results/reproduction-smoke --sample-per-source 1 --methods direct,cot,react,edl --setting frozen-evidence --check",

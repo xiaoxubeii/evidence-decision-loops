@@ -1,6 +1,6 @@
 # Reproducing the Reported Analyses
 
-This document describes the recommended verification path for the EviAgent JBI artifact package.
+This document describes the recommended verification path for the Evidence Decision Loops JBI artifact package.
 
 ## 1. Install Dependencies
 
@@ -38,12 +38,12 @@ These results are treated as a cross-model check, not as a replacement for the p
 
 ## 5. Check Component Ablations
 
-EDL component-ablation summaries are available in:
+The final EDL component-ablation summary used for Supplementary Table S18 is available in:
 
-- `results/edl-ablation-scifact-nli4ct-component-summary.md`
-- `results/edl-ablation-scifact-nli4ct-component-summary.json`
+- `results/edl-ablation-s18-final-summary.md`
+- `results/edl-ablation-s18-final-summary.json`
 
-The underlying ablation trace directories for SciFact and NLI4CT subsets are included under `results/edl-ablation-*`.
+The summary lists the exact main-run Full references and the underlying SciFact and NLI4CT feature-removal trace directories. The updated SciFact variants are stored under `results/edl-ablation-scifact135-s14-medium-bm25-topk5-no-selfcheck-*`. Older component summaries remain only as historical artifacts and are not the source for Supplementary Table S18.
 
 ## 6. Re-running Live Model Comparisons
 
